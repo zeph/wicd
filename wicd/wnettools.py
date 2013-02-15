@@ -1224,10 +1224,13 @@ class BaseWirelessInterface(BaseInterface):
         '''
         # FIXME: what if, in future, bitrates won't be "M(egabit per second)"
         #+anymore?
-        if allow_lower:
-            cmd = 'iwconfig %s rate %sM auto' % (self.iface, bitrate)
+        if bitrate == 'auto':
+            cmd = 'iwconfig %s rate auto'
         else:
-            cmd = 'iwconfig %s rate %sM fixed' % (self.iface, bitrate)
+            if allow_lower:
+                cmd = 'iwconfig %s rate %sM auto' % (self.iface, bitrate)
+            else:
+                cmd = 'iwconfig %s rate %sM fixed' % (self.iface, bitrate)
         misc.Run(cmd)
 
     @neediface(False)
