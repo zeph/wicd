@@ -51,7 +51,7 @@ The daemon is responsible for making and configuring connections, reading and
 writing configuration files and logs, and monitoring the connection status.
 The daemon's job is split between two processes: wicd-daemon.py and monitor.py.
 All the connection status monitoring, as well as the auto-reconnection logic,
-takes place in monitor.py.  Everthing else is done by wicd-daemon.py.
+takes place in monitor.py.  Everything else is done by wicd-daemon.py.
 
 The user interface (stored in wicd-gtk), which is made up of a tray
 icon, a main GUI window, and its child dialogs, gets configuration and network
