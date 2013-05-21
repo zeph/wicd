@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2013-02-28 21:32+0000\n"
-"Last-Translator: Utku BERBEROĞLU <Unknown>\n"
+"PO-Revision-Date: 2013-05-20 13:00+0000\n"
+"Last-Translator: Volkan Gezer <Unknown>\n"
 "Language-Team: tr <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-01 04:54+0000\n"
-"X-Generator: Launchpad (build 16514)\n"
+"X-Launchpad-Export-Date: 2013-05-21 04:56+0000\n"
+"X-Generator: Launchpad (build 16626)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -162,11 +162,11 @@ msgstr "Seçili ağa bağlan"
 
 #: cli/wicd-cli.py:83
 msgid "Connected"
-msgstr ""
+msgstr "Bağlı"
 
 #: cli/wicd-cli.py:96
 msgid "Connected to \"$A\" ($B)."
-msgstr ""
+msgstr "Bağlanılan \"$A\" ($B)."
 
 #: curses/wicd-curses.py:158 gtk/gui.py:490 gtk/wicd-client.py:215
 msgid "Connected to $A at $B (IP: $C)"
@@ -174,15 +174,15 @@ msgstr "$A ağına $B nitelikle (IP: $C) olarak bağlanıldı"
 
 #: cli/wicd-cli.py:102
 msgid "Connected to $A."
-msgstr ""
+msgstr "Bağlanılan $A."
 
 #: wicd/misc.py:53
 msgid "Connected to a wired network"
-msgstr ""
+msgstr "Kablolu bir ağa bağlandı."
 
 #: wicd/misc.py:52
 msgid "Connected to a wireless network"
-msgstr ""
+msgstr "Kablosuz bir ağa bağlandı."
 
 #: curses/wicd-curses.py:133 gtk/gui.py:483 gtk/wicd-client.py:220
 msgid "Connected to wired network (IP: $A)"
@@ -194,11 +194,11 @@ msgstr "Bağlanıyor"
 
 #: cli/wicd-cli.py:107
 msgid "Connecting to wired network."
-msgstr ""
+msgstr "Kablolu ağa bağlanıyor."
 
 #: cli/wicd-cli.py:109
 msgid "Connecting to wireless network \"$A\"."
-msgstr ""
+msgstr "\"$A\" kablosuz ağına bağlanıyor."
 
 #: wicd/misc.py:86
 msgid "Connection Cancelled"
@@ -230,11 +230,11 @@ msgstr "Bağlantı hatası: Kablosuz erişim noktasıyla iletişilemedi."
 
 #: wicd/misc.py:51
 msgid "Connection in progress"
-msgstr ""
+msgstr "Bağlantı devam ediyor"
 
 #: cli/wicd-cli.py:92
 msgid "Connection status"
-msgstr ""
+msgstr "Bağlantı durumu"
 
 #: wicd/misc.py:104
 msgid "Connection successful."
@@ -242,11 +242,11 @@ msgstr "Bağlantı İptal Edildi"
 
 #: wicd/misc.py:54
 msgid "Connection suspended"
-msgstr ""
+msgstr "Bağlantı durduruldu"
 
 #: cli/wicd-cli.py:94
 msgid "Connection type"
-msgstr ""
+msgstr "Bağlantı türü"
 
 #: gtk/gui.py:65 gtk/wicd-client.py:955
 msgid ""
@@ -448,7 +448,7 @@ msgstr "Net maskesi"
 
 #: cli/wicd-cli.py:99
 msgid "Network ID: $A"
-msgstr ""
+msgstr "Ağ Kimliği: $A"
 
 #: curses/prefs_curses.py:66
 msgid "Network Interfaces"
@@ -498,7 +498,7 @@ msgstr ""
 
 #: wicd/translations.py:82
 msgid "Passphrase"
-msgstr ""
+msgstr "Parola"
 
 #: wicd/translations.py:83
 msgid "Password"
@@ -607,7 +607,7 @@ msgstr "Ağ listesini yenile"
 
 #: curses/wicd-curses.py:538
 msgid "Remove"
-msgstr ""
+msgstr "Kaldır"
 
 #: curses/wicd-curses.py:224 data/wicd.ui:67
 msgid "Remove settings for saved networks"
@@ -844,7 +844,7 @@ msgstr "Wicd'in bilgisayarınızdaki ağ kartlarını ulaşması gerekir."
 
 #: cli/wicd-cli.py:85
 msgid "Wired"
-msgstr ""
+msgstr "Kablolu"
 
 #: gtk/wicd-client.py:628
 msgid ""
@@ -885,7 +885,7 @@ msgstr "Kablolu bağlantı algılandı"
 
 #: cli/wicd-cli.py:87
 msgid "Wireless"
-msgstr ""
+msgstr "Kablosuz"
 
 #: gtk/wicd-client.py:633
 msgid ""
@@ -939,7 +939,7 @@ msgstr "_Bağlantı bilgisi"
 
 #: gtk/wicd-client.py:502 data/wicd.ui:161
 msgid "_Quit"
-msgstr ""
+msgstr "_Çık"
 
 #: curses/wicd-curses.py:428
 msgid ""
@@ -1142,7 +1142,7 @@ msgstr ""
 
 #: data/wicd.ui:1484
 msgid "Driver:"
-msgstr ""
+msgstr "Sürücü:"
 
 #: data/wicd.ui:1540
 msgid "<b>Wireless Interface</b>"
