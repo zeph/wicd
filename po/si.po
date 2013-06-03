@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: wicd\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2013-06-01 14:06+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-06-02 11:49+0000\n"
+"Last-Translator: Thilina Weliwita <Unknown>\n"
 "Language-Team: Sinhalese <si@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-02 05:32+0000\n"
+"X-Launchpad-Export-Date: 2013-06-03 06:06+0000\n"
 "X-Generator: Launchpad (build 16660)\n"
 
 #: gtk/wicd-client.py:610
@@ -26,6 +26,12 @@ msgid ""
 "$E KB/s\n"
 "$F KB/s"
 msgstr ""
+"$A\n"
+"$B\n"
+"$C\n"
+"$D\n"
+"$E KB/s\n"
+"$F KB/s"
 
 #: gtk/wicd-client.py:603
 msgid ""
@@ -33,228 +39,236 @@ msgid ""
 "$B KB/s\n"
 "$C KB/s"
 msgstr ""
+"$A\n"
+"$B KB/s\n"
+"$C KB/s"
 
 #: curses/wicd-curses.py:612
 msgid "About"
-msgstr ""
+msgstr "පිලිබඳ"
 
 #: curses/wicd-curses.py:200
 msgid "About Wicd"
-msgstr ""
+msgstr "Wicd පිලිබඳ"
 
 #: curses/wicd-curses.py:465 gtk/gui.py:273
 msgid "Activate Internet Connection Sharing"
-msgstr ""
+msgstr "අන්තර්ජාල සබඳතාව බෙදාහැරීම සක්‍රිය කරන්න"
 
 #: curses/wicd-curses.py:378
 msgid "Add a new profile"
-msgstr ""
+msgstr "නව පැතිකඩක් ඇතුළු කරන්න"
 
 #: curses/wicd-curses.py:411
 msgid "Add a new wired profile"
-msgstr ""
+msgstr "නව පරිපථගත පැතිකඩක් ඇතුළු කරන්න"
 
 #: curses/prefs_curses.py:52 data/wicd.ui:1679
 msgid "Advanced Settings"
-msgstr ""
+msgstr "අධි සිටවුම්"
 
 #: curses/prefs_curses.py:69 gtk/prefs.py:326 data/wicd.ui:966
 msgid "Always show wired interface"
-msgstr ""
+msgstr "සෑම විටම පරිපථගත අතුරුමුහුණත් පෙන්වන්න"
 
 #: curses/prefs_curses.py:70
 msgid "Always switch to wired connection when available"
-msgstr ""
+msgstr "ප්‍රයෝජ්‍ය සෑම විටම පරිපථගත සබැඳුමට සබඳින්න"
 
 #: curses/wicd-curses.py:947 gtk/gui.py:353
 msgid "Are you sure you want to discard settings for the selected networks?"
-msgstr ""
+msgstr "ඔබට මෙම ‍තෝරාගත් ජාල සඳහා සිටවුම් ඉවත දැමීමට අවශ්‍යය බවට සහතිකද?"
 
 #: wicd/translations.py:77
 msgid "Authentication"
-msgstr ""
+msgstr "සත්‍යාපනය"
 
 #: curses/prefs_curses.py:90 curses/prefs_curses.py:176 gtk/prefs.py:352
 #: gtk/prefs.py:359 gtk/prefs.py:366 gtk/prefs.py:371 data/wicd.ui:1092
 #: data/wicd.ui:1153 data/wicd.ui:1214 data/wicd.ui:1329
 msgid "Automatic (recommended)"
-msgstr ""
+msgstr "ස්වයංක්‍රීය (රෙකමදාරු කරනවා)"
 
 #: curses/prefs_curses.py:86
 msgid "Automatic Reconnection"
-msgstr ""
+msgstr "ස්වයංක්‍රීය නැවත සබැඳුම"
 
 #: curses/netentry_curses.py:374 gtk/netentry.py:889
 msgid "Automatically connect to this network"
-msgstr ""
+msgstr "මෙම ජාලයට ස්වයංක්‍රීයව සම්බන්ධ වන්න"
 
 #: curses/prefs_curses.py:87 gtk/prefs.py:331
 msgid "Automatically reconnect on connection loss"
-msgstr ""
+msgstr "සබැඳුම නැතිවීමකදී ස්වයංක්‍රීයව නැවත සබඳින්න"
 
 #: gtk/gui.py:330
 msgid "BSSID"
-msgstr ""
+msgstr "BSSID"
 
 #: curses/prefs_curses.py:113 curses/prefs_curses.py:114
 msgid "Backend"
-msgstr ""
+msgstr "පසුඅග"
 
 #: curses/wicd-curses.py:194
 msgid "Brought to you by:"
-msgstr ""
+msgstr "ඔබ වෙත ගෙන ආවේ"
 
 #: curses/wicd-curses.py:1089
 msgid "Can't connect to the daemon, trying to start it automatically..."
-msgstr ""
+msgstr "ඩිමනයට සම්බන්ධ වීමට නොහැක, ස්වයංක්‍රීය සබැඳුමකට උත්සහය.."
 
 #: curses/configscript_curses.py:74 curses/curses_misc.py:541
 #: curses/netentry_curses.py:65 curses/wicd-curses.py:490
 #: curses/wicd-curses.py:538 curses/wicd-curses.py:653
 #: curses/wicd-curses.py:655 curses/wicd-curses.py:951
 msgid "Cancel"
-msgstr ""
+msgstr "අවලංගු කරන්න"
 
 #: curses/wicd-curses.py:463 gtk/gui.py:268 gtk/netentry.py:1038
 #: gtk/netentry.py:1160
 msgid "Channel"
-msgstr ""
+msgstr "නාලිකාව"
 
 #: gtk/gui.py:189 data/wicd.ui:183
 msgid "Choose from the networks below:"
-msgstr ""
+msgstr "පහත ඇති ජාල වලින් ‍තෝරන්න"
 
 #: curses/wicd-curses.py:604
 msgid "Config"
-msgstr ""
+msgstr "වින්‍යාස"
 
 #: curses/wicd-curses.py:225
 msgid "Configure selected network"
-msgstr ""
+msgstr "‍තෝරාගත් ජාල වින්‍යාස කරන්න"
 
 #: curses/netentry_curses.py:267
 msgid "Configuring preferences for wired profile \"$A\""
-msgstr ""
+msgstr "\"$A\" පරිපථගත පැතිකඩ සඳහා කැමැත්ත වින්‍යාස කරනවා"
 
 #: curses/netentry_curses.py:389
 msgid "Configuring preferences for wireless network \"$A\" ($B)"
-msgstr ""
+msgstr "‍\"$A\" ($B) රැහැන් රහිත ජාලය සඳහා කැමැත්ත වින්‍යාස කරනවා"
 
 #: wicd/misc.py:89
 msgid "Configuring wireless interface..."
-msgstr ""
+msgstr "‍රැහැන් රහිත අතුරුමුහුණත වින්‍යාස කරනවා"
 
 #: curses/wicd-curses.py:607 gtk/wicd-client.py:498
 msgid "Connect"
-msgstr ""
+msgstr "සබඳින්න"
 
 #: curses/wicd-curses.py:214
 msgid "Connect to selected network"
-msgstr ""
+msgstr "‍තෝරාගත් ජාලයට සබඳින්න"
 
 #: cli/wicd-cli.py:83
 msgid "Connected"
-msgstr ""
+msgstr "සබඳුනා"
 
 #: cli/wicd-cli.py:96
 msgid "Connected to \"$A\" ($B)."
-msgstr ""
+msgstr "\"$A\" ($B) ට සබඳුනා"
 
 #: curses/wicd-curses.py:158 gtk/gui.py:490 gtk/wicd-client.py:215
 msgid "Connected to $A at $B (IP: $C)"
-msgstr ""
+msgstr "$A at $B (IP: $C) ට සබඳුනා"
 
 #: cli/wicd-cli.py:102
 msgid "Connected to $A."
-msgstr ""
+msgstr "$A ට සබඳුනා"
 
 #: wicd/misc.py:53
 msgid "Connected to a wired network"
-msgstr ""
+msgstr "පරිපථගත ජාලයකට සබඳුනා"
 
 #: wicd/misc.py:52
 msgid "Connected to a wireless network"
-msgstr ""
+msgstr "රැහැන් රහිත ජාලයකට සබඳුනා"
 
 #: curses/wicd-curses.py:133 gtk/gui.py:483 gtk/wicd-client.py:220
 msgid "Connected to wired network (IP: $A)"
-msgstr ""
+msgstr "(IP: $A) පරිපථගත ජාලයට සබඳුනා"
 
 #: gtk/gui.py:192 gtk/wicd-client.py:313 gtk/wicd-client.py:641
 msgid "Connecting"
-msgstr ""
+msgstr "සබඳිමින් පවතිනවා"
 
 #: cli/wicd-cli.py:107
 msgid "Connecting to wired network."
-msgstr ""
+msgstr "පරිපථගත ජාලයකට සබඳිමින් පවතිනවා"
 
 #: cli/wicd-cli.py:109
 msgid "Connecting to wireless network \"$A\"."
-msgstr ""
+msgstr "\"$A\" රැහැන් රහිත ජාලයට සබඳිමින් පවතිනවා"
 
 #: wicd/misc.py:86
 msgid "Connection Cancelled"
-msgstr ""
+msgstr "සබැඳුම අවලංගු කලා"
 
 #: wicd/misc.py:92
 msgid "Connection Failed."
-msgstr ""
+msgstr "සබැඳුම අසමත් උනා"
 
 #: wicd/misc.py:88
 msgid "Connection Failed: Bad password"
-msgstr ""
+msgstr "සබැඳුම අසමත් උනා: අයෝග්‍ය මුරපදය"
 
 #: wicd/misc.py:98
 msgid "Connection Failed: No DHCP offers received."
-msgstr ""
+msgstr "සබැඳුම අසමත් උනා: DHCP පිරිනැමීම් නැත"
 
 #: wicd/misc.py:90
 msgid "Connection Failed: Unable to Get IP Address"
-msgstr ""
+msgstr "සබැඳුම අසමත් උනා: IP යොමුව ලබාගැනීමට නොහැකි උනා"
 
 #: gtk/wicd-client.py:269 gtk/wicd-client.py:299
 msgid "Connection established"
-msgstr ""
+msgstr "සබැඳුම ස්ථාපනය කලා"
 
 #: wicd/misc.py:87
 msgid "Connection failed: Could not contact the wireless access point."
 msgstr ""
+"සබැඳුම අසමත් උනා: ‍රැහැන් රහිත ප්‍රවේශ්‍ය ස්ථානය සම්බන්ධ කිරීමට නොහැක"
 
 #: wicd/misc.py:51
 msgid "Connection in progress"
-msgstr ""
+msgstr "සබැඳුම කෙරීගෙන යනවා"
 
 #: cli/wicd-cli.py:92
 msgid "Connection status"
-msgstr ""
+msgstr "සබැඳුම් තත්ව"
 
 #: wicd/misc.py:104
 msgid "Connection successful."
-msgstr ""
+msgstr "සබැඳුම සාර්ථකයි"
 
 #: wicd/misc.py:54
 msgid "Connection suspended"
-msgstr ""
+msgstr "සබැඳුම තහනම් කලා"
 
 #: cli/wicd-cli.py:94
 msgid "Connection type"
-msgstr ""
+msgstr "සබැඳුම් වර්ගය"
 
 #: gtk/gui.py:65 gtk/wicd-client.py:955
 msgid ""
 "Could not connect to wicd's D-Bus interface. Check the wicd log for error "
 "messages."
 msgstr ""
+"Wicdයේ D-නිය මග අතුරුමුහුණතට සබැදීමට නොහැක. දොස් හසුන් සඳහා Wicd දොස් සටහන "
+"පරීක්ෂා කරන්න."
 
 #: gtk/netentry.py:379 gtk/netentry.py:522
 msgid ""
 "Could not find a graphical sudo program. The script editor could not be "
 "launched.  You'll have to edit scripts directly your configuration file."
 msgstr ""
+"චිත්‍රක sudo ක්‍රම ලේඛයක් සොයාගැනීමට නොහැකි වුනා. උපදේශාවලිය සකසනය පුරන්න "
+"නොහැකි වුනා. උපදේශාවලිය කෙලින්ම ඔබගේ වින්‍යාසයට සැකසීමට ඔබට සිදුවේ."
 
 #: curses/wicd-curses.py:488 gtk/gui.py:259
 msgid "Create an Ad-Hoc Network"
-msgstr ""
+msgstr "ආවස්ථික ජාලයක් සාදන්න"
 
 #: curses/wicd-curses.py:98
 msgid ""
@@ -262,205 +276,210 @@ msgid ""
 "wicd-curses is running. Please restart the daemon, and then restart wicd-"
 "curses."
 msgstr ""
+"D- නිය මගහි නොහැකියාව! බොහෝ විට මෙයට හේතු විය හැක්කේ wicd-කර්සය ධාවනය වන විට "
+"wicd ඩිමනය නතරවීමය. කරුනාකර ඩිමනය නැවත අරඹන්න, මීලඟට  wicd-කර්සය නැවත අරඹන්න."
 
 #: curses/prefs_curses.py:92
 msgid "DHCP Client"
-msgstr ""
+msgstr "DHCP සේවාලාභියා"
 
 #: curses/netentry_curses.py:63
 msgid "DHCP Hostname"
-msgstr ""
+msgstr "DHCP ධාරක නාමය"
 
 #: curses/netentry_curses.py:56 curses/prefs_curses.py:74 gtk/netentry.py:79
 msgid "DNS domain"
-msgstr ""
+msgstr "DNS වසම"
 
 #: curses/netentry_curses.py:58 curses/netentry_curses.py:59
 #: curses/netentry_curses.py:60 curses/prefs_curses.py:76
 #: curses/prefs_curses.py:77 curses/prefs_curses.py:78 gtk/netentry.py:80
 #: gtk/netentry.py:81 gtk/netentry.py:82
 msgid "DNS server"
-msgstr ""
+msgstr "DNS සේවා දායකයා"
 
 #: curses/prefs_curses.py:117
 msgid "Debugging"
-msgstr ""
+msgstr "නිදොස් කරනවා"
 
 #: curses/wicd-curses.py:608
 msgid "Disconn"
-msgstr ""
+msgstr "විබෙදන්න"
 
 #: curses/wicd-curses.py:215
 msgid "Disconnect from all networks"
-msgstr ""
+msgstr "සියළුම ජාල වලින් විබෙදන්න"
 
 #: gtk/wicd-client.py:340 gtk/wicd-client.py:643
 msgid "Disconnected"
-msgstr ""
+msgstr "විබෙදුවා"
 
 #: gtk/gui.py:785
 msgid "Disconnecting active connections..."
-msgstr ""
+msgstr "සක්‍රීය සබැඳුම් වලින් විබෙදනවා..."
 
 #: curses/wicd-curses.py:226
 msgid "Display 'about' dialog"
-msgstr ""
+msgstr "'පිලිබඳ' දෙබස් කො‍ටුව පෙන්වන්න"
 
 #: gtk/prefs.py:349 data/wicd.ui:1002
 msgid "Display notifications about connection status"
-msgstr ""
+msgstr "සබැඳුම් තත්වය පිලිබඳ නිවේදන පෙන්වන්න"
 
 #: curses/wicd-curses.py:213
 msgid "Display this help dialog"
-msgstr ""
+msgstr "මෙම උදවු දෙබස් කො‍ටුව පෙන්වන්න"
 
 #: wicd/translations.py:78
 msgid "Domain"
-msgstr ""
+msgstr "වසම"
 
 #: wicd/misc.py:91
 msgid "Done connecting..."
-msgstr ""
+msgstr "සබැඳීම නිම කලා"
 
 #: curses/wicd-curses.py:1113
 msgid ""
 "ERROR: wicd-curses was denied access to the wicd daemon: please check that "
 "your user is in the \"$A\" group."
 msgstr ""
+"දොස: Wicd-curses හට Wicd ඩිමනයට ප්‍රවේශ වීම ප්‍රතික්ශේප විය, කරුණාකර ඔබගේ "
+"පරිශීලකයන් කණ්ඩායම තුල සිටින බව පරීක්ශා කරන්න"
 
 #: curses/wicd-curses.py:461 gtk/gui.py:267 gtk/gui.py:327
 msgid "ESSID"
-msgstr ""
+msgstr "ESSID"
 
 #: curses/prefs_curses.py:118 gtk/prefs.py:335 data/wicd.ui:1521
 msgid "Enable debug mode"
-msgstr ""
+msgstr "පරිශීලක ප්‍රකාරයට බලය දෙන්න"
 
 #: gtk/wicd-client.py:320 gtk/wicd-client.py:324
 msgid "Establishing connection..."
-msgstr ""
+msgstr "සබෙඳුම ප්‍රතිශ්ඨාපනය කරනවා..."
 
 #: curses/prefs_curses.py:51 data/wicd.ui:1408
 msgid "External Programs"
-msgstr ""
+msgstr "බාහිර ක්‍රමලේඛ"
 
 #: wicd/misc.py:93
 msgid "Flushing the routing table..."
-msgstr ""
+msgstr "මං සැකසුම් වගුව මකනවා..."
 
 #: curses/wicd-curses.py:209
 msgid "For more detailed help, consult the wicd-curses(8) man page."
 msgstr ""
+"වැඩි විස්තරාත්මක උදවු සඳහා, wicd-curses(8) අත්පොත් පි‍ටුවෙන් උපදෙස් ලබාගන්න"
 
 #: curses/netentry_curses.py:52 gtk/netentry.py:77
 msgid "Gateway"
-msgstr ""
+msgstr "වාහල"
 
 #: curses/prefs_curses.py:50 data/wicd.ui:1028
 msgid "General Settings"
-msgstr ""
+msgstr "පොදු සිටවුම්"
 
 #: wicd/misc.py:94
 msgid "Generating PSK..."
-msgstr ""
+msgstr "PSK උත්පාදනය කරනවා..."
 
 #: wicd/misc.py:95
 msgid "Generating WPA configuration file..."
-msgstr ""
+msgstr "WPA වින්‍යාස ගොනුව උත්පාදනය කරනවා..."
 
 #: gtk/netentry.py:234
 msgid "Global DNS has not been enabled in general preferences."
-msgstr ""
+msgstr "පොදු වරණයෙහි ගෝලීය DNS බලය පවරා නැත"
 
 #: curses/prefs_curses.py:72
 msgid "Global DNS servers"
-msgstr ""
+msgstr "ගෝලීය DNS සේවාදායකයෝ"
 
 #: gtk/gui.py:321
 msgid "Global settings for this ESSID"
-msgstr ""
+msgstr "මෙම ESSIDයට ගෝලීය DNS සේවාදායකයෝ"
 
 #: curses/wicd-curses.py:603
 msgid "Help"
-msgstr ""
+msgstr "උදවු"
 
 #: curses/wicd-curses.py:611
 msgid "Hidden"
-msgstr ""
+msgstr "සැඟවුනු"
 
 #: gtk/gui.py:418
 msgid "Hidden Network ESSID"
-msgstr ""
+msgstr "සැඟවුනු ජාල ESSID"
 
 #: curses/netentry_curses.py:50 curses/wicd-curses.py:462 gtk/gui.py:266
 #: gtk/netentry.py:74
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: wicd/translations.py:79
 msgid "Identity"
-msgstr ""
+msgstr "අනන්‍යතාව"
 
 #: gtk/wicd-client.py:500
 msgid "Information about the current connection"
-msgstr ""
+msgstr "වර්තමාන සබැඳුම ගැන තොරතුරු"
 
 #: gtk/netentry.py:168
 msgid "Invalid IP address entered."
-msgstr ""
+msgstr "අවලංගු IP යොමුවක් ඇතුළු කලා."
 
 #: gtk/gui.py:691 gtk/gui.py:699
 msgid "Invalid address in $A entry."
-msgstr ""
+msgstr "SA පිවිසුමෙහි අවලංගු යොමුවක්."
 
 #: curses/wicd-curses.py:464 gtk/gui.py:269 wicd/translations.py:80
 msgid "Key"
-msgstr ""
+msgstr "යතුර"
 
 #: wicd/translations.py:81
 msgid "Key index"
-msgstr ""
+msgstr "යතුරු සූචිය"
 
 #: curses/wicd-curses.py:536 gtk/gui.py:310
 msgid "List of saved networks"
-msgstr ""
+msgstr "සු‍රැකි ජාල ලැයිස්තුවක්"
 
 #: curses/netentry_curses.py:51 gtk/netentry.py:76
 msgid "Netmask"
-msgstr ""
+msgstr "ජාල ආවරණය"
 
 #: cli/wicd-cli.py:99
 msgid "Network ID: $A"
-msgstr ""
+msgstr "$A ජාල හැඳුනුම"
 
 #: curses/prefs_curses.py:66
 msgid "Network Interfaces"
-msgstr ""
+msgstr "ජාල අතුරු මුහුණත්"
 
 #: gtk/netentry.py:890
 msgid "Never connect to this network"
-msgstr ""
+msgstr "කිසිවිටක මෙම ජාලයට සම්බන්ධ නොවන්න"
 
 #: curses/wicd-curses.py:575 gtk/gui.py:664 gtk/wicd-client.py:797
 msgid "No wireless networks found."
-msgstr ""
+msgstr "‍රැහැන් රහිත ජාල හමු නොවීය."
 
 #: curses/wicd-curses.py:786 gtk/gui.py:500 gtk/wicd-client.py:213
 #: gtk/wicd-client.py:223 gtk/wicd-client.py:335 gtk/wicd-client.py:338
 #: wicd/misc.py:50
 msgid "Not connected"
-msgstr ""
+msgstr "සබැදී නැත"
 
 #: curses/configscript_curses.py:73 curses/curses_misc.py:515
 #: curses/curses_misc.py:533 curses/netentry_curses.py:66
 #: curses/wicd-curses.py:490 curses/wicd-curses.py:650
 #: curses/wicd-curses.py:654 curses/wicd-curses.py:951
 msgid "OK"
-msgstr ""
+msgstr "හරි"
 
 #: wicd/misc.py:100
 msgid "Obtaining IP address..."
-msgstr ""
+msgstr "IP යොමුවක් ලබා ගන්නවා"
 
 #: curses/wicd-curses.py:278
 msgid ""
@@ -471,242 +490,252 @@ msgid ""
 "- not the actual script contents.  You will need to add/edit the script "
 "contents separately.  Refer to the wicd manual page for more information."
 msgstr ""
+"පෙර සබැඳුම්, පෙර විබෙඳුම්, පසු සබැඳුම්, පසු විබෙඳුම් උපදේශාවලි වෙනස් කිරීමට "
+"ඔබට  \"beforescript\", \"afterscript\", \"predisconnectscript\" and "
+"\"postdisconnectscript\"  යන විචල්‍යයන් ඔබට අවශ්‍යය ලෙස සීරුමාරු කිරීමට හෝ "
+"අතුළු කිරීමට හැකිය. ඔබ විසින්  උපදේශාවලි අන්තර්ගතය නොව, උපදේශාවලි වල පූර්ණ "
+"මාර්ගය සඳහන් කරන බවට වග බලා ගන්න.ඔබට උපදේශාවලි අන්තර්ගතය වෙන වෙනම අතුළු "
+"කිරීමට/ සංස්කරණය කිරීමට අවශ්‍යය වනු ඇත. වැඩි විස්තර සඳහා wicd උපදෙස් පි‍ටුවට "
+"යොමු වන්න."
 
 #: wicd/translations.py:82
 msgid "Passphrase"
-msgstr ""
+msgstr "මුර වැකිය"
 
 #: wicd/translations.py:83
 msgid "Password"
-msgstr ""
+msgstr "මුර පදය"
 
 #: wicd/translations.py:84
 msgid "Path to CA cert"
-msgstr ""
+msgstr "CA සහතිකයට මග"
 
 #: wicd/translations.py:86
 msgid "Path to PAC file"
-msgstr ""
+msgstr "PAC ගොනුවට මග"
 
 #: wicd/translations.py:85
 msgid "Path to client cert"
-msgstr ""
+msgstr "සේවාලාභියගේ සහතිකයට මග"
 
 #: curses/prefs_curses.py:122 gtk/prefs.py:339 data/wicd.ui:1654
 msgid "Ping static gateways after connecting to verify association"
 msgstr ""
+"සංගමය සත්‍යාපනය කිරීමට සබැඳුමෙන් පසු ස්ථිතික වාහලට (ping) පින්ග් කරන්න"
 
 #: curses/wicd-curses.py:521
 msgid "Please select the networks to forget"
-msgstr ""
+msgstr "අමතක කිරීම සඳහා ජාල ‍තෝරන්න"
 
 #: curses/configscript_curses.py:57 gtk/configscript.py:129
 msgid "Post-connection Script"
-msgstr ""
+msgstr "පසු සබැඳුම් උපදේශවලිය"
 
 #: curses/configscript_curses.py:59 gtk/configscript.py:132
 msgid "Post-disconnection Script"
-msgstr ""
+msgstr "පසු විබෙදුම් උපදේශවලිය"
 
 #: curses/configscript_curses.py:56 gtk/configscript.py:128
 msgid "Pre-connection Script"
-msgstr ""
+msgstr "පෙර සබැඳුම් උපදේශවලිය"
 
 #: curses/configscript_curses.py:58 gtk/configscript.py:130
 msgid "Pre-disconnection Script"
-msgstr ""
+msgstr "පෙර විබෙදුම් උපදේශවලිය"
 
 #: curses/prefs_curses.py:56 curses/prefs_curses.py:252 gtk/prefs.py:318
 msgid "Preferences"
-msgstr ""
+msgstr "වරණයන්"
 
 #: curses/wicd-curses.py:218
 msgid "Preferences dialog"
-msgstr ""
+msgstr "වරණයන් සංවාද"
 
 #: curses/wicd-curses.py:610
 msgid "Prefs"
-msgstr ""
+msgstr "වරණයන්"
 
 #: wicd/translations.py:87
 msgid "Preshared key"
-msgstr ""
+msgstr "පෙර හවුල් යතුර"
 
 #: curses/wicd-curses.py:229
 msgid "Press any key to return."
-msgstr ""
+msgstr "ආපසු යෑමට ඕනෑම යතුරක් ඔබන්න"
 
 #: wicd/translations.py:88
 msgid "Private key"
-msgstr ""
+msgstr "පෞද්ගලික යතුර"
 
 #: wicd/translations.py:89
 msgid "Private key password"
-msgstr ""
+msgstr "පෞද්ගලික යතුරු රහස් පදය"
 
 #: curses/prefs_curses.py:83 gtk/prefs.py:343
 msgid "Prompt for profile on wired autoconnect"
-msgstr ""
+msgstr "පරිපථ ස්ව්‍යං සබැඳුමකදී පරිශීලක පැතිකඩ සඳහා ප්‍රේරක"
 
 #: gtk/netentry.py:59 gtk/netentry.py:61 gtk/netentry.py:670
 msgid "Properties"
-msgstr ""
+msgstr "ගුණාංග"
 
 #: wicd/misc.py:96
 msgid "Putting interface down..."
-msgstr ""
+msgstr "අතුරුමුහුණත බිම දමනවා"
 
 #: wicd/misc.py:97
 msgid "Putting interface up..."
-msgstr ""
+msgstr "අතුරුමුහුණත උඩ දමනවා"
 
 #: curses/wicd-curses.py:613
 msgid "Quit"
-msgstr ""
+msgstr "පිටවන්න"
 
 #: curses/wicd-curses.py:227
 msgid "Quit wicd-curses"
-msgstr ""
+msgstr "wicd-කර්සයෙන් පිටවන්න"
 
 #: gtk/wicd-client.py:502
 msgid "Quit wicd-tray-icon"
-msgstr ""
+msgstr "wicd තැටි නිරූපකයෙන් පිටවන්න"
 
 #: curses/wicd-curses.py:609
 msgid "Refresh"
-msgstr ""
+msgstr "නැවුම් කරන්න"
 
 #: curses/wicd-curses.py:217
 msgid "Refresh network list"
-msgstr ""
+msgstr "ජාල ලැයිස්තුව නැවුම් කරන්න"
 
 #: curses/wicd-curses.py:538
 msgid "Remove"
-msgstr ""
+msgstr "ඉවත් කරන්න"
 
 #: curses/wicd-curses.py:224 data/wicd.ui:67
 msgid "Remove settings for saved networks"
-msgstr ""
+msgstr "සු‍රැකි ජාල වල සිටවුම් ඉවත් කරන්න"
 
 #: curses/wicd-curses.py:441
 msgid "Rename wired profile"
-msgstr ""
+msgstr "පරිපථගත පැතිකඩ නැවත නම් කරන්න"
 
 #: curses/netentry_curses.py:333 curses/netentry_curses.py:467 gtk/gui.py:754
 #: gtk/netentry.py:425 gtk/netentry.py:597
 msgid "Required encryption information is missing."
-msgstr ""
+msgstr "අවශ්‍ය සංකේතන තොරතුරු නොමැත"
 
 #: wicd/misc.py:99
 msgid "Resetting IP address..."
-msgstr ""
+msgstr "IP යොමුව ප්‍රත්‍යාරම්භ කරනවා"
 
 #: curses/wicd-curses.py:606
 msgid "RfKill"
-msgstr ""
+msgstr "RfKill"
 
 #: curses/prefs_curses.py:103
 msgid "Route Table Flushing"
-msgstr ""
+msgstr "මං සැකසුම් වගුව මකනවා"
 
 #: curses/wicd-curses.py:677
 msgid "Scan"
-msgstr ""
+msgstr "පරිලෝකනය කරන්න"
 
 #: curses/wicd-curses.py:221
 msgid "Scan for hidden networks"
-msgstr ""
+msgstr "සැඟවුනු ජාල සඳහා පරිලෝකනය කරන්න"
 
 #: gtk/gui.py:224 gtk/gui.py:589 gtk/wicd-client.py:810
 msgid "Scanning"
-msgstr ""
+msgstr "පරිලෝකනය කරනවා"
 
 #: curses/wicd-curses.py:574
 msgid "Scanning networks... stand by..."
-msgstr ""
+msgstr "ජාල පරිලෝකනය කරනවා... පොරොත්තු වන්න"
 
 #: gtk/netentry.py:102
 msgid "Scripts"
-msgstr ""
+msgstr "උපදේශාවලි"
 
 #: curses/netentry_curses.py:57 curses/prefs_curses.py:75 gtk/netentry.py:78
 msgid "Search domain"
-msgstr ""
+msgstr "සෙවුම් වසම"
 
 #: gtk/netentry.py:1032 gtk/netentry.py:1154
 msgid "Secured"
-msgstr ""
+msgstr "ආරක්ෂිතයි"
 
 #: curses/wicd-curses.py:677
 msgid "Select Hidden Network ESSID"
-msgstr ""
+msgstr "සැඟවුනු ජාලයේ ESSIDය ‍තෝරන්න"
 
 #: gtk/gui.py:103
 msgid "Select or create a wired profile to connect with"
-msgstr ""
+msgstr "සබැඳීම සඳහා පරිපථගත පැතිකඩක් ‍තෝරන්න හෝ සාදන්න"
 
 #: curses/wicd-curses.py:222
 msgid "Select scripts"
-msgstr ""
+msgstr "උපදේශාවලිය ‍තෝරන්න"
 
 #: curses/wicd-curses.py:223
 msgid "Set up Ad-hoc network"
-msgstr ""
+msgstr "ආවස්ථික ජාලයක් පිහි‍ටුවන්න"
 
 #: wicd/misc.py:101
 msgid "Setting broadcast address..."
-msgstr ""
+msgstr "විකාශන යොමුව පිහි‍ටුවනවා..."
 
 #: wicd/misc.py:102
 msgid "Setting static DNS servers..."
-msgstr ""
+msgstr "ස්ථිතික DNS සේවාදායකයන් පිහි‍ටුවනවා..."
 
 #: wicd/misc.py:103
 msgid "Setting static IP addresses..."
-msgstr ""
+msgstr "ස්ථිතික IP යොමු පිහි‍ටුවනවා..."
 
 #: gtk/prefs.py:333 data/wicd.ui:581
 msgid "Show never connect networks"
-msgstr ""
+msgstr "කිසිදා සම්බන්ධ නොවූ සබැඳුම් පෙන්වන්න"
 
 #: gtk/gui.py:104
 msgid "Stop Showing Autoconnect pop-up temporarily"
-msgstr ""
+msgstr "ස්වයං සබැඳුම් උත්පතන පෙන්වීම තාවකාලිකව නවතන්න"
 
 #: curses/wicd-curses.py:216
 msgid "Stop a connection in progress"
-msgstr ""
+msgstr "ප්‍රගතියේ පවතින සබැඳුම නවතන්න"
 
 #: gtk/gui.py:376
 msgid "Switch Off Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi ස්විචය වසන්න"
 
 #: gtk/gui.py:373
 msgid "Switch On Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi ස්විචය දමන්න"
 
 #: curses/wicd-curses.py:651
 msgid "Tab Left"
-msgstr ""
+msgstr "වමට පටිත්ත"
 
 #: curses/wicd-curses.py:652
 msgid "Tab Right"
-msgstr ""
+msgstr "දකුණට පටිත්ත"
 
 #: curses/wicd-curses.py:93
 msgid "Terminated by user"
-msgstr ""
+msgstr "පරිශීලකයා විසින් අවසන් කරන ලදී"
 
 #: gtk/gui.py:85 gtk/wicd-client.py:984
 msgid ""
 "The wicd daemon has shut down. The UI will not function properly until it is "
 "restarted."
 msgstr ""
+"wicd ඩිමනය නැවතී ඇත. එය නැවත අරඹන තුරු පරිශීලක අතුරුමුහුණත නිසි ලෙස ක්‍රියා "
+"නොකරයි."
 
 #: curses/netentry_curses.py:478 gtk/gui.py:761 gtk/netentry.py:436
 #: gtk/netentry.py:608
 msgid "This network requires encryption to be enabled."
-msgstr ""
+msgstr "මෙම ජාලයට සංකේතනය සක්‍රීය කර තිබීම අවශ්‍යයි."
 
 #: curses/wicd-curses.py:272
 msgid ""
@@ -715,100 +744,107 @@ msgid ""
 "open the \"$A\" config file, and look for the section labeled by the $B in "
 "question. In this case, this is:"
 msgstr ""
+"විවිධ ව්‍යාකූලතා මග හැරීමට, wicd කර්සය උපදේශාවලි සෘජුව සංස්කරණයට සහය නොවේ. "
+"කෙසේනමුත් ඔබට මේවා අතින් සංස්කරණය කල හැකිය. පළමුව වින්‍යාස ලිපි ගොනුව \"$A\" "
+"විවෘත කර, $B මගින් නම් කර ඇති කොටස සොයන්න. මෙම අවස්ථාවේදී නම් මෙය:"
 
 #: gtk/netentry.py:707
 msgid ""
 "To connect to a wired network, you must create a network profile. To create "
 "a network profile, type a name that describes this network, and press Add."
 msgstr ""
+"පරිපථගත ජාලයකට සම්බන්ධවීම සඳහා, ඔබ ජාල පැතිකඩක් සෑදිය යුතුය. ජාල පැතිකඩක් "
+"සෑදීමට,  මෙම ජාලය විස්තර කිරීමට නමක් යොදා, 'ඇතුළු කරන්න' (add) බොත්තම ඔබන්න"
 
 #: gtk/wicd-client.py:94
 msgid ""
 "Unable to contact the Wicd daemon due to an access denied error from DBus. "
 "Please check that your user is in the $A group."
 msgstr ""
+"Dබසයේ ඇතුල්වීම තහනම් කිරීම් දෝෂයක් නිසා wicd ඩිමනයට සම්බන්ධ වීමට නොහැකි "
+"වුනා. කරුණාකර ඔබේ පරිශීලකයා $A කණ්ඩායම තුල සිටීදැයි පරීක්ෂා කරන්න."
 
 #: curses/wicd-curses.py:353 gtk/netentry.py:1034 gtk/netentry.py:1156
 msgid "Unsecured"
-msgstr ""
+msgstr "නොසු‍රැකුනු"
 
 #: curses/netentry_curses.py:62
 msgid "Use DHCP Hostname"
-msgstr ""
+msgstr "DHCP ධාරකනාමය යොදාගන්න"
 
 #: curses/netentry_curses.py:255 curses/netentry_curses.py:373
 #: gtk/netentry.py:341 gtk/netentry.py:467
 msgid "Use Encryption"
-msgstr ""
+msgstr "සංකේතනය යොදාගන්න"
 
 #: curses/wicd-curses.py:466 gtk/gui.py:264
 msgid "Use Encryption (WEP only)"
-msgstr ""
+msgstr "සංකේතනය යොදාගන්න (WEP පමණයි)"
 
 #: curses/netentry_curses.py:54 gtk/netentry.py:89
 msgid "Use Static DNS"
-msgstr ""
+msgstr "ස්ථිතික DNS යොදාගන්න"
 
 #: curses/netentry_curses.py:49 gtk/netentry.py:88
 msgid "Use Static IPs"
-msgstr ""
+msgstr "ස්ථිතික IP යොමු යොදාගන්න"
 
 #: curses/netentry_curses.py:249 gtk/netentry.py:708
 msgid "Use as default profile (overwrites any previous default)"
-msgstr ""
+msgstr "පෙරනිමි පැතිකඩ ලෙස යොදාගන්න (පූර්ව පෙරනිමි පැතිකඩ උඩින් ලියයි)"
 
 #: curses/prefs_curses.py:121 gtk/prefs.py:337 data/wicd.ui:1500
 msgid "Use dBm to measure signal strength"
-msgstr ""
+msgstr "සංඥා ප්‍රබලතාව මැනීමට dBm යොදාගන්න"
 
 #: curses/prefs_curses.py:82 gtk/prefs.py:341
 msgid "Use default profile on wired autoconnect"
-msgstr ""
+msgstr "පරිපථගත ස්වයං සබැඳුමකදී පෙරනිමි පැතිකඩ යොදාගන්න"
 
 #: curses/netentry_curses.py:55 curses/prefs_curses.py:73 gtk/netentry.py:90
 #: data/wicd.ui:892
 msgid "Use global DNS servers"
-msgstr ""
+msgstr "ගෝලීය DNS සේවාදායකයන් යොදාගන්න"
 
 #: curses/prefs_curses.py:84 gtk/prefs.py:345
 msgid "Use last used profile on wired autoconnect"
-msgstr ""
+msgstr "පරිපථගත ස්වයං සබැඳුමකදී අවසන් වරට භාවිත කල පැතිකඩ යොදාගන්න"
 
 #: curses/netentry_curses.py:372 gtk/netentry.py:468
 msgid "Use these settings for all networks sharing this essid"
-msgstr ""
+msgstr "මෙම සිටවුම් මෙම ESSIDය හවුලේ තබාගන්නා සියළුම ජාල වලට යොදාගන්න"
 
 #: wicd/translations.py:90
 msgid "Username"
-msgstr ""
+msgstr "පරිශීලක නාමය"
 
 #: wicd/misc.py:105
 msgid "Validating authentication..."
-msgstr ""
+msgstr "සත්‍යාපනය තහවුරු කරනවා"
 
 #: wicd/misc.py:106
 msgid "Verifying access point association..."
-msgstr ""
+msgstr "ප්‍රවේශ්‍ය ස්ථාන සංගමය තහවුරු කරනවා..."
 
 #: curses/prefs_curses.py:108
 msgid "WPA Supplicant"
-msgstr ""
+msgstr "WPA ආයාචකයා"
 
 #: curses/wicd-curses.py:576
 msgid "Wicd Curses Interface"
-msgstr ""
+msgstr "wicd කර්ස අතුරුමුහුණත"
 
 #: gtk/wicd-client.py:226 gtk/wicd-client.py:333
 msgid "Wicd daemon unreachable"
-msgstr ""
+msgstr "wicd ඩිමනයට ලඟාවීමට නොහැක"
 
 #: wicd/misc.py:216
 msgid "Wicd needs to access your computer's network cards."
-msgstr ""
+msgstr "wicd හට ඔබගේ පරිගණකයේ ජාල කාඩ්පතට සම්බන්ධ වීමට අවශ්‍යය"
 
 #: cli/wicd-cli.py:85
 msgid "Wired"
-msgstr ""
+msgstr "පරිපථගත"
 
 #: gtk/wicd-client.py:628
 msgid ""
@@ -817,35 +853,39 @@ msgid ""
 "RX:\n"
 "TX:"
 msgstr ""
+"පරිපථගත\n"
+"IP:\n"
+"RX:\n"
+"TX:"
 
 #: curses/prefs_curses.py:81
 msgid "Wired Autoconnect Settings"
-msgstr ""
+msgstr "පරිපථගත ස්වයං සබැඳුම් සිටවුම්"
 
 #: curses/prefs_curses.py:67
 msgid "Wired Interface"
-msgstr ""
+msgstr "පරිපථගත අතුරුමුහුණත"
 
 #: curses/prefs_curses.py:99
 msgid "Wired Link Detection"
-msgstr ""
+msgstr "පරිපථගත සබැඳිය අනාවරණය"
 
 #: curses/wicd-curses.py:802 gtk/gui.py:534 gtk/netentry.py:333
 #: gtk/netentry.py:701 gtk/wicd-client.py:268 gtk/wicd-client.py:309
 msgid "Wired Network"
-msgstr ""
+msgstr "පරිපථගත ජාලය"
 
 #: curses/wicd-curses.py:581
 msgid "Wired Networks"
-msgstr ""
+msgstr "පරිපථගත ජාල"
 
 #: gtk/gui.py:97
 msgid "Wired connection detected"
-msgstr ""
+msgstr "පරිපථගත සබැඳුම අනාවරණය වුනා"
 
 #: cli/wicd-cli.py:87
 msgid "Wireless"
-msgstr ""
+msgstr "‍රැහැන් රහිත"
 
 #: gtk/wicd-client.py:633
 msgid ""
@@ -857,126 +897,136 @@ msgid ""
 "RX:\n"
 "TX:"
 msgstr ""
+"‍රැහැන් රහිත\n"
+"SSID:\n"
+"වේගය:\n"
+"IP:\n"
+"බලය:\n"
+"RX:\n"
+"TX:"
 
 #: curses/prefs_curses.py:68 curses/prefs_curses.py:120
 msgid "Wireless Interface"
-msgstr ""
+msgstr "‍රැහැන් රහිත අතුරුමුහුණත"
 
 #: gtk/gui.py:662 gtk/wicd-client.py:224 gtk/wicd-client.py:336
 msgid "Wireless Kill Switch Enabled"
-msgstr ""
+msgstr "රැහැන් රහිත නැතිකිරීම් ස්විචය සක්‍රිය කලා"
 
 #: curses/wicd-curses.py:583
 msgid "Wireless Networks"
-msgstr ""
+msgstr "රැහැන් රහිත ජාල"
 
 #: curses/wicd-curses.py:277
 msgid ""
 "You can also configure the wireless networks by looking for the "
 "\"[<ESSID>]\" field in the config file."
 msgstr ""
+"වින්‍යාස ලිපිගොනුවේ ඇති \"[<ESSID>]\" ක්ෂේත්‍රය සෙවීමෙන්ද ඔබට ‍රැහැන් රහිත "
+"ජාල වින්‍යාස කල හැකිය."
 
 #: gtk/netentry.py:376 gtk/netentry.py:519
 msgid "You must enter your password to configure scripts"
-msgstr ""
+msgstr "උපදේශාවලිය වින්‍යාස කිරීමට ඔබගේ මුර පදය ඇතුලත් කල යුතුය"
 
 #: curses/prefs_curses.py:111
 msgid "You should almost always use wext as the WPA supplicant driver"
-msgstr ""
+msgstr "ඔබ සම්පූර්ණයෙන් සෑම විටම WPA ආයාචක ධාවකය භාවිත කල යුතුය"
 
 #: gtk/wicd-client.py:499
 msgid "_Connection Info"
-msgstr ""
+msgstr "_සබැඳුම් තොරතුරු"
 
 #: gtk/wicd-client.py:502 data/wicd.ui:161
 msgid "_Quit"
-msgstr ""
+msgstr "_ඉවත් වන්න"
 
 #: curses/wicd-curses.py:428
 msgid ""
 "wicd-curses does not support deleting the last wired profile.  Try renaming "
 "it (\"F2\")"
 msgstr ""
+"අවසාන පරිපථගත ජාලය මැකීමට wicd කර්සය සහය නොවේ. එය නැවත නම් කරන්න උත්සහ කරන්න."
 
 #: curses/wicd-curses.py:205
 msgid "wicd-curses help"
-msgstr ""
+msgstr "wicd කර්සයේ උදවු"
 
 #: data/wicd.ui:9
 msgid "Wicd Network Manager"
-msgstr ""
+msgstr "wicd ජාල කළමණාකාරකය"
 
 #: data/wicd.ui:46
 msgid "Create an ad-hoc network"
-msgstr ""
+msgstr "තාවකාලික ජාලයක් තනන්න"
 
 #: data/wicd.ui:55
 msgid "Find a hidden network"
-msgstr ""
+msgstr "සැඟවුනු ජාලයක් සොයන්න"
 
 #: data/wicd.ui:57
 msgid "Enter a hidden network to try to locate."
-msgstr ""
+msgstr "පිහිටි තැන දැක්වීමට තැත්කිරීමට සැඟවුනු ජාලයක් ඇතුළු කරන්න."
 
 #: data/wicd.ui:65
 msgid "Forget network settings"
-msgstr ""
+msgstr "ජාල සිටවුම් අමතක කරන්න"
 
 #: data/wicd.ui:89
 msgid "_Switch Off Wi-Fi"
-msgstr ""
+msgstr "_Wi-Fi ස්විචය වසන්න"
 
 #: data/wicd.ui:104
 msgid "_Disconnect All"
-msgstr ""
+msgstr "_සියල්ල විබෙදන්න"
 
 #: data/wicd.ui:118
 msgid "_Refresh"
-msgstr ""
+msgstr "_නැවුම් කරන්න"
 
 #: data/wicd.ui:132
 msgid "_Preferences"
-msgstr ""
+msgstr "_කැමැත්ත"
 
 #: data/wicd.ui:146
 msgid "_About"
-msgstr ""
+msgstr "_පිලිබඳ"
 
 #: data/wicd.ui:223 data/wicd.ui:225
 msgid "Connecting..."
-msgstr ""
+msgstr "සබැඳිමින් පවතිනවා..."
 
 #: data/wicd.ui:238
 msgid "Cancel the current connection attempt"
-msgstr ""
+msgstr "වත්මන් සබැඳුම් තැත අවලංගු කරන්න"
 
 #: data/wicd.ui:270
 msgid "Configure Scripts"
-msgstr ""
+msgstr "උපදේශාවලි වින්‍යාස කරන්න"
 
 #: data/wicd.ui:289
 msgid "Configure scripts to run for this network:"
-msgstr ""
+msgstr "මෙම ජාලය සඳහා ධාවනය කිරීමට උපදේශාවලි වින්‍යාස කරන්න:"
 
 #: data/wicd.ui:306
 msgid "Pre-connection Script:"
-msgstr ""
+msgstr "පෙර සබැඳුම් උපදේශාවලි:"
 
 #: data/wicd.ui:339
 msgid "Post-connection Script:"
-msgstr ""
+msgstr "පසු සබැඳුම් උපදේශාවලි:"
 
 #: data/wicd.ui:372
 msgid "Pre-disconnection Script:"
-msgstr ""
+msgstr "පෙර විබෙදුම් උපදේශාවලි:"
 
 #: data/wicd.ui:405
 msgid "Post-disconnection Script:"
-msgstr ""
+msgstr "පසු විබෙදුම් උපදේශාවලි:"
 
 #: data/wicd.ui:524
 msgid "Always switch to a wired connection when available"
-msgstr ""
+msgstr "ප්‍රයෝජ්‍ය සෑම විටම පරිපථගත සබැඳුමට සබඳින්න"
 
 #: data/wicd.ui:529
 msgid ""
@@ -984,70 +1034,72 @@ msgid ""
 "as soon as a cable is plugged in, even if a wireless connection \n"
 "is already active."
 msgstr ""
+"තේරුවහොත්, ‍රැහැන් රහිත සබැඳුමක් දැනටත් සක්‍රීයව තිබුනද, ‍රැහැනක් පේනු "
+"කලහොත්, wicdය ස්වයංක්‍රීයව පරිපථගත ජාලයකට සබැ‍ඳෙනු ඇත."
 
 #: data/wicd.ui:552
 msgid "DNS domain:"
-msgstr ""
+msgstr "DNS වසම:"
 
 #: data/wicd.ui:600
 msgid "<b>Never Connect</b>"
-msgstr ""
+msgstr "<b>කිසිවිටක නොසබඳින්න</b>"
 
 #: data/wicd.ui:616
 msgid "Automatically reconnect on network connection loss"
-msgstr ""
+msgstr "ජාල සබැඳුම නැතිවීමකදී ස්වයංක්‍රීයව නැවත සබඳින්න"
 
 #: data/wicd.ui:635
 msgid "<b>Automatic Reconnection</b>"
-msgstr ""
+msgstr "<b>ස්වයංක්‍රීය නැවත සබැඳුම</b>"
 
 #: data/wicd.ui:651
 msgid "Use last wired network profile"
-msgstr ""
+msgstr "අවසන් පරිපථගත ජාල පැතිකඩ යොදාගන්න"
 
 #: data/wicd.ui:673
 msgid "Prompt for wired network profile"
-msgstr ""
+msgstr "පරිපථගත ජාල පැතිකඩ සඳහා ප්‍රේරණය"
 
 #: data/wicd.ui:696
 msgid "Use default wired network profile"
-msgstr ""
+msgstr "පෙරනිමි පරිපථගත ජාල පැතිකඩ යොදාගන්න"
 
 #: data/wicd.ui:717
 msgid "<b>Wired automatic connection</b>"
-msgstr ""
+msgstr "<b>පරිපථගත ස්වයං සබැඳුම</b>"
 
 #: data/wicd.ui:735
 msgid "Wired interface:"
-msgstr ""
+msgstr "පරිපථගත අතුරුමුහුණත:"
 
 #: data/wicd.ui:753
 msgid "Wireless interface:"
-msgstr ""
+msgstr "‍රැහැන් රහිත අතුරුමුහුණත:"
 
 #: data/wicd.ui:793
 msgid "<b>Network Interfaces</b>"
-msgstr ""
+msgstr "<b>ජාල අතුරුමුහුණත්</b>"
 
 #: data/wicd.ui:809
 msgid "DNS server 3:"
-msgstr ""
+msgstr "DNS සේවදායකයා 3:"
 
 #: data/wicd.ui:840
 msgid "DNS server 2:"
-msgstr ""
+msgstr "DNS සේවදායකයා 2:"
 
 #: data/wicd.ui:858
 msgid "DNS server 1:"
-msgstr ""
+msgstr "DNS සේවදායකයා 1:"
 
 #: data/wicd.ui:876
 msgid "Search domain:"
-msgstr ""
+msgstr "සෙවුම් වසම:"
 
 #: data/wicd.ui:911
 msgid "<b>Global DNS Servers</b>"
-msgstr ""
+msgstr "<b>ගෝලීය DNS සේවාදායකයෝ</b>"
 
 #: data/wicd.ui:970
 msgid ""
@@ -1055,59 +1107,63 @@ msgid ""
 "window. This can be useful if your wired network card does not detect when "
 "the interface is connected to a cable."
 msgstr ""
+"සක්‍රීය කලහොත්,  පරිපථගත ජාල අතුරුමුහුණත සෑමවිටම ප්‍රධාන කවුළුවෙහි සංදර්ශනය "
+"වේ. අතුරුමූණත ‍රැහැනකට සම්බන්ද කලද ඔබගේ පරිපථගත ජාල පත එය සොයා නොගන්නා විට "
+"මෙය ප්‍රයෝජනවත් විය හැකිය."
 
 #: data/wicd.ui:986
 msgid "<b>Notifications</b>"
-msgstr ""
+msgstr "<b>නිවේදනය</b>"
 
 #: data/wicd.ui:1060
 msgid "<b>Route Table Flushing</b>"
-msgstr ""
+msgstr "<b>මං සැකසුම් වගුව මකනවා</b>"
 
 #: data/wicd.ui:1073
 msgid "<b>Wired Link Detection</b>"
-msgstr ""
+msgstr "<b>පරිපථගත සබැඳිය අනාවරණය</b>"
 
 #: data/wicd.ui:1299
 msgid "<b>DHCP Client</b>"
-msgstr ""
+msgstr "<b>DHCP සේවාලාභියා</b>"
 
 #: data/wicd.ui:1310
 msgid "<b>Graphical Sudo Application</b>"
-msgstr ""
+msgstr "<b>චිත්‍රක සුදෝ (sudo) යෙදුම</b>"
 
 #: data/wicd.ui:1431
 msgid ""
 "Hover your mouse over the selected backend \n"
 "to read its description."
-msgstr ""
+msgstr "යමක විස්තරය කියවීමට, මූසිකය ‍තෝරාගත් පසුඅගක් මතින් ගෙන යන්න."
 
 #: data/wicd.ui:1484
 msgid "Driver:"
-msgstr ""
+msgstr "ධාවකය:"
 
 #: data/wicd.ui:1540
 msgid "<b>Wireless Interface</b>"
-msgstr ""
+msgstr "<b>‍රැහැන් රහිත අතුරුමුහුණත</b>"
 
 #: data/wicd.ui:1554
 msgid "<b>WPA Supplicant</b>"
-msgstr ""
+msgstr "<b>WPA ආයාචකයා</b>"
 
 #: data/wicd.ui:1566
 msgid "<b>Debugging</b>"
-msgstr ""
+msgstr "<b>නිදොස් කරනවා</b>"
 
 #: data/wicd.ui:1584
 msgid "Backend:"
-msgstr ""
+msgstr "පසුඅග:"
 
 #: data/wicd.ui:1611
 msgid "<b>Backend</b>"
-msgstr ""
+msgstr "<b>පසුඅග</b>"
 
 #: data/wicd.ui:1625
 msgid ""
 "You should almost always use wext as the\n"
 "WPA supplicant driver."
 msgstr ""
+"ඔබ සම්පූර්ණයෙන් සෑම විටම WPA ආයාචක ධාවකය ලෙස වෙක්ස්ට් (wext) භාවිත කල යුතුය"
