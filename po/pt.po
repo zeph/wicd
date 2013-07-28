@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2012-03-02 04:00+0000\n"
-"Last-Translator: Nuno Messeder Ferreira <neocentaurus@gmail.com>\n"
+"PO-Revision-Date: 2013-07-27 23:44+0000\n"
+"Last-Translator: David Serrano <david@tbm.ath.cx>\n"
 "Language-Team: pt <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-23 05:39+0000\n"
-"X-Generator: Launchpad (build 16506)\n"
+"X-Launchpad-Export-Date: 2013-07-28 05:58+0000\n"
+"X-Generator: Launchpad (build 16700)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -102,7 +102,7 @@ msgstr "Restabelecer ligação automaticamente após perda de ligação"
 
 #: gtk/gui.py:330
 msgid "BSSID"
-msgstr ""
+msgstr "BSSID"
 
 #: curses/prefs_curses.py:113 curses/prefs_curses.py:114
 msgid "Backend"
@@ -114,7 +114,8 @@ msgstr "Trazido até si por"
 
 #: curses/wicd-curses.py:1089
 msgid "Can't connect to the daemon, trying to start it automatically..."
-msgstr "Impossível ligar ao daemon, a tentar iniciá-lo automáticamente..."
+msgstr ""
+"Não é possível ligar ao daemon, a tentar iniciá-lo automaticamente..."
 
 #: curses/configscript_curses.py:74 curses/curses_misc.py:541
 #: curses/netentry_curses.py:65 curses/wicd-curses.py:490
@@ -162,11 +163,11 @@ msgstr "Ligar à rede seleccionada"
 
 #: cli/wicd-cli.py:83
 msgid "Connected"
-msgstr ""
+msgstr "Ligado"
 
 #: cli/wicd-cli.py:96
 msgid "Connected to \"$A\" ($B)."
-msgstr ""
+msgstr "Ligado a \"$A\" ($B)."
 
 #: curses/wicd-curses.py:158 gtk/gui.py:490 gtk/wicd-client.py:215
 msgid "Connected to $A at $B (IP: $C)"
@@ -174,15 +175,15 @@ msgstr "Ligado a $A em $B (IP: $C)"
 
 #: cli/wicd-cli.py:102
 msgid "Connected to $A."
-msgstr ""
+msgstr "Ligado a $A."
 
 #: wicd/misc.py:53
 msgid "Connected to a wired network"
-msgstr ""
+msgstr "Ligado a uma rede com fios"
 
 #: wicd/misc.py:52
 msgid "Connected to a wireless network"
-msgstr ""
+msgstr "Ligado a uma rede sem fios"
 
 #: curses/wicd-curses.py:133 gtk/gui.py:483 gtk/wicd-client.py:220
 msgid "Connected to wired network (IP: $A)"
@@ -194,11 +195,11 @@ msgstr "A ligar"
 
 #: cli/wicd-cli.py:107
 msgid "Connecting to wired network."
-msgstr ""
+msgstr "A ligar a uma rede com fios"
 
 #: cli/wicd-cli.py:109
 msgid "Connecting to wireless network \"$A\"."
-msgstr ""
+msgstr "A ligar à rede sem fios \"$A\"."
 
 #: wicd/misc.py:86
 msgid "Connection Cancelled"
@@ -792,7 +793,7 @@ msgstr "Utilizar IP estático"
 #: curses/netentry_curses.py:249 gtk/netentry.py:708
 msgid "Use as default profile (overwrites any previous default)"
 msgstr ""
-"Utilizar como perfil por defeito (sobrepõe qualquer valor por defeito)"
+"Utilizar como perfil por omissão (sobrepõe qualquer valor por omissão)"
 
 #: curses/prefs_curses.py:121 gtk/prefs.py:337 data/wicd.ui:1500
 msgid "Use dBm to measure signal strength"
