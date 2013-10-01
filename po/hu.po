@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2012-05-27 23:25+0000\n"
-"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
+"PO-Revision-Date: 2013-09-30 13:46+0000\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>\n"
 "Language-Team: hu <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-23 05:39+0000\n"
-"X-Generator: Launchpad (build 16506)\n"
+"X-Launchpad-Export-Date: 2013-10-01 05:23+0000\n"
+"X-Generator: Launchpad (build 16774)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -230,31 +230,31 @@ msgstr "Kapcsolódás sikertelen: a vezeték nélküli elérési pont elérhetet
 
 #: wicd/misc.py:51
 msgid "Connection in progress"
-msgstr ""
+msgstr "Csatlakozás folyamatban"
 
 #: cli/wicd-cli.py:92
 msgid "Connection status"
-msgstr ""
+msgstr "Kapcsolat állapota"
 
 #: wicd/misc.py:104
 msgid "Connection successful."
-msgstr "Kapcsolódás megszakítva"
+msgstr "Sikeres csatlakozás."
 
 #: wicd/misc.py:54
 msgid "Connection suspended"
-msgstr ""
+msgstr "Kapcsolódás felfüggesztve"
 
 #: cli/wicd-cli.py:94
 msgid "Connection type"
-msgstr ""
+msgstr "Kapcsolat típusa"
 
 #: gtk/gui.py:65 gtk/wicd-client.py:955
 msgid ""
 "Could not connect to wicd's D-Bus interface. Check the wicd log for error "
 "messages."
 msgstr ""
-"Nem sikerült kapcsolódni a wicd daemon DBus interface-hez.Ellenőrizd a "
-"hibaüzeneteket a wicd log-ban"
+"Nem sikerült kapcsolódni a wicd daemon DBus interface-hez. Ellenőrizd a "
+"hibaüzeneteket a wicd log-ban."
 
 #: gtk/netentry.py:379 gtk/netentry.py:522
 msgid ""
