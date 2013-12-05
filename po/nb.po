@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2012-02-25 11:43+0000\n"
-"Last-Translator: David Paleino <dapal@debian.org>\n"
+"PO-Revision-Date: 2013-12-04 14:04+0000\n"
+"Last-Translator: Magnus Meyer Hustveit <Unknown>\n"
 "Language-Team: nb <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-23 05:39+0000\n"
-"X-Generator: Launchpad (build 16506)\n"
+"X-Launchpad-Export-Date: 2013-12-05 05:50+0000\n"
+"X-Generator: Launchpad (build 16863)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -25,6 +25,12 @@ msgid ""
 "$E KB/s\n"
 "$F KB/s"
 msgstr ""
+"$A\n"
+"$B\n"
+"$C\n"
+"$D\n"
+"$E KB/s\n"
+"$F KB/s"
 
 #: gtk/wicd-client.py:603
 msgid ""
@@ -32,30 +38,33 @@ msgid ""
 "$B KB/s\n"
 "$C KB/s"
 msgstr ""
+"$A\n"
+"$B KB/s\n"
+"$C KB/s"
 
 #: curses/wicd-curses.py:612
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: curses/wicd-curses.py:200
 msgid "About Wicd"
-msgstr ""
+msgstr "Om Wicd"
 
 #: curses/wicd-curses.py:465 gtk/gui.py:273
 msgid "Activate Internet Connection Sharing"
-msgstr ""
+msgstr "Aktivér internettdeling"
 
 #: curses/wicd-curses.py:378
 msgid "Add a new profile"
-msgstr ""
+msgstr "Legg til en ny profil"
 
 #: curses/wicd-curses.py:411
 msgid "Add a new wired profile"
-msgstr ""
+msgstr "Legg til ny profil for kablet nett"
 
 #: curses/prefs_curses.py:52 data/wicd.ui:1679
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Avanserte innstillinger"
 
 #: curses/prefs_curses.py:69 gtk/prefs.py:326 data/wicd.ui:966
 msgid "Always show wired interface"
@@ -68,10 +77,11 @@ msgstr "Bytt alltid til kablet forbindelse hvis tilgjengelig"
 #: curses/wicd-curses.py:947 gtk/gui.py:353
 msgid "Are you sure you want to discard settings for the selected networks?"
 msgstr ""
+"Er du sikker på at du vil forkaste innstillingene for de valgte nettverkene?"
 
 #: wicd/translations.py:77
 msgid "Authentication"
-msgstr ""
+msgstr "Autentisering"
 
 #: curses/prefs_curses.py:90 curses/prefs_curses.py:176 gtk/prefs.py:352
 #: gtk/prefs.py:359 gtk/prefs.py:366 gtk/prefs.py:371 data/wicd.ui:1092
