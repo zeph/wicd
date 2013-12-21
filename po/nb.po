@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2013-12-04 14:04+0000\n"
+"PO-Revision-Date: 2013-12-20 09:33+0000\n"
 "Last-Translator: Magnus Meyer Hustveit <Unknown>\n"
 "Language-Team: nb <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-12-05 05:50+0000\n"
-"X-Generator: Launchpad (build 16863)\n"
+"X-Launchpad-Export-Date: 2013-12-21 06:02+0000\n"
+"X-Generator: Launchpad (build 16872)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -87,23 +87,23 @@ msgstr "Autentisering"
 #: gtk/prefs.py:359 gtk/prefs.py:366 gtk/prefs.py:371 data/wicd.ui:1092
 #: data/wicd.ui:1153 data/wicd.ui:1214 data/wicd.ui:1329
 msgid "Automatic (recommended)"
-msgstr ""
+msgstr "Automatisk (anbefalt)"
 
 #: curses/prefs_curses.py:86
 msgid "Automatic Reconnection"
-msgstr ""
+msgstr "Automatisk gjenoppkobling"
 
 #: curses/netentry_curses.py:374 gtk/netentry.py:889
 msgid "Automatically connect to this network"
-msgstr ""
+msgstr "Koble til dette nettverket automatisk"
 
 #: curses/prefs_curses.py:87 gtk/prefs.py:331
 msgid "Automatically reconnect on connection loss"
-msgstr ""
+msgstr "Koble til automatisk ved brudd av nettverskkobling"
 
 #: gtk/gui.py:330
 msgid "BSSID"
-msgstr ""
+msgstr "BSSID"
 
 #: curses/prefs_curses.py:113 curses/prefs_curses.py:114
 msgid "Backend"
@@ -111,7 +111,7 @@ msgstr ""
 
 #: curses/wicd-curses.py:194
 msgid "Brought to you by:"
-msgstr ""
+msgstr "Presentert av:"
 
 #: curses/wicd-curses.py:1089
 msgid "Can't connect to the daemon, trying to start it automatically..."
@@ -122,12 +122,12 @@ msgstr ""
 #: curses/wicd-curses.py:538 curses/wicd-curses.py:653
 #: curses/wicd-curses.py:655 curses/wicd-curses.py:951
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: curses/wicd-curses.py:463 gtk/gui.py:268 gtk/netentry.py:1038
 #: gtk/netentry.py:1160
 msgid "Channel"
-msgstr ""
+msgstr "Kanal"
 
 #: gtk/gui.py:189 data/wicd.ui:183
 msgid "Choose from the networks below:"
