@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2014-01-10 15:20+0000\n"
-"Last-Translator: Spiros Georgaras <sng@hellug.gr>\n"
+"PO-Revision-Date: 2014-06-04 07:14+0000\n"
+"Last-Translator: James Spentzos <Unknown>\n"
 "Language-Team: el <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-11 05:52+0000\n"
-"X-Generator: Launchpad (build 16890)\n"
+"X-Launchpad-Export-Date: 2014-06-05 05:47+0000\n"
+"X-Generator: Launchpad (build 17031)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -246,7 +246,7 @@ msgstr "Ακύρωση Σύνδεσης"
 
 #: wicd/misc.py:54
 msgid "Connection suspended"
-msgstr ""
+msgstr "Η σύνδεση ανεστάλη"
 
 #: cli/wicd-cli.py:94
 msgid "Connection type"
@@ -1112,6 +1112,9 @@ msgid ""
 "window. This can be useful if your wired network card does not detect when "
 "the interface is connected to a cable."
 msgstr ""
+"Αν ενεργοποιηθεί, η επιφάνεια ενσύρματου δικτύου θα εμφανίζεται πάντα στο "
+"κύριο παράθυρο. Αυτό μπορεί να είναι χρήσιμο αν η κάρτα ενσύρματου δικτύου "
+"σας δεν ανιχνεύει πότε η επιφάνεια είναι συνδεδεμένη με ένα καλώδιο."
 
 #: data/wicd.ui:986
 msgid "<b>Notifications</b>"
