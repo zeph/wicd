@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2012-01-17 22:24+0000\n"
-"Last-Translator: Longchao Dong <donglongchao@gmail.com>\n"
+"PO-Revision-Date: 2014-07-02 14:37+0000\n"
+"Last-Translator: Xiaofan Zhang <banban0802@gmail.com>\n"
 "Language-Team: zh_CN <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-23 05:40+0000\n"
-"X-Generator: Launchpad (build 16506)\n"
+"X-Launchpad-Export-Date: 2014-07-03 05:41+0000\n"
+"X-Generator: Launchpad (build 17082)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -76,7 +76,7 @@ msgstr "如果存在有线网络，则自动切换到有线网络"
 
 #: curses/wicd-curses.py:947 gtk/gui.py:353
 msgid "Are you sure you want to discard settings for the selected networks?"
-msgstr ""
+msgstr "你是否确定撤销对选定网络的所有操作？"
 
 #: wicd/translations.py:77
 msgid "Authentication"
@@ -102,7 +102,7 @@ msgstr "断线自动连接"
 
 #: gtk/gui.py:330
 msgid "BSSID"
-msgstr ""
+msgstr "BSSID"
 
 #: curses/prefs_curses.py:113 curses/prefs_curses.py:114
 msgid "Backend"
@@ -162,7 +162,7 @@ msgstr "连接到所选网络"
 
 #: cli/wicd-cli.py:83
 msgid "Connected"
-msgstr ""
+msgstr "已连接"
 
 #: cli/wicd-cli.py:96
 msgid "Connected to \"$A\" ($B)."
@@ -178,11 +178,11 @@ msgstr ""
 
 #: wicd/misc.py:53
 msgid "Connected to a wired network"
-msgstr ""
+msgstr "已连接到有线网络。"
 
 #: wicd/misc.py:52
 msgid "Connected to a wireless network"
-msgstr ""
+msgstr "已连接到无线网络。"
 
 #: curses/wicd-curses.py:133 gtk/gui.py:483 gtk/wicd-client.py:220
 msgid "Connected to wired network (IP: $A)"
@@ -194,7 +194,7 @@ msgstr "正在连接"
 
 #: cli/wicd-cli.py:107
 msgid "Connecting to wired network."
-msgstr ""
+msgstr "正在连接到有线网络。"
 
 #: cli/wicd-cli.py:109
 msgid "Connecting to wireless network \"$A\"."
@@ -230,11 +230,11 @@ msgstr "连接失败：不能连接到无线接入点"
 
 #: wicd/misc.py:51
 msgid "Connection in progress"
-msgstr ""
+msgstr "正在连接"
 
 #: cli/wicd-cli.py:92
 msgid "Connection status"
-msgstr ""
+msgstr "连接状态"
 
 #: wicd/misc.py:104
 msgid "Connection successful."
@@ -242,11 +242,11 @@ msgstr "连接成功."
 
 #: wicd/misc.py:54
 msgid "Connection suspended"
-msgstr ""
+msgstr "连接已停止。"
 
 #: cli/wicd-cli.py:94
 msgid "Connection type"
-msgstr ""
+msgstr "连接类型"
 
 #: gtk/gui.py:65 gtk/wicd-client.py:955
 msgid ""
@@ -387,7 +387,7 @@ msgstr "全局 DNS 服务器"
 
 #: gtk/gui.py:321
 msgid "Global settings for this ESSID"
-msgstr ""
+msgstr "对当前ESSID的全局设定"
 
 #: curses/wicd-curses.py:603
 msgid "Help"
@@ -432,7 +432,7 @@ msgstr ""
 
 #: curses/wicd-curses.py:536 gtk/gui.py:310
 msgid "List of saved networks"
-msgstr ""
+msgstr "已保存的网络列表"
 
 #: curses/netentry_curses.py:51 gtk/netentry.py:76
 msgid "Netmask"
@@ -594,11 +594,11 @@ msgstr "刷新网络列表"
 
 #: curses/wicd-curses.py:538
 msgid "Remove"
-msgstr ""
+msgstr "删除"
 
 #: curses/wicd-curses.py:224 data/wicd.ui:67
 msgid "Remove settings for saved networks"
-msgstr ""
+msgstr "删除已保存网络的设定"
 
 #: curses/wicd-curses.py:441
 msgid "Rename wired profile"
@@ -615,7 +615,7 @@ msgstr "正在重设IP地址..."
 
 #: curses/wicd-curses.py:606
 msgid "RfKill"
-msgstr ""
+msgstr "RfKill"
 
 #: curses/prefs_curses.py:103
 msgid "Route Table Flushing"
@@ -824,7 +824,7 @@ msgstr "Wicd 需要访问您电脑的网络适配器。"
 
 #: cli/wicd-cli.py:85
 msgid "Wired"
-msgstr ""
+msgstr "有线网络"
 
 #: gtk/wicd-client.py:628
 msgid ""
@@ -865,7 +865,7 @@ msgstr "检测到有线连接"
 
 #: cli/wicd-cli.py:87
 msgid "Wireless"
-msgstr ""
+msgstr "无线网络"
 
 #: gtk/wicd-client.py:633
 msgid ""
@@ -906,7 +906,7 @@ msgstr "你应该尽量用 wext 作为WPA supplicat 的驱动"
 
 #: gtk/wicd-client.py:499
 msgid "_Connection Info"
-msgstr ""
+msgstr "连接信息"
 
 #: gtk/wicd-client.py:502 data/wicd.ui:161
 msgid "_Quit"
@@ -936,7 +936,7 @@ msgstr ""
 
 #: data/wicd.ui:57
 msgid "Enter a hidden network to try to locate."
-msgstr ""
+msgstr "输入隐藏网络以定位。"
 
 #: data/wicd.ui:65
 msgid "Forget network settings"
