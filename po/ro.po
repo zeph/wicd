@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2012-02-25 11:44+0000\n"
-"Last-Translator: David Paleino <dapal@debian.org>\n"
+"PO-Revision-Date: 2014-07-03 10:29+0000\n"
+"Last-Translator: Vlad Stoica <stoica.vl@gmail.com>\n"
 "Language-Team: ro <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-23 05:39+0000\n"
-"X-Generator: Launchpad (build 16506)\n"
+"X-Launchpad-Export-Date: 2014-07-04 05:59+0000\n"
+"X-Generator: Launchpad (build 17086)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -68,6 +68,7 @@ msgstr "Comută întotdeauna la rețeaua prin fir cînd este disponibilă"
 #: curses/wicd-curses.py:947 gtk/gui.py:353
 msgid "Are you sure you want to discard settings for the selected networks?"
 msgstr ""
+"Sunteți sigur că doriți să renunțați la setările pentru rețelele selectate ?"
 
 #: wicd/translations.py:77
 msgid "Authentication"
@@ -93,7 +94,7 @@ msgstr "Reconectare automată la pierderea legăturii"
 
 #: gtk/gui.py:330
 msgid "BSSID"
-msgstr ""
+msgstr "BSSID"
 
 #: curses/prefs_curses.py:113 curses/prefs_curses.py:114
 msgid "Backend"
@@ -101,7 +102,7 @@ msgstr "Configuraţie"
 
 #: curses/wicd-curses.py:194
 msgid "Brought to you by:"
-msgstr "Vă este adus de:"
+msgstr "Vă este oferit de:"
 
 #: curses/wicd-curses.py:1089
 msgid "Can't connect to the daemon, trying to start it automatically..."
