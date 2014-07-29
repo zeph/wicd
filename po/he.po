@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: wicd-1.7.1\n"
 "Report-Msgid-Bugs-To: Eli Zaretskii <eliz@gnu.org>\n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2014-03-22 04:59+0000\n"
+"PO-Revision-Date: 2014-07-28 18:36+0000\n"
 "Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
 "Language-Team: Hebrew <he@translationproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-03-23 06:26+0000\n"
-"X-Generator: Launchpad (build 16967)\n"
+"X-Launchpad-Export-Date: 2014-07-29 06:25+0000\n"
+"X-Generator: Launchpad (build 17131)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -732,7 +732,7 @@ msgstr "שדון Wicd כבה. ממשק המשתמש לא יפעל כראוי ע�
 #: curses/netentry_curses.py:478 gtk/gui.py:761 gtk/netentry.py:436
 #: gtk/netentry.py:608
 msgid "This network requires encryption to be enabled."
-msgstr "רשת זו דורשת שההצפנה תהיה פעילה."
+msgstr "רשת זו דורשת כי הצפנה תאופשר."
 
 #: curses/wicd-curses.py:272
 msgid ""
@@ -752,7 +752,7 @@ msgid ""
 "a network profile, type a name that describes this network, and press Add."
 msgstr ""
 "בכדי להתחבר אל רשת חוטית, עליך ליצור פרופיל רשת. כדי ליצור פרופיל רשת, עליך "
-"להזין שם המתאר את הרשת וללחוץ על הוסף."
+"להזין שם אשר מתאר את הרשת וללחוץ הוסף."
 
 #: gtk/wicd-client.py:94
 msgid ""
@@ -1004,7 +1004,7 @@ msgstr "הגדרת תסריטים"
 
 #: data/wicd.ui:289
 msgid "Configure scripts to run for this network:"
-msgstr "הגדר תסריטים להרצה עבור רשת זו:"
+msgstr "הגדר תסריטים לשם הרצה עבור רשת זו:"
 
 #: data/wicd.ui:306
 msgid "Pre-connection Script:"
