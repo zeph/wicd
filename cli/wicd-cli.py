@@ -25,6 +25,8 @@ from wicd.translations import _
 
 misc.RenameProcess('wicd-cli')
 
+exit_status = 0
+
 if getattr(dbus, 'version', (0, 0, 0)) < (0, 80, 0):
     import dbus.glib
 else:
@@ -278,6 +280,8 @@ if options.connect:
                 print message()
                 last = next_
         print "done!"
+        if status() != u'done':
+            exit_status = 6
         op_performed = True
 
 def str_properties(prop):
@@ -312,4 +316,6 @@ if options.save and options.network > -1:
 
 if not op_performed:
     print "No operations performed."
+
+sys.exit(exit_status)
 
