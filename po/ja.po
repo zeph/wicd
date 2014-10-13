@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2014-05-14 14:44+0000\n"
-"Last-Translator: KITAGAWA Masahiro <Unknown>\n"
+"PO-Revision-Date: 2014-10-13 02:20+0000\n"
+"Last-Translator: Takuro Onoue <kusanaginoturugi@gmail.com>\n"
 "Language-Team: ja <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-15 05:57+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-10-13 05:52+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -178,7 +178,7 @@ msgstr "$A へ接続しました。"
 
 #: wicd/misc.py:53
 msgid "Connected to a wired network"
-msgstr ""
+msgstr "無線ネットワークに接続しました"
 
 #: wicd/misc.py:52
 msgid "Connected to a wireless network"
@@ -194,11 +194,11 @@ msgstr "接続中"
 
 #: cli/wicd-cli.py:107
 msgid "Connecting to wired network."
-msgstr ""
+msgstr "無線ネットワークに接続しています"
 
 #: cli/wicd-cli.py:109
 msgid "Connecting to wireless network \"$A\"."
-msgstr ""
+msgstr "無線ネットワーク($A)に接続しています"
 
 #: wicd/misc.py:86
 msgid "Connection Cancelled"
@@ -230,7 +230,7 @@ msgstr "接続に失敗しました: 無線アクセスポイントに接続で�
 
 #: wicd/misc.py:51
 msgid "Connection in progress"
-msgstr ""
+msgstr "接続中"
 
 #: cli/wicd-cli.py:92
 msgid "Connection status"
