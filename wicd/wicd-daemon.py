@@ -1785,9 +1785,9 @@ def main(argv):
     # back up resolv.conf before we do anything else
     try:
         backup_location = wpath.varlib + 'resolv.conf.orig'
-        # don't back up if .orig exists, probably there cause
-        # wicd exploded
-        if not os.path.exists(backup_location):
+        # Don't back up if the backup already exists, either as a regular file or a symlink
+        # The backup file should have been cleaned up by wicd, so perhaps it didn't exit cleanly...
+        if not os.path.exists(backup_location) and not os.path.islink(backup_location):
             if os.path.islink('/etc/resolv.conf'):
                 dest = os.readlink('/etc/resolv.conf')
                 os.symlink(dest, backup_location)
