@@ -367,11 +367,6 @@ class WicdDaemon(dbus.service.Object, object):
             if self.debug_mode:
                 print 'Already connecting, doing nothing.'
             return
-        # We don't want to rescan/connect if the gui is open.
-        if self.gui_open:
-            if self.debug_mode:
-                print "Skipping autoconnect because GUI is open."
-            return
         if self.wired_bus.CheckPluggedIn():
             if self.debug_mode:
                 print "Starting wired autoconnect..."
