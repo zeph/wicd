@@ -12,8 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-23 05:39+0000\n"
-"X-Generator: Launchpad (build 16506)\n"
+"X-Launchpad-Export-Date: 2014-12-19 06:10+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -290,7 +290,7 @@ msgstr "Klient DHCP"
 
 #: curses/netentry_curses.py:63
 msgid "DHCP Hostname"
-msgstr "Nazwa hosta DHCP"
+msgstr "Nazwa serwera DHCP"
 
 #: curses/netentry_curses.py:56 curses/prefs_curses.py:74 gtk/netentry.py:79
 msgid "DNS domain"
@@ -775,7 +775,7 @@ msgstr "Niezabezpieczona"
 
 #: curses/netentry_curses.py:62
 msgid "Use DHCP Hostname"
-msgstr "Użyj hosta DHCP"
+msgstr "Użyj serwera DHCP"
 
 #: curses/netentry_curses.py:255 curses/netentry_curses.py:373
 #: gtk/netentry.py:341 gtk/netentry.py:467
