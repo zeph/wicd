@@ -56,6 +56,9 @@ from wicd import dbusmanager
 # Internal Python stuff
 import sys
 
+# SIGQUIT signal handling
+import signal
+
 # Curses UIs for other stuff
 from curses_misc import ComboBox, Dialog2, NSelListBox, SelText, OptCols
 from curses_misc import TextDialog, InputDialog, error, DynEdit, DynIntEdit
@@ -360,6 +363,10 @@ def gen_list_header():
     return 'C %s %*s %9s %17s %6s %s' % \
         ('STR ', essidgap, 'ESSID', 'ENCRYPT', 'BSSID', 'MODE', 'CHNL')
 
+""" Some people use CTRL-\ to quit the application (SIGQUIT) """
+def handle_sigquit(signal_number, stack_frame):
+    loop.quit()
+    ui.stop()
 
 ########################################
 ##### URWID SUPPORT CLASSES
@@ -1207,6 +1214,8 @@ def main():
         ('red', 'dark red', 'default'),
         ('bold', 'white', 'black', 'bold')
     ])
+    # Handle SIGQUIT correctly (otherwise urwid leaves the terminal in a bad state)
+    signal.signal(signal.SIGQUIT, handle_sigquit)
     # This is a wrapper around a function that calls another a function that
     # is a wrapper around a infinite loop.  Fun.
     urwid.set_encoding('utf8')
