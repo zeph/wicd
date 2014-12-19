@@ -756,13 +756,13 @@ class appGUI():
     def init_other_optcols(self):
         """ Init "tabbed" preferences dialog. """
         self.prefCols = OptCols([
-            ('f10', _('OK')),
+            ('S', _('Save')),
             ('page up', _('Tab Left'), ),
             ('page down', _('Tab Right')),
             ('esc', _('Cancel'))
         ], self.handle_keys)
         self.confCols = OptCols([
-            ('f10', _('OK')),
+            ('S', _('Save')),
             ('esc', _('Cancel'))
         ], self.handle_keys)
 
@@ -1121,7 +1121,10 @@ class appGUI():
                 if  k == 'esc' or k == 'q' or k == 'Q':
                     self.restore_primary()
                     break
-                if k == 'f10':
+                # F10 has been changed to S to avoid using function keys,
+                # which are often caught by the terminal emulator.
+                # But F10 still works, because it doesn't hurt and some users might be used to it.
+                if k == 'f10' or k == 'S' or k == 's':
                     self.diag.save_settings()
                     self.restore_primary()
                     break

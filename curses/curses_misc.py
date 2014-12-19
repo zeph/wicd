@@ -711,7 +711,7 @@ class OptCols(urwid.WidgetWrap):
                 ('ctrl ', 'Ctrl+'), ('meta ', 'Alt+'),
                 ('left', '<-'), ('right', '->'),
                 ('page up', 'Page Up'), ('page down', 'Page Down'),
-                ('esc', 'ESC'), ('enter', 'Enter'), ('f10', 'F10')], cmd[0])
+                ('esc', 'ESC'), ('enter', 'Enter'), ('s', 'S')], cmd[0])
 
             if debug:
                 callback = self.debugClick
