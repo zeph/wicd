@@ -8,6 +8,7 @@ Name=Wicd Network Manager
 Name[en_US]=Wicd Network Manager
 Comment=Start the Wicd client without system tray icon
 Comment[en_US]=Start the Wicd client without system tray icon
+Comment[he]=הפעלת לקוח Wicd בלי סמל מגש מערכת
 Terminal=false
 Type=Application
 Version=1.0

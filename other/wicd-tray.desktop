@@ -8,6 +8,7 @@ Name=Wicd Network Manager Tray
 Name[en_US]=Wicd Network Manager Tray
 Comment=Display network connection status in the system tray
 Comment[en_US]=Display network connection status in the system tray
+Comment[he]=הצגת מצב חיבור רשת במגש מערכת
 Terminal=false
 Type=Application
 Version=1.0
