@@ -872,7 +872,8 @@ class appGUI():
                         get_body().set_focus(self.focusloc[1])
                 else:
                     if self.wlessLB != self.no_wlan:
-                        self.thePile.get_focus().set_focus(self.focusloc[1])
+                        # Set the focus to the last selected item, but never past the length of the list
+                        self.thePile.get_focus().set_focus(min(self.focusloc[1], len(wlessL) - 1))
                     else:
                         self.thePile.set_focus(self.wiredCB)
             else:
@@ -885,7 +886,8 @@ class appGUI():
                 if self.focusloc[1] is None:
                     self.focusloc[1] = 0
                 if self.wlessLB != self.no_wlan:
-                    self.wlessLB.set_focus(self.focusloc[1])
+                    # Set the focus to the last selected item, but never past the length of the list
+                    self.wlessLB.set_focus(min(self.focusloc[1], len(wlessL) - 1))
 
         self.prev_state = state
         if not firstrun:
