@@ -10,13 +10,13 @@ msgstr ""
 "Project-Id-Version: wicd-1.7.1\n"
 "Report-Msgid-Bugs-To: Eli Zaretskii <eliz@gnu.org>\n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2014-12-19 05:43+0000\n"
+"PO-Revision-Date: 2014-12-19 08:41+0000\n"
 "Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
 "Language-Team: Hebrew <he@translationproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-19 06:09+0000\n"
+"X-Launchpad-Export-Date: 2014-12-20 05:35+0000\n"
 "X-Generator: Launchpad (build 17286)\n"
 "Generated-By: Babel 0.9.6\n"
 
@@ -323,15 +323,15 @@ msgstr "מנתק כעת חיבורים פעילים..."
 
 #: curses/wicd-curses.py:226
 msgid "Display 'about' dialog"
-msgstr "הצגת דו־שיח 'אודות'"
+msgstr "הצג דו שיח 'אודות'"
 
 #: gtk/prefs.py:349 data/wicd.ui:1002
 msgid "Display notifications about connection status"
-msgstr "הצג הודעות לגבי מצב חיבור"
+msgstr "הצג התרעות אודות מצב חיבור"
 
 #: curses/wicd-curses.py:213
 msgid "Display this help dialog"
-msgstr "הצגת דו־שיח זה לעזרה"
+msgstr "הצג דו שיח עזרה זה"
 
 #: wicd/translations.py:78
 msgid "Domain"
@@ -649,7 +649,7 @@ msgstr "סורק כעת"
 
 #: curses/wicd-curses.py:574
 msgid "Scanning networks... stand by..."
-msgstr "סורק כעת רשתות תקשורת... אנא המתן..."
+msgstr "סורק כעת רשתות... אנא המתן..."
 
 #: gtk/netentry.py:102
 msgid "Scripts"
@@ -732,7 +732,7 @@ msgstr "שדון Wicd כבה. ממשק המשתמש לא יפעל כראוי ע�
 #: curses/netentry_curses.py:478 gtk/gui.py:761 gtk/netentry.py:436
 #: gtk/netentry.py:608
 msgid "This network requires encryption to be enabled."
-msgstr "רשת זו דורשת כי הצפנה תאופשר."
+msgstr "רשת זו דורשת הצפנה מאופשרת."
 
 #: curses/wicd-curses.py:272
 msgid ""
@@ -1106,9 +1106,8 @@ msgid ""
 "window. This can be useful if your wired network card does not detect when "
 "the interface is connected to a cable."
 msgstr ""
-"כאשר אפשרות זו מאופשרת, ממשק רשת התקשורת החוטית תמיד יוצג בחלון הראשי. ניתן "
-"להפיק תועלת מאפשרות זו במידה שכרטיס רשת התקשורת החוטי שלך לא מאתר כאשר הממשק "
-"הינו מחובר אל כבל."
+"כאשר מאופשרת, ממשק רשת חוטי תמיד יוצג בחלון הראשי. זה יכול להועיל כאשר כרטיס "
+"רשת חוטי לא מאתר כאשר הממשק הינו מחובר אל כבל."
 
 #: data/wicd.ui:986
 msgid "<b>Notifications</b>"
