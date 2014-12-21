@@ -1,4 +1,41 @@
 ------------------------------------------------------------
+revno: 932
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Sun 2014-12-21 21:20:27 +0100
+message:
+  HOWTO_RELEASE: improve procedure for creating CHANGES file
+------------------------------------------------------------
+revno: 931
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Sun 2014-12-21 21:13:30 +0100
+message:
+  wicd: add HOWTO_RELEASE file with documentation as a memory aid
+------------------------------------------------------------
+revno: 930 [merge]
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Sun 2014-12-21 21:00:48 +0100
+message:
+  Improve .bzrignore
+------------------------------------------------------------
+revno: 929
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Sun 2014-12-21 20:57:09 +0100
+message:
+  Replace old broken wicd.net URL by the Launchpad homepage
+    
+  This is now consistent with the GTK wicd-client website URL.
+------------------------------------------------------------
+revno: 928
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Sun 2014-12-21 20:12:15 +0100
+message:
+  Prepare files for the release of 1.7.3
+------------------------------------------------------------
 revno: 927
 committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
 branch nick: wicd
