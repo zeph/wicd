@@ -435,6 +435,7 @@ class appGui(object):
         dialog.set_name("Wicd")
         dialog.set_version(daemon.Hello())
         dialog.set_authors([
+            "Tom Van Braeckel",
             "Adam Blackburn",
             "Dan O'Reilly",
             "Andrew Psaltis",

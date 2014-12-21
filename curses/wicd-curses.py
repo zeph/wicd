@@ -216,11 +216,12 @@ def about_dialog(body):
     "      http://launchpad.net/wicd\n",
 ('green', "  \\\\\\"), "   |+|   ", ('green', "///"), "      ",
     _('Brought to you by:'), "\n",
-('green', "   \\\\\\"), "  |+|  ", ('green', "///"), "       Adam Blackburn\n",
-"     ___|+|___         Dan O'Reilly\n",
-"    ____|+|____        Andrew Psaltis\n",
-"   |-----------|       David Paleino\n"]
-    about = TextDialog(theText, 17, 55, header=('header', _('About Wicd')))
+('green', "   \\\\\\"), "  |+|  ", ('green', "///"), "       * Tom Van Braeckel\n",
+"      __|+|__          * Adam Blackburn\n",
+"     ___|+|___         * Dan O'Reilly\n",
+"    ____|+|____        * Andrew Psaltis\n",
+"   |-----------|       * David Paleino\n"]
+    about = TextDialog(theText, 18, 55, header=('header', _('About Wicd')))
     about.run(ui, body)
 
 

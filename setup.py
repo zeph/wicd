@@ -700,8 +700,8 @@ to easily add encryption methods used.  It ships with some common
 encryption types, such as WPA and WEP. Wicd will automatically
 connect at startup to any preferred network within range.
 """,
-    author = "Adam Blackburn, Dan O'Reilly, Andrew Psaltis, David Paleino",
-    author_email = "compwiz18@gmail.com, oreilldf@gmail.com, ampsaltis@gmail.com, d.paleino@gmail.com",
+    author = "Tom Van Braeckel, Adam Blackburn, Dan O'Reilly, Andrew Psaltis, David Paleino",
+    author_email = "tomvanbraeckel@gmail.com, compwiz18@gmail.com, oreilldf@gmail.com, ampsaltis@gmail.com, d.paleino@gmail.com",
     url = "https://launchpad.net/wicd",
     license = "http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
     py_modules = py_modules,
