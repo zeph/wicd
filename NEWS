@@ -1,6 +1,10 @@
 Wicd 1.7 Series
 ---------------
 
+1.7.3:
+	- New feature: you can now manually control the speed of the wireless connection
+	- Lots (30+) of bugfixes (see launchpad or the CHANGES file for details)
+
 1.7.2.4:
 	Minor Changes:
 	- Really fix local privilege escalation (CVE-2012-2095).
