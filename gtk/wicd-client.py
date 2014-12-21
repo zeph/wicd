@@ -570,7 +570,7 @@ class TrayIcon(object):
             dialog.set_name('Wicd Tray Icon')
             dialog.set_version('2.0')
             dialog.set_comments('An icon that shows your network connectivity')
-            dialog.set_website('http://wicd.net')
+            dialog.set_website('http://launchpad.net/wicd')
             dialog.run()
             dialog.destroy()
 
