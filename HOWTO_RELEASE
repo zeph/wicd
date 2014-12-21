@@ -10,7 +10,7 @@ In the sources:
 - ensure all work is committed
 - update the NEWS file
 - update the VERSION_NUM variable in setup.py
-- update the CHANGES file (hint: bzr log -rXXX + attach the footer saying "this is not a complete list...")
+- update the CHANGES file (hint: bzr log -r717.. | head -n -1 > CHANGES && cat in/CHANGES.suffix >> CHANGES)
 
 Build the release tarball by running:
 python setup.py sdist
