@@ -213,7 +213,7 @@ def about_dialog(body):
 
 ('green', "\\||  \\\\"), " |+| ", ('green', "//  ||/    \n"),
 ('green', " \\\\\\"), "    |+|    ", ('green', "///"),
-    "      http://wicd.net\n",
+    "      http://launchpad.net/wicd\n",
 ('green', "  \\\\\\"), "   |+|   ", ('green', "///"), "      ",
     _('Brought to you by:'), "\n",
 ('green', "   \\\\\\"), "  |+|  ", ('green', "///"), "       Adam Blackburn\n",
