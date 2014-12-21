@@ -1,0 +1,20 @@
+This is a quick-and-dirty reminder document on how to create a new release.
+It might not be complete or perfect, but it's better than having nothing.
+
+On http://launchpad.net/wicd
+- create the milestone
+- assign bugs to the milestone
+- move unfinished work to the *next* milestone
+
+In the sources:
+- ensure all work is committed
+- update the NEWS file
+- update the VERSION_NUM variable in setup.py
+- update the CHANGES file (hint: bzr log -rXXX + attach the footer saying "this is not a complete list...")
+
+Build the release tarball by running:
+python setup.py sdist
+
+On http://launchpad.net/wicd
+- Attach the dist/wicd-*.tar.gz file to the milestone
+- Release the milestone
