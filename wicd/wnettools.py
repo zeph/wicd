@@ -1339,14 +1339,23 @@ class BaseWirelessInterface(BaseInterface):
                     misc.Run(cmd)
 
     @neediface([])
-    def GetNetworks(self):
+    def GetNetworks(self, essid=None):
         """ Get a list of available wireless networks.
 
         Returns:
         A list containing available wireless networks.
 
         """
+
         cmd = 'iwlist ' + self.iface + ' scan'
+
+        # If there is a hidden essid then it was set earlier, with iwconfig wlan0 essid,
+	# but on some drivers (iwlwifi, in my case) we have to pass it to iwlist scan.
+        essid = misc.Noneify(essid)
+        if essid is not None:
+            print 'Passing hidden essid to iwlist scan: ' + essid
+            cmd = cmd + ' essid ' + essid
+
         if self.verbose:
             print cmd
         results = misc.Run(cmd)

@@ -648,6 +648,7 @@ class Wireless(Controller):
 
         # If there is a hidden essid then set it now, so that when it is
         # scanned it will be recognized.
+        # Note: this does not always work, sometimes we have to pass it with "iwlist wlan0 scan essid -- XXXXX"
         essid = misc.Noneify(essid)
         if essid is not None:
             print 'Setting hidden essid ' + essid
@@ -655,7 +656,7 @@ class Wireless(Controller):
             # sleep for a bit; scanning to fast will result in nothing
             time.sleep(1)
 
-        aps = wiface.GetNetworks()
+        aps = wiface.GetNetworks(essid)
         aps.sort(cmp=comp, reverse=True)
         
         return aps

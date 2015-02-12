@@ -269,8 +269,11 @@ class WirelessInterface(Interface, BaseWirelessInterface):
         self.CheckWirelessTools()
 
     @neediface([])
-    def GetNetworks(self):
+    def GetNetworks(self, essid=None):
         """ Get a list of available wireless networks.
+	
+        NOTE: the essid parameter is not used here,
+        it was added for the iwlist scan for hidden networks.
 
         Returns:
         A list containing available wireless networks.
