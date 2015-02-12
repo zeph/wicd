@@ -1,4 +1,4 @@
-name = PEAP with TKIP/MSCHAPV2
+name = WPA1-PEAP with TKIP/MSCHAPV2
 author = Fralaltro
 version = 1
 require identity *Identity password *Password 

@@ -1,4 +1,4 @@
-name = 802.1x
+name = IEEE 802.1x with MSCHAPV2
 author = Joe MacMahon
 version = 1
 require identity *Identity password *Password

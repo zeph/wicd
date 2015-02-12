@@ -1,4 +1,4 @@
-name = WPA-PEAP
+name = WPA1-PEAP with CCMP/MSCHAPV2
 author = atiketemola
 version = 1
 require identity *Username domain *Domain password *Password

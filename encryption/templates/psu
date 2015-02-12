@@ -1,4 +1,4 @@
-name = PSU
+name = PSU (IEEE 802.1x + PEAP + MSCHAPV2)
 author = Alexander Anisimov
 version = 1
 require identity *Identity password *Password
