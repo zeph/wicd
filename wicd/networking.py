@@ -650,7 +650,7 @@ class Wireless(Controller):
         # scanned it will be recognized.
         essid = misc.Noneify(essid)
         if essid is not None:
-            print 'Setting hidden essid' + essid
+            print 'Setting hidden essid ' + essid
             wiface.SetEssid(essid)
             # sleep for a bit; scanning to fast will result in nothing
             time.sleep(1)
