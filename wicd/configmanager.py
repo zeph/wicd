@@ -112,8 +112,9 @@ class ConfigManager(RawConfigParser):
                 self.add_section(section)
             else:
                 return None
-    
-        if self.has_option(section, option):
+
+        #  If the option is present and not empty
+        if self.has_option(section, option) and RawConfigParser.get(self, section, option) != "None":
             ret = RawConfigParser.get(self, section, option)
             if (isinstance(ret, basestring) and ret.startswith(self.mrk_ws) 
                 and ret.endswith(self.mrk_ws)):
