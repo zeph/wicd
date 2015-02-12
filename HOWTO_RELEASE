@@ -1,6 +1,8 @@
 This is a quick-and-dirty reminder document on how to create a new release.
 It might not be complete or perfect, but it's better than having nothing.
 
+Author: Tom Van Braeckel
+
 On http://launchpad.net/wicd
 - create the milestone
 - assign bugs to the milestone
