@@ -113,8 +113,7 @@ class ConfigManager(RawConfigParser):
             else:
                 return None
 
-        #  If the option is present and not empty
-        if self.has_option(section, option) and RawConfigParser.get(self, section, option) != "None":
+        if self.has_option(section, option):
             ret = RawConfigParser.get(self, section, option)
             if (isinstance(ret, basestring) and ret.startswith(self.mrk_ws) 
                 and ret.endswith(self.mrk_ws)):
@@ -131,7 +130,7 @@ class ConfigManager(RawConfigParser):
                     else:
                         print ''.join(['found ', option, ' in configuration ',
                                        str(ret)])
-        else:
+        else:	# Use the default, unless no default was provided
             if default != "__None__":
                 print 'did not find %s in configuration, setting default %s' \
                     % (option, str(default))

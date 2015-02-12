@@ -162,6 +162,7 @@ class WicdDaemon(dbus.service.Object, object):
     def SetWiredInterface(self, interface):
         """ Sets the wired interface for the daemon to use. """
         print "setting wired interface %s" % (str(interface))
+        # Set it to a blank string, otherwise a network card named "None" will be searched
         self.wired.wired_interface = noneToBlankString(interface)
         self.config.set("Settings", "wired_interface", interface, write=True)
 
@@ -169,6 +170,7 @@ class WicdDaemon(dbus.service.Object, object):
     def SetWirelessInterface(self, interface):
         """ Sets the wireless interface the daemon will use. """
         print "setting wireless interface %s" % (str(interface))
+        # Set it to a blank string, otherwise a network card named "None" will be searched
         self.wifi.wireless_interface = noneToBlankString(interface)
         self.config.set("Settings", "wireless_interface", interface, write=True)
 
