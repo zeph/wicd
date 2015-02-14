@@ -296,7 +296,7 @@ class BaseInterface(object):
         return path
 
     
-    def _get_dhcp_command(self, flavor=None, hostname=None):
+    def _get_dhcp_command(self, flavor=None, hostname=None, staticdns=False):
         """ Returns the correct DHCP client command. 
        
         Given a type of DHCP request (create or release a lease),
@@ -333,26 +333,26 @@ class BaseInterface(object):
         
         client_dict = {
             "dhclient" : 
-                {'connect' : r"%(cmd)s -cf %(dhclientconf)s %(iface)s",
-                 'connect_with_hostname' : r"%(cmd)s -cf %(dhclientconf)s %(iface)s",
+                {'connect' : r"%(cmd)s -cf %(dhclientconf)s %(extra)s %(iface)s",
+                 'connect_with_hostname' : r"%(cmd)s -cf %(dhclientconf)s %(extra)s %(iface)s",
                  'release' : r"%(cmd)s -r %(iface)s",
                  'id' : misc.DHCLIENT, 
                  },
             "pump" : 
-                { 'connect' : r"%(cmd)s -i %(iface)s",
-                  'connect_with_hostname' : r"%(cmd)s -i %(iface)s -h %(hostname)s",
+                { 'connect' : r"%(cmd)s -i %(iface)s %(extra)s",
+                  'connect_with_hostname' : r"%(cmd)s -i %(iface)s -h %(hostname)s %(extra)s",
                   'release' : r"%(cmd)s -r -i %(iface)s",
                   'id' : misc.PUMP,
                 },
             "dhcpcd" : 
-                {'connect' : r"%(cmd)s --noipv4ll %(iface)s",
-                 'connect_with_hostname' : r"%(cmd)s -h %(hostname)s --noipv4ll %(iface)s ",
+                {'connect' : r"%(cmd)s --noipv4ll %(extra)s %(iface)s",
+                 'connect_with_hostname' : r"%(cmd)s -h %(hostname)s --noipv4ll %(extra)s %(iface)s ",
                  'release' : r"%(cmd)s -k %(iface)s",
                  'id' : misc.DHCPCD,
                 },
             "udhcpc":
-                {'connect' : r"%(cmd)s -n -i %(iface)s",
-                 'connect_with_hostname' : r"%(cmd)s -n -i %(iface)s -H %(hostname)s ",
+                {'connect' : r"%(cmd)s -n -i %(iface)s %(extra)s",
+                 'connect_with_hostname' : r"%(cmd)s -n -i %(iface)s -H %(hostname)s %(extra)s",
                  'release' : r"killall -SIGUSR2 %(cmd)s",
                  'id' : misc.UDHCPC,
                 },
@@ -388,16 +388,25 @@ class BaseInterface(object):
             return ""
             
         if flavor == "connect":
+
+            # set up (optional) extra arguments to the dhcp client,
+            # used for disabling the resolv.conf update of dhcpd
+            extra_args = ""
+            if staticdns and client_name == "dhcpcd":
+                extra_args = "--nohook resolv.conf"
+
             if hostname:
                 return client_dict[client_name]['connect_with_hostname'] % \
                     { "cmd" : cmd,
                       "iface" : self.iface,
                       "hostname" : hostname,
+                      'extra': extra_args,
                       'dhclientconf' : dhclient_conf_path }
             else:
                 return client_dict[client_name]['connect'] % \
                     { "cmd" : cmd,
                       "iface" : self.iface,
+                      'extra': extra_args,
                       'dhclientconf' : dhclient_conf_path }
         elif flavor == "release":
             return client_dict[client_name]['release'] % \
@@ -655,7 +664,7 @@ class BaseInterface(object):
             return 'dhcp_failed'
             
     @neediface(False)
-    def StartDHCP(self, hostname):
+    def StartDHCP(self, hostname, staticdns):
         """ Start the DHCP client to obtain an IP address.
 
         Keyword Arguments:
@@ -666,7 +675,7 @@ class BaseInterface(object):
         _check_dhcp_result for the possible values.
         
         """
-        cmd = self._get_dhcp_command('connect', hostname)
+        cmd = self._get_dhcp_command('connect', hostname, staticdns)
         if self.verbose:
             print cmd
         self.dhcp_object = misc.Run(cmd, include_stderr=True, return_obj=True)

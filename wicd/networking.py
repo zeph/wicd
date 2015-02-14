@@ -476,7 +476,13 @@ class ConnectThread(threading.Thread):
             else:
                 hname = None
                 print "Running DHCP with NO hostname"
-            dhcp_status = iface.StartDHCP(hname)
+            
+            # Check if a global DNS is configured. If it is, then let the DHCP know *not* to update resolv.conf
+            staticdns = False
+            if self.network.get('use_global_dns') or (self.network.get('use_static_dns') and (self.network.get('dns1') or self.network.get('dns2') or self.network.get('dns3'))):
+                staticdns = True
+
+            dhcp_status = iface.StartDHCP(hname, staticdns)
             if dhcp_status in ['no_dhcp_offers', 'dhcp_failed']:
                 if self.connect_result != "aborted":
                     self.abort_connection(dhcp_status)
