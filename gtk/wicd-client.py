@@ -11,6 +11,7 @@ class TrayIcon() -- Parent class of TrayIconGUI and IconConnectionInfo.
         and updates connection status.
     class TrayIconGUI() -- Child class of TrayIcon which implements the tray.
         icon itself.  Parent class of StatusTrayIconGUI and EggTrayIconGUI.
+    class IndicatorTrayIconGUI() -- Implements the tray icon using appindicator.Indicator.
     class StatusTrayIconGUI() -- Implements the tray icon using a
                                  gtk.StatusIcon.
     class EggTrayIconGUI() -- Implements the tray icon using egg.trayicon.
@@ -47,6 +48,12 @@ from dbus import DBusException
 
 import pygtk
 pygtk.require('2.0')
+
+USE_APP_INDICATOR = True
+try:
+    import appindicator
+except ImportError:
+    USE_APP_INDICATOR = False
 
 HAS_NOTIFY = True
 try:
@@ -145,7 +152,9 @@ class TrayIcon(object):
         self.max_snd_gain = 10000
         self.max_rcv_gain = 10000
 
-        if USE_EGG:
+        if USE_APP_INDICATOR:
+            self.tr = self.IndicatorTrayIconGUI(self)
+        elif USE_EGG:
             self.tr = self.EggTrayIconGUI(self)
         else:
             self.tr = self.StatusTrayIconGUI(self)
@@ -529,7 +538,8 @@ class TrayIcon(object):
             self.current_icon_name = None
             self._is_scanning = False
             net_menuitem = self.manager.get_widget("/Menubar/Menu/Connect/")
-            net_menuitem.connect("activate", self.on_net_menu_activate)
+            if not USE_APP_INDICATOR:
+                net_menuitem.connect("activate", self.on_net_menu_activate)
 
             self.parent = parent
             self.time = 2           # Time between updates
@@ -957,6 +967,76 @@ TX:'''))
 
                 """
                 self.set_visible(val)
+
+    if USE_APP_INDICATOR:
+        class IndicatorTrayIconGUI(gtk.StatusIcon, TrayIconGUI):
+            """ Class for creating the wicd AppIndicator.
+            This is required on recent versions of Unity (>=13.04).
+            
+            Uses appindicator.Indicator to implement a tray icon.
+            
+            """
+            def __init__(self, parent):
+                TrayIcon.TrayIconGUI.__init__(self, parent)
+                self.ind = appindicator.Indicator(
+                    "wicd", "", appindicator.CATEGORY_SYSTEM_SERVICES)
+                self.ind.set_icon(wpath.images + "no-signal.png")
+
+                # Rescaning when hovering over the net_menu doesn't work.
+                # (AFAICT, AppIndicator menus don't report PRELIGHT status.)
+                # We use a separate menu item instead.
+                rescan = gtk.MenuItem("Rescan")
+                self.menu.prepend(rescan)
+                rescan.connect("activate", self.on_rescan)
+                rescan.show()
+
+                sep = gtk.SeparatorMenuItem()
+                self.menu.prepend(sep)
+                sep.show()
+
+                # AppIndicator does not support tooltips so we use a
+                # menu item to contain what was the tooltip.
+                #
+                # Also, since AppIndicator does not support actions on
+                # clicking the tray icon, we use this tooltip menu
+                # item to toggle the GUI
+                self.tooltip_item = gtk.MenuItem("Initializing wicd...")
+                self.menu.prepend(self.tooltip_item)
+                self.tooltip_item.connect("activate", self.on_activate)
+                self.tooltip_item.show()
+
+                self.ind.set_menu(self.menu)
+
+            def on_rescan(self, *data):
+                """ Triggers a network rescan that updates the 'Connect' menu when the 'Rescan' menu item is selected. """
+                self.init_network_menu()
+                wireless.Scan(False)
+
+            def set_from_file(self, path=None):
+                """ Sets a new tray icon picture. """
+                if path != self.current_icon_path:
+                    self.current_icon_path = path
+                    self.ind.set_icon(path)
+
+            def visible(self, val):
+                """ Set if the icon is visible or not.
+
+                If val is True, makes the icon visible, if val is False,
+                hides the tray icon.
+
+                """
+                self.ind.set_status(val and appindicator.STATUS_ACTIVE or appindicator.STATUS_PASSIVE)
+
+            def set_tooltip(self, str):
+                """ Set the tooltip for this tray icon.
+                
+                Since AppIndicators do not support tooltips, actually
+                sets the label for the top menu item associated with
+                this tray icon.
+
+                """
+                self.tooltip_item.set_label(str)
+
 
 def usage():
     """ Print usage information. """

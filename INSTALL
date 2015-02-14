@@ -14,6 +14,8 @@ are a few dependencies:
      Wicd supports using versions >=1.2.4 -- earlier versions may work just
      fine, but they are completely unsupported here.
   9. pybabel
+ 10. rfkill
+ 11. python-appindicator if you want the Unity-compatible appindicator notifications
 
 Next, configure Wicd for installation.  Wicd will, by default, follow the 
 FHS guidelines <http://www.pathname.com/fhs/> (or distribution standards 
