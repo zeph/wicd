@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2014-05-22 15:39+0000\n"
-"Last-Translator: Dorzhi Tarbaev <diixtra@gmail.com>\n"
+"PO-Revision-Date: 2015-03-13 11:20+0000\n"
+"Last-Translator: igor <igor@sato.ru>\n"
 "Language-Team: ru <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-15 05:45+0000\n"
-"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-03-14 05:14+0000\n"
+"X-Generator: Launchpad (build 17389)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -102,7 +102,7 @@ msgstr "Автоматически переподключаться при по�
 
 #: gtk/gui.py:330
 msgid "BSSID"
-msgstr ""
+msgstr "BSSID"
 
 #: curses/prefs_curses.py:113 curses/prefs_curses.py:114
 msgid "Backend"
@@ -234,19 +234,19 @@ msgstr "Выполняется соединение"
 
 #: cli/wicd-cli.py:92
 msgid "Connection status"
-msgstr ""
+msgstr "Состояние подключения"
 
 #: wicd/misc.py:104
 msgid "Connection successful."
-msgstr "Соединение прервано"
+msgstr "Соединение установлено"
 
 #: wicd/misc.py:54
 msgid "Connection suspended"
-msgstr ""
+msgstr "Подключение приостановлено"
 
 #: cli/wicd-cli.py:94
 msgid "Connection type"
-msgstr ""
+msgstr "Тип подключения"
 
 #: gtk/gui.py:65 gtk/wicd-client.py:955
 msgid ""
@@ -394,7 +394,7 @@ msgstr "Глобальные серверы DNS"
 
 #: gtk/gui.py:321
 msgid "Global settings for this ESSID"
-msgstr ""
+msgstr "Основные настройки для этого ESSID"
 
 #: curses/wicd-curses.py:603
 msgid "Help"
@@ -439,7 +439,7 @@ msgstr ""
 
 #: curses/wicd-curses.py:536 gtk/gui.py:310
 msgid "List of saved networks"
-msgstr ""
+msgstr "Список сохраненных сетей"
 
 #: curses/netentry_curses.py:51 gtk/netentry.py:76
 msgid "Netmask"
@@ -447,7 +447,7 @@ msgstr "Маска сети"
 
 #: cli/wicd-cli.py:99
 msgid "Network ID: $A"
-msgstr ""
+msgstr "Идентификатор сети: $A"
 
 #: curses/prefs_curses.py:66
 msgid "Network Interfaces"
@@ -521,7 +521,7 @@ msgstr ""
 
 #: curses/wicd-curses.py:521
 msgid "Please select the networks to forget"
-msgstr ""
+msgstr "Пожалуйста, укажите сеть, которую надо забыть"
 
 #: curses/configscript_curses.py:57 gtk/configscript.py:129
 msgid "Post-connection Script"
@@ -553,7 +553,7 @@ msgstr "Настройки"
 
 #: wicd/translations.py:87
 msgid "Preshared key"
-msgstr ""
+msgstr "Пароль для подключения"
 
 #: curses/wicd-curses.py:229
 msgid "Press any key to return."
@@ -605,11 +605,11 @@ msgstr "Обновить список сетей"
 
 #: curses/wicd-curses.py:538
 msgid "Remove"
-msgstr ""
+msgstr "Удалить"
 
 #: curses/wicd-curses.py:224 data/wicd.ui:67
 msgid "Remove settings for saved networks"
-msgstr ""
+msgstr "Удалить настройки для сохраненных сетей"
 
 #: curses/wicd-curses.py:441
 msgid "Rename wired profile"
@@ -843,7 +843,7 @@ msgstr "Wicd необходим доступ к сетевым картам ко
 
 #: cli/wicd-cli.py:85
 msgid "Wired"
-msgstr ""
+msgstr "Проводное подключение"
 
 #: gtk/wicd-client.py:628
 msgid ""
@@ -971,7 +971,7 @@ msgstr "Введите SSID скрытой сети"
 
 #: data/wicd.ui:65
 msgid "Forget network settings"
-msgstr ""
+msgstr "Забыть настройки сети"
 
 #: data/wicd.ui:89
 msgid "_Switch Off Wi-Fi"
@@ -1081,19 +1081,19 @@ msgstr "Беспроводной интерфейс"
 
 #: data/wicd.ui:793
 msgid "<b>Network Interfaces</b>"
-msgstr "Сетевые интерфейсы"
+msgstr "<b>Сетевые интерфейсы</b>"
 
 #: data/wicd.ui:809
 msgid "DNS server 3:"
-msgstr "DNS сервер:"
+msgstr "DNS сервер 3:"
 
 #: data/wicd.ui:840
 msgid "DNS server 2:"
-msgstr "DNS сервер:"
+msgstr "DNS сервер 2:"
 
 #: data/wicd.ui:858
 msgid "DNS server 1:"
-msgstr "DNS сервер:"
+msgstr "DNS сервер 1:"
 
 #: data/wicd.ui:876
 msgid "Search domain:"
@@ -1109,7 +1109,7 @@ msgid ""
 "window. This can be useful if your wired network card does not detect when "
 "the interface is connected to a cable."
 msgstr ""
-"Если выбрано, кабельный интерфейс всегда отображается вглавном окне. Может "
+"Если выбрано, кабельный интерфейс всегда отображается в главном окне. Может "
 "быть полезно, если ваша сетевая карта автоматически не определяет "
 "подключение кабеля."
 
@@ -1119,11 +1119,11 @@ msgstr "<b>Уведомления</b>"
 
 #: data/wicd.ui:1060
 msgid "<b>Route Table Flushing</b>"
-msgstr "Очистка таблицы маршрутизации"
+msgstr "<b>Очистка таблицы маршрутизации</b>"
 
 #: data/wicd.ui:1073
 msgid "<b>Wired Link Detection</b>"
-msgstr "Определение проводного соединения"
+msgstr "<b>Определение проводного соединения</b>"
 
 #: data/wicd.ui:1299
 msgid "<b>DHCP Client</b>"
@@ -1147,7 +1147,7 @@ msgstr "Драйвер:"
 
 #: data/wicd.ui:1540
 msgid "<b>Wireless Interface</b>"
-msgstr "Беспроводной интерфейс"
+msgstr "<b>Беспроводной интерфейс</b>"
 
 #: data/wicd.ui:1554
 msgid "<b>WPA Supplicant</b>"
@@ -1155,7 +1155,7 @@ msgstr ""
 
 #: data/wicd.ui:1566
 msgid "<b>Debugging</b>"
-msgstr "Отладка"
+msgstr "<b>Отладка</b>"
 
 #: data/wicd.ui:1584
 msgid "Backend:"
