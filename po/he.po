@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: wicd-1.7.1\n"
 "Report-Msgid-Bugs-To: Eli Zaretskii <eliz@gnu.org>\n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2014-12-19 08:41+0000\n"
+"PO-Revision-Date: 2015-12-15 09:11+0000\n"
 "Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
 "Language-Team: Hebrew <he@translationproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-15 05:45+0000\n"
-"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-12-16 05:16+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -76,7 +76,7 @@ msgstr "הצג תמיד ממשק חוטי"
 
 #: curses/prefs_curses.py:70
 msgid "Always switch to wired connection when available"
-msgstr "החלף תמיד אל חיבור חוטי כאשר זמין"
+msgstr "החלף תמיד לחיבור חוטי כאשר זמין"
 
 #: curses/wicd-curses.py:947 gtk/gui.py:353
 msgid "Are you sure you want to discard settings for the selected networks?"
@@ -118,7 +118,7 @@ msgstr "הובא לך על ידי:"
 
 #: curses/wicd-curses.py:1089
 msgid "Can't connect to the daemon, trying to start it automatically..."
-msgstr "לא ניתן להתחבר אל השדון, מנסה כעת להפעילו אוטומטית..."
+msgstr "לא ניתן להתחבר לשדון, מנסה להפעילו אוטומטית כעת..."
 
 #: curses/configscript_curses.py:74 curses/curses_misc.py:541
 #: curses/netentry_curses.py:65 curses/wicd-curses.py:490
@@ -162,7 +162,7 @@ msgstr "התחבר"
 
 #: curses/wicd-curses.py:214
 msgid "Connect to selected network"
-msgstr "תתחבר אל רשת נבחרת"
+msgstr "תתחבר לרשת נבחרת"
 
 #: cli/wicd-cli.py:83
 msgid "Connected"
@@ -182,15 +182,15 @@ msgstr "מחובר אל $A."
 
 #: wicd/misc.py:53
 msgid "Connected to a wired network"
-msgstr "מחובר אל רשת חוטית"
+msgstr "מחובר לרשת חוטית"
 
 #: wicd/misc.py:52
 msgid "Connected to a wireless network"
-msgstr "מחובר אל רשת אלחוטית"
+msgstr "מחובר לרשת אלחוטית"
 
 #: curses/wicd-curses.py:133 gtk/gui.py:483 gtk/wicd-client.py:220
 msgid "Connected to wired network (IP: $A)"
-msgstr "מחובר אל רשת חוטית (IP: $A)"
+msgstr "מחובר לרשת חוטית (IP: $A)"
 
 #: gtk/gui.py:192 gtk/wicd-client.py:313 gtk/wicd-client.py:641
 msgid "Connecting"
@@ -198,11 +198,11 @@ msgstr "מתחבר כעת"
 
 #: cli/wicd-cli.py:107
 msgid "Connecting to wired network."
-msgstr "מתחבר כעת אל רשת חוטית."
+msgstr "כעת מתחבר לרשת חוטית."
 
 #: cli/wicd-cli.py:109
 msgid "Connecting to wireless network \"$A\"."
-msgstr "מתחבר כעת אל רשת אלחוטית \"$A\"."
+msgstr "כעת מתחבר לרשת אלחוטית \"$A\"."
 
 #: wicd/misc.py:86
 msgid "Connection Cancelled"
@@ -230,7 +230,7 @@ msgstr "חיבור נוצר"
 
 #: wicd/misc.py:87
 msgid "Connection failed: Could not contact the wireless access point."
-msgstr "חיבור נכשל: לא ניתן להתחבר אל נקודת הגישה האלחוטית (AP)."
+msgstr "חיבור נכשל: לא ניתן להתחבר לנקודת גישה אלחוטית (AP)."
 
 #: wicd/misc.py:51
 msgid "Connection in progress"
@@ -257,8 +257,8 @@ msgid ""
 "Could not connect to wicd's D-Bus interface. Check the wicd log for error "
 "messages."
 msgstr ""
-"לא היה ניתן להתחבר לממשק D-Bus של Wicd. יש לבדוק בקובצי היומן של Wicd עבור "
-"הודעות שגיאה."
+"לא היה ניתן להתחבר לממשק D-Bus של Wicd. דוק בקובצי היומן של Wicd עבור הודעות "
+"שגיאה."
 
 #: gtk/netentry.py:379 gtk/netentry.py:522
 msgid ""
@@ -346,8 +346,8 @@ msgid ""
 "ERROR: wicd-curses was denied access to the wicd daemon: please check that "
 "your user is in the \"$A\" group."
 msgstr ""
-"שגיאה: היישום wicd-curses מנוע מלגשת אל השדון Wicd: אנא בדוק שהמשתמש שלך "
-"מצוי בקבוצה \"$A\"."
+"שגיאה: היישום wicd-curses מנוע מלגשת לשדון Wicd: אנא בדוק כי המשתמש שלך מצוי "
+"בקבוצה \"$A\"."
 
 #: curses/wicd-curses.py:461 gtk/gui.py:267 gtk/gui.py:327
 msgid "ESSID"
@@ -512,7 +512,7 @@ msgstr "נתיב אל CA cert"
 
 #: wicd/translations.py:86
 msgid "Path to PAC file"
-msgstr "נתיב אל קובץ PAC"
+msgstr "נתיב לקובץ PAC"
 
 #: wicd/translations.py:85
 msgid "Path to client cert"
@@ -520,7 +520,7 @@ msgstr "נתיב אל client cert"
 
 #: curses/prefs_curses.py:122 gtk/prefs.py:339 data/wicd.ui:1654
 msgid "Ping static gateways after connecting to verify association"
-msgstr "שלח פינג אל שערי גישה (Gateways) נייחים לאחר חיבור כדי לאמת התחברות"
+msgstr "שלח פינג לשערי גישה (Gateways) נייחים לאחר חיבור כדי לאמת התחברות"
 
 #: curses/wicd-curses.py:521
 msgid "Please select the networks to forget"
@@ -592,11 +592,11 @@ msgstr "יציאה"
 
 #: curses/wicd-curses.py:227
 msgid "Quit wicd-curses"
-msgstr "צא מן wicd-curses"
+msgstr "צא מתוך wicd-curses"
 
 #: gtk/wicd-client.py:502
 msgid "Quit wicd-tray-icon"
-msgstr "צא מן wicd-tray-icon"
+msgstr "צא מתוך wicd-tray-icon"
 
 #: curses/wicd-curses.py:609
 msgid "Refresh"
@@ -751,7 +751,7 @@ msgid ""
 "To connect to a wired network, you must create a network profile. To create "
 "a network profile, type a name that describes this network, and press Add."
 msgstr ""
-"בכדי להתחבר אל רשת חוטית, עליך ליצור דיוקן רשת. כדי ליצור דיוקן רשת, עליך "
+"בכדי להתחבר לרשת חוטית, עליך ליצור דיוקן רשת. כדי ליצור דיוקן רשת, עליך "
 "להזין שם אשר מתאר את הרשת וללחוץ הוסף."
 
 #: gtk/wicd-client.py:94
@@ -759,8 +759,8 @@ msgid ""
 "Unable to contact the Wicd daemon due to an access denied error from DBus. "
 "Please check that your user is in the $A group."
 msgstr ""
-"לא ניתן ליצור קשר עם השדון Wicd עקב שגיאת דחיית גישה מן D-Bus. אנא בדוק "
-"שהמשתמש שלך נמצא בקבוצה $A."
+"לא ניתן ליצור קשר עם השדון Wicd עקב שגיאת דחיית גישה מתוך D-Bus. אנא בדוק כי "
+"המשתמש שלך נמצא בקבוצה $A."
 
 #: curses/wicd-curses.py:353 gtk/netentry.py:1034 gtk/netentry.py:1156
 msgid "Unsecured"
@@ -810,7 +810,7 @@ msgstr "השתמש בדיוקן אחרון בשימוש בחיבור חוטי א
 
 #: curses/netentry_curses.py:372 gtk/netentry.py:468
 msgid "Use these settings for all networks sharing this essid"
-msgstr "השתמש בהגדרות אלה עבור כל הרשתות החולקות את ESSID זה"
+msgstr "השתמש בהגדרות אלה עבור כל הרשתות אשר חולקות את ESSID זה"
 
 #: wicd/translations.py:90
 msgid "Username"
@@ -838,7 +838,7 @@ msgstr "שדון Wicd אינו נגיש"
 
 #: wicd/misc.py:216
 msgid "Wicd needs to access your computer's network cards."
-msgstr "Wicd צריך לגשת אל כרטיסי הרשת של מחשבך."
+msgstr "Wicd צריך לגשת לכרטיסי הרשת של המחשב שלך."
 
 #: cli/wicd-cli.py:85
 msgid "Wired"
@@ -1024,7 +1024,7 @@ msgstr "תסריט עובר התנתקות:"
 
 #: data/wicd.ui:524
 msgid "Always switch to a wired connection when available"
-msgstr "החלף אוטומטית אל חיבור חוטי כאשר זה זמין"
+msgstr "החלף אוטומטית לחיבור חוטי כאשר זה זמין"
 
 #: data/wicd.ui:529
 msgid ""
@@ -1032,9 +1032,9 @@ msgid ""
 "as soon as a cable is plugged in, even if a wireless connection \n"
 "is already active."
 msgstr ""
-"כאשר אפשרות זו נבחרת, Wicd יתחבר אוטומטית אל\n"
-"רשת חוטית בו ברגע שמחובר כבל, אפילו אם כבר קיים \n"
-"חיבור אלחוטי פעיל."
+"כאשר אפשרות זו נבחרת, Wicd יתחבר אוטומטית\n"
+"לרשת חוטית בו ברגע שמחובר כבל, אפילו אם \n"
+"כבר קיים חיבור אלחוטי פעיל."
 
 #: data/wicd.ui:552
 msgid "DNS domain:"
@@ -1107,7 +1107,7 @@ msgid ""
 "the interface is connected to a cable."
 msgstr ""
 "כאשר מאופשרת, ממשק רשת חוטי תמיד יוצג בחלון הראשי. זה יכול להועיל כאשר כרטיס "
-"רשת חוטי לא מאתר כאשר הממשק הינו מחובר אל כבל."
+"רשת חוטי לא מאתר כאשר הממשק הינו מחובר לכבל."
 
 #: data/wicd.ui:986
 msgid "<b>Notifications</b>"
