@@ -1,4 +1,209 @@
 ------------------------------------------------------------
+revno: 957
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Mon 2016-01-25 04:58:07 +0100
+message:
+  Update version number
+------------------------------------------------------------
+revno: 956
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Mon 2016-01-25 04:47:18 +0100
+message:
+  wicd: Fix the parsing and writing of wep-hex configurations (launchpad bug #1419464)
+  
+  Thanks, Axel Beckert from Debian!
+  
+  ***
+  
+   Symptom: Can't connect to WEP based networks with hexadecimal keys
+   due to unexpanded template variables like $_KEY in the actual
+   wpa_supplicant configurations.
+  
+   Solution: Move the appending of the line outside the loop over all
+   matches in one line.
+  
+  Author: Axel Beckert <abe@debian.org>
+  Bug-Debian: https://bugs.debian.org/812427
+  Bug: https://bugs.launchpad.net/wicd/+bug/1419464
+------------------------------------------------------------
+revno: 955
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Tue 2016-01-19 05:12:12 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 954
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Wed 2015-12-16 05:16:23 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 953
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Sun 2015-12-13 05:16:25 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 952
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Sun 2015-11-22 05:13:57 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 951
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Tue 2015-10-20 05:17:37 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 950
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Thu 2015-10-08 05:29:24 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 949
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Thu 2015-09-24 05:16:28 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 948
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Wed 2015-09-23 05:52:15 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 947
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Mon 2015-04-27 05:11:32 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 946 [merge]
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Fri 2015-04-24 16:55:14 +0200
+message:
+  IndicatorTrayIconGUI was missing the function "set_from_name" and also the icon path was wrong.
+  
+  Thanks, Bastian Köcher!
+------------------------------------------------------------
+revno: 945
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Fri 2015-04-10 04:56:36 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 944
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Sat 2015-03-14 05:14:30 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 943
+committer: Launchpad Translations on behalf of wicd-devel
+branch nick: wicd
+timestamp: Sun 2015-02-15 05:46:35 +0000
+message:
+  Launchpad automatic translations update.
+------------------------------------------------------------
+revno: 942
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Sat 2015-02-14 11:55:53 +0100
+message:
+  Add AppIndicator support for Ubuntu's Unity
+  
+  This fixes https://bugs.launchpad.net/wicd/+bug/761326
+  Credits go to Michael D. Adams (mdmkolbe), thanks!
+------------------------------------------------------------
+revno: 941 [merge]
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Sat 2015-02-14 11:44:03 +0100
+message:
+  Add possibility to pass extra arguments to the DHCP client commands, and use this option when a global DNS server has been set, to avoid resolv.conf being overwritten by the DHCP client when receiving a DHCP reply that contains a DNS server.
+    
+  This should fix https://bugs.launchpad.net/wicd/+bug/145405.
+  Credits for the original patch go to "Leonardo" :-)
+  
+  Plus, translations...
+------------------------------------------------------------
+revno: 940
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Thu 2015-02-12 18:01:42 +0100
+message:
+  Wireless network interface should only be auto-detected when nothing is specified in /etc/wicd/manager-settings.conf
+  
+  If the user makes this empty, it will not be autodetected anymore.
+------------------------------------------------------------
+revno: 939
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Thu 2015-02-12 15:45:24 +0100
+message:
+  Improve handling of None values in the configuration file
+  
+  When wireless_interface is not filled in, it should be autodetected.
+  But because this is set to None, the autodetection fails...
+------------------------------------------------------------
+revno: 938
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Thu 2015-02-12 14:57:31 +0100
+message:
+  Add author info
+------------------------------------------------------------
+revno: 937
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Thu 2015-02-12 14:12:37 +0100
+message:
+  Improve names of encryption schemes
+------------------------------------------------------------
+revno: 936
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Thu 2015-02-12 13:44:32 +0100
+message:
+  Fix scanning of hidden networks
+------------------------------------------------------------
+revno: 935 [merge]
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Thu 2015-02-12 12:46:06 +0100
+message:
+  Merge
+------------------------------------------------------------
+revno: 934
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Thu 2015-02-12 12:43:18 +0100
+message:
+  Improve debugging output
+------------------------------------------------------------
+revno: 933
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Sun 2014-12-21 21:21:04 +0100
+message:
+  wicd: update CHANGES file by following new easy procedure
+------------------------------------------------------------
 revno: 932
 committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
 branch nick: wicd
@@ -1577,11 +1782,3 @@ timestamp: Thu 2012-02-02 20:15:03 +0100
 message:
   Prepare files for the release of 1.7.1
 ------------------------------------------------------------
-
-Due to size, this file has been truncated. All revisions relevant to
-the 1.7.2 release (and sub-releases) have been included. For more
-information, please see the full log of changes at:
-
-     https://code.launchpad.net/~wicd-devel/wicd/experimental
-
-For a short list of major changes, please see NEWS.
