@@ -1,6 +1,9 @@
 Wicd 1.7 Series
 ---------------
 
+1.7.4:
+	- Bugfix for WEP hexadecimal network configurations (thanks, Axel Beckert!)
+
 1.7.3:
 	- New feature: you can now manually control the speed of the wireless connection
 	- Lots (30+) of bugfixes (see launchpad or the CHANGES file for details)
