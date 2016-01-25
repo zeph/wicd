@@ -321,11 +321,11 @@ def ParseEncryption(network):
                                 rep_val = '0'
                         if rep_val:
                             line = line.replace("$_%s" % cur_val, str(rep_val))
-                            config_file = ''.join([config_file, line])
                         else:
                             print "Ignoring template line: '%s'" % line
                     else:
                         print "Weird parsing error occurred"
+                config_file = ''.join([config_file, line])
             else:  # Just a regular entry.
                 config_file = ''.join([config_file, line])
 
