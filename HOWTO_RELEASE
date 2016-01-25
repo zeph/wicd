@@ -4,19 +4,24 @@ It might not be complete or perfect, but it's better than having nothing.
 Author: Tom Van Braeckel
 
 On http://launchpad.net/wicd
-- create the milestone
+- create the milestone (see the series page, https://launchpad.net/wicd/1.7)
 - assign bugs to the milestone
-- move unfinished work to the *next* milestone
+- move unfinished work to the *next* milestone (this is optional, I stopped doing this)
 
 In the sources:
 - ensure all work is committed
-- update the NEWS file
+- bzr pull to make sure you have all work
 - update the VERSION_NUM variable in setup.py
-- update the CHANGES file (hint: bzr log -r717.. | head -n -1 > CHANGES && cat in/CHANGES.suffix >> CHANGES)
+- sudo python setup.py compile_translations
+- sudo python setup.py configure
+- sudo python setup.py install
+- test: sudo python wicd/wicd-daemon.py; python gtk/wicd-client.py # and check the versio number!
+- update the NEWS file
+- DON'T update the CHANGES file (hint: bzr log -r717.. | head -n -1 > CHANGES && cat in/CHANGES.suffix >> CHANGES)
 
 Build the release tarball by running:
 python setup.py sdist
 
 On http://launchpad.net/wicd
 - Attach the dist/wicd-*.tar.gz file to the milestone
-- Release the milestone
+- Release the milestone (by filling in its "released" date)
