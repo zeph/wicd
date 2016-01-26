@@ -1,4 +1,25 @@
 ------------------------------------------------------------
+revno: 960
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Mon 2016-01-25 05:36:45 +0100
+message:
+  Update HOWTO_RELEASE after doing the 1.7.4 release
+------------------------------------------------------------
+revno: 959
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Mon 2016-01-25 05:25:04 +0100
+message:
+  Why do we want a CHANGES file anyway...?
+------------------------------------------------------------
+revno: 958
+committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
+branch nick: wicd
+timestamp: Mon 2016-01-25 05:23:58 +0100
+message:
+  Update NEWS with what comes to mind...
+------------------------------------------------------------
 revno: 957
 committer: Tom Van Braeckel <tomvanbraeckel@gmail.com>
 branch nick: wicd
@@ -1782,3 +1803,11 @@ timestamp: Thu 2012-02-02 20:15:03 +0100
 message:
   Prepare files for the release of 1.7.1
 ------------------------------------------------------------
+
+Due to size, this file has been truncated. All revisions relevant to
+the 1.7.2 release (and sub-releases) have been included. For more
+information, please see the full log of changes at:
+
+     https://code.launchpad.net/~wicd-devel/wicd/experimental
+
+For a short list of major changes, please see NEWS.

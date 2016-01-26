@@ -17,7 +17,7 @@ In the sources:
 - sudo python setup.py install
 - test: sudo python wicd/wicd-daemon.py; python gtk/wicd-client.py # and check the versio number!
 - update the NEWS file
-- DON'T update the CHANGES file (hint: bzr log -r717.. | head -n -1 > CHANGES && cat in/CHANGES.suffix >> CHANGES)
+- update the CHANGES file for Debian. Hint: bzr log -r717.. | head -n -1 > CHANGES && cat in/CHANGES.suffix >> CHANGES
 
 Build the release tarball by running:
 python setup.py sdist
