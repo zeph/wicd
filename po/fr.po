@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2015-12-12 15:37+0000\n"
-"Last-Translator: Jean-Marc <Unknown>\n"
+"PO-Revision-Date: 2016-01-26 07:52+0000\n"
+"Last-Translator: Stéphane G. <harrycovert_68@hotmail.fr>\n"
 "Language-Team: fr <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-13 05:16+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-27 05:13+0000\n"
+"X-Generator: Launchpad (build 17902)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -1050,7 +1050,7 @@ msgstr ""
 
 #: data/wicd.ui:552
 msgid "DNS domain:"
-msgstr "Domaine DNS"
+msgstr "Domaine DNS :"
 
 #: data/wicd.ui:600
 msgid "<b>Never Connect</b>"
@@ -1066,19 +1066,19 @@ msgstr "<b>Reconnexion automatique</b>"
 
 #: data/wicd.ui:651
 msgid "Use last wired network profile"
-msgstr "Renommer un profil de réseau filaire"
+msgstr "Utiliser le dernier profil de réseau filaire"
 
 #: data/wicd.ui:673
 msgid "Prompt for wired network profile"
-msgstr "Demander un profil réseau filaire"
+msgstr "Demander un profil de réseau filaire"
 
 #: data/wicd.ui:696
 msgid "Use default wired network profile"
-msgstr "Renommer un profil de réseau filaire"
+msgstr "Utiliser le profile de réseau filaire par défaut"
 
 #: data/wicd.ui:717
 msgid "<b>Wired automatic connection</b>"
-msgstr "Reconnexion automatique"
+msgstr "<b>Reconnexion filaire automatique</b>"
 
 #: data/wicd.ui:735
 msgid "Wired interface:"
@@ -1090,7 +1090,7 @@ msgstr "Interface sans fil :"
 
 #: data/wicd.ui:793
 msgid "<b>Network Interfaces</b>"
-msgstr "Interfaces réseau"
+msgstr "<b>Interfaces réseau</b>"
 
 #: data/wicd.ui:809
 msgid "DNS server 3:"
@@ -1106,11 +1106,11 @@ msgstr "Serveur DNS 1 :"
 
 #: data/wicd.ui:876
 msgid "Search domain:"
-msgstr "Recherche du domaine"
+msgstr "Domaine de recherche:"
 
 #: data/wicd.ui:911
 msgid "<b>Global DNS Servers</b>"
-msgstr "Serveurs de noms (DNS) globaux"
+msgstr "<b>Serveurs DNS globaux</b>"
 
 #: data/wicd.ui:970
 msgid ""
@@ -1118,9 +1118,9 @@ msgid ""
 "window. This can be useful if your wired network card does not detect when "
 "the interface is connected to a cable."
 msgstr ""
-"Si activée, l'interface réseau filaire apparaîtra toujours dans la "
-"fenêtreprincipale. Ceci peut être utile si votre carte réseau filaire ne "
-"détecte pas le branchement du câble."
+"Si activée, l'interface réseau filaire apparaîtra toujours dans la fenêtre "
+"principale. Ceci peut être utile si votre carte réseau filaire ne détecte "
+"pas le branchement du câble."
 
 #: data/wicd.ui:986
 msgid "<b>Notifications</b>"
@@ -1128,11 +1128,11 @@ msgstr "<b>Notifications</b>"
 
 #: data/wicd.ui:1060
 msgid "<b>Route Table Flushing</b>"
-msgstr "Purge de la table de routage"
+msgstr "<b>Purge de la table de routage</b>"
 
 #: data/wicd.ui:1073
 msgid "<b>Wired Link Detection</b>"
-msgstr "Détection du lien filaire"
+msgstr "<b>Détection de la liaison filaire</b>"
 
 #: data/wicd.ui:1299
 msgid "<b>DHCP Client</b>"
@@ -1147,16 +1147,16 @@ msgid ""
 "Hover your mouse over the selected backend \n"
 "to read its description."
 msgstr ""
-"Déplacez la souris sur le protocole choisi \n"
-"pour afficher une description de celui-ci"
+"Placez la souris sur le protocole choisi\n"
+"pour afficher sa description."
 
 #: data/wicd.ui:1484
 msgid "Driver:"
-msgstr "Pilote :"
+msgstr "Pilote:"
 
 #: data/wicd.ui:1540
 msgid "<b>Wireless Interface</b>"
-msgstr "Interface sans fil"
+msgstr "<b>Interface sans fil</b>"
 
 #: data/wicd.ui:1554
 msgid "<b>WPA Supplicant</b>"
@@ -1179,7 +1179,8 @@ msgid ""
 "You should almost always use wext as the\n"
 "WPA supplicant driver."
 msgstr ""
-"La plupart du temps, il convient d'utiliser wext comme pilote WPA supplicant"
+"Vous devriez généralement utiliser\n"
+"wext comme pilote WPA supplicant."
 
 #~ msgid "Help)"
 #~ msgstr "Aide)"
