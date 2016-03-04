@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2014-06-04 07:14+0000\n"
-"Last-Translator: Jim Spentzos <Unknown>\n"
+"PO-Revision-Date: 2016-03-03 20:42+0000\n"
+"Last-Translator: George Politis <sitilop@hotmail.com>\n"
 "Language-Team: el <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-15 05:45+0000\n"
-"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2016-03-04 05:23+0000\n"
+"X-Generator: Launchpad (build 17936)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -443,7 +443,7 @@ msgstr "Κλειδί"
 
 #: wicd/translations.py:81
 msgid "Key index"
-msgstr ""
+msgstr "Βασικός Δείκτης"
 
 #: curses/wicd-curses.py:536 gtk/gui.py:310
 msgid "List of saved networks"
@@ -561,7 +561,7 @@ msgstr "Prefs"
 
 #: wicd/translations.py:87
 msgid "Preshared key"
-msgstr ""
+msgstr "Κοινόχρηστο κλειδί"
 
 #: curses/wicd-curses.py:229
 msgid "Press any key to return."
@@ -601,7 +601,7 @@ msgstr "Έξοδος από το wicd-curses"
 
 #: gtk/wicd-client.py:502
 msgid "Quit wicd-tray-icon"
-msgstr ""
+msgstr "Έξοδος εικονίδιο wicd"
 
 #: curses/wicd-curses.py:609
 msgid "Refresh"
@@ -718,11 +718,11 @@ msgstr "Ενεργοποίηση του Wi-Fi"
 
 #: curses/wicd-curses.py:651
 msgid "Tab Left"
-msgstr ""
+msgstr "Στοίχηση αριστερά"
 
 #: curses/wicd-curses.py:652
 msgid "Tab Right"
-msgstr ""
+msgstr "Στοίχηση δεξιά"
 
 #: curses/wicd-curses.py:93
 msgid "Terminated by user"
@@ -977,7 +977,7 @@ msgstr "Εισάγετε το κρυφό δίκτυο που θέλετε να �
 
 #: data/wicd.ui:65
 msgid "Forget network settings"
-msgstr ""
+msgstr "Να ξεχαστούν οι ρυθμίσεις δικτύου"
 
 #: data/wicd.ui:89
 msgid "_Switch Off Wi-Fi"
@@ -1013,7 +1013,7 @@ msgstr "Συνέχιση εκτέλεσης αρχείου δέσμης"
 
 #: data/wicd.ui:289
 msgid "Configure scripts to run for this network:"
-msgstr ""
+msgstr "Τροποποιείστε scripts για να τρέξουν σε αυτό το δίκτυο"
 
 #: data/wicd.ui:306
 msgid "Pre-connection Script:"
@@ -1041,6 +1041,9 @@ msgid ""
 "as soon as a cable is plugged in, even if a wireless connection \n"
 "is already active."
 msgstr ""
+"Αν επιλεγεί, το wicd θα συνδεθεί αυτόματα σε ένα ενσύρματο δίκτυο\n"
+"μόλις το καλώδιο μπει στην υποδοχή, ακόμη και αν μια ασύρματη σύνδεση\n"
+"είναι ήδη ενεργή."
 
 #: data/wicd.ui:552
 msgid "DNS domain:"
@@ -1141,6 +1144,8 @@ msgid ""
 "Hover your mouse over the selected backend \n"
 "to read its description."
 msgstr ""
+"Τοποθετήστε το ποντίκι σας πάνω από το επιλεγμένο backend\n"
+"για να διαβάσετε την περιγραφή του."
 
 #: data/wicd.ui:1484
 msgid "Driver:"
