@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wicd\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2012-11-04 09:26+0000\n"
+"PO-Revision-Date: 2016-03-09 16:38+0000\n"
 "Last-Translator: Mikalai Udodau <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-15 05:44+0000\n"
-"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2016-03-10 05:26+0000\n"
+"X-Generator: Launchpad (build 17936)\n"
 
 #: gtk/wicd-client.py:610
 msgid ""
@@ -366,7 +366,7 @@ msgstr ""
 
 #: curses/netentry_curses.py:52 gtk/netentry.py:77
 msgid "Gateway"
-msgstr ""
+msgstr "Шлюз"
 
 #: curses/prefs_curses.py:50 data/wicd.ui:1028
 msgid "General Settings"
@@ -623,7 +623,7 @@ msgstr ""
 
 #: curses/wicd-curses.py:677
 msgid "Scan"
-msgstr ""
+msgstr "Сканаваць"
 
 #: curses/wicd-curses.py:221
 msgid "Scan for hidden networks"
@@ -691,11 +691,11 @@ msgstr ""
 
 #: gtk/gui.py:376
 msgid "Switch Off Wi-Fi"
-msgstr ""
+msgstr "Выключыць Wi-Fi"
 
 #: gtk/gui.py:373
 msgid "Switch On Wi-Fi"
-msgstr ""
+msgstr "Уключыць Wi-Fi"
 
 #: curses/wicd-curses.py:651
 msgid "Tab Left"
@@ -898,7 +898,7 @@ msgstr ""
 
 #: gtk/wicd-client.py:499
 msgid "_Connection Info"
-msgstr ""
+msgstr "Зве_сткі аб злучэнні"
 
 #: gtk/wicd-client.py:502 data/wicd.ui:161
 msgid "_Quit"
