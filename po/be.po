@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wicd\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2016-03-11 09:49+0000\n"
+"PO-Revision-Date: 2016-03-15 16:18+0000\n"
 "Last-Translator: Mikalai Udodau <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-12 05:24+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-03-16 05:46+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 
 #: gtk/wicd-client.py:610
 msgid ""
@@ -494,11 +494,11 @@ msgstr "Пароль"
 
 #: wicd/translations.py:84
 msgid "Path to CA cert"
-msgstr ""
+msgstr "Шлях да сертыфіката CA"
 
 #: wicd/translations.py:86
 msgid "Path to PAC file"
-msgstr ""
+msgstr "Шлях да файла PAC"
 
 #: wicd/translations.py:85
 msgid "Path to client cert"
@@ -578,11 +578,11 @@ msgstr "Выйсці"
 
 #: curses/wicd-curses.py:227
 msgid "Quit wicd-curses"
-msgstr ""
+msgstr "Выйсці з wicd-curses"
 
 #: gtk/wicd-client.py:502
 msgid "Quit wicd-tray-icon"
-msgstr ""
+msgstr "Выйсці з wicd-tray-icon"
 
 #: curses/wicd-curses.py:609
 msgid "Refresh"
@@ -598,7 +598,7 @@ msgstr "Сцерці"
 
 #: curses/wicd-curses.py:224 data/wicd.ui:67
 msgid "Remove settings for saved networks"
-msgstr ""
+msgstr "Сцерці настройкі для запісаных сетак"
 
 #: curses/wicd-curses.py:441
 msgid "Rename wired profile"
@@ -759,7 +759,7 @@ msgstr "Ужываць шыфраванне (толькі WEP)"
 
 #: curses/netentry_curses.py:54 gtk/netentry.py:89
 msgid "Use Static DNS"
-msgstr ""
+msgstr "Выкарыстоўваць статычны DNS"
 
 #: curses/netentry_curses.py:49 gtk/netentry.py:88
 msgid "Use Static IPs"
