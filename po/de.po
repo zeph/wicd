@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2015-10-19 15:30+0000\n"
+"PO-Revision-Date: 2016-03-17 23:39+0000\n"
 "Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: de <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-20 05:17+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"X-Launchpad-Export-Date: 2016-03-18 05:44+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -134,7 +134,7 @@ msgstr "Kanal"
 
 #: gtk/gui.py:189 data/wicd.ui:183
 msgid "Choose from the networks below:"
-msgstr "Wählen Sie eines der folgenden Netzwerke aus:"
+msgstr "Bitte aus den unteren Netzwerken auswählen:"
 
 #: curses/wicd-curses.py:604
 msgid "Config"
@@ -424,7 +424,7 @@ msgstr "IP"
 
 #: wicd/translations.py:79
 msgid "Identity"
-msgstr "Identität"
+msgstr "Kennung"
 
 #: gtk/wicd-client.py:500
 msgid "Information about the current connection"
