@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: wicd\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2016-03-16 16:42+0000\n"
+"PO-Revision-Date: 2016-03-18 14:04+0000\n"
 "Last-Translator: Mikalai Udodau <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-17 05:15+0000\n"
+"X-Launchpad-Export-Date: 2016-03-19 05:25+0000\n"
 "X-Generator: Launchpad (build 17947)\n"
 
 #: gtk/wicd-client.py:610
@@ -244,7 +244,7 @@ msgstr "Паспяхова злучана."
 
 #: wicd/misc.py:54
 msgid "Connection suspended"
-msgstr ""
+msgstr "Злучэнне прыпынена"
 
 #: cli/wicd-cli.py:94
 msgid "Connection type"
@@ -255,6 +255,8 @@ msgid ""
 "Could not connect to wicd's D-Bus interface. Check the wicd log for error "
 "messages."
 msgstr ""
+"Немагчыма злучыцца з сэрвісам  wicd праз інтэрфейс D-Bus. Гл. паведамленне "
+"пра памылку ў адпаведным журнале."
 
 #: gtk/netentry.py:379 gtk/netentry.py:522
 msgid ""
@@ -358,11 +360,11 @@ msgstr "Вонкавыя праграмы"
 
 #: wicd/misc.py:93
 msgid "Flushing the routing table..."
-msgstr ""
+msgstr "Ачышчэнне табліцы маршрутызацыі..."
 
 #: curses/wicd-curses.py:209
 msgid "For more detailed help, consult the wicd-curses(8) man page."
-msgstr ""
+msgstr "За падрабязнымі звесткамі звярніцеся да старонкі man wicd-curses(8)."
 
 #: curses/netentry_curses.py:52 gtk/netentry.py:77
 msgid "Gateway"
@@ -510,7 +512,7 @@ msgstr ""
 
 #: curses/wicd-curses.py:521
 msgid "Please select the networks to forget"
-msgstr ""
+msgstr "Калі ласка, выберыце сеткі, пра якія трэба забыць"
 
 #: curses/configscript_curses.py:57 gtk/configscript.py:129
 msgid "Post-connection Script"
