@@ -6,13 +6,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2016-03-17 23:39+0000\n"
+"PO-Revision-Date: 2016-03-20 02:35+0000\n"
 "Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: de <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-18 05:44+0000\n"
+"X-Launchpad-Export-Date: 2016-03-20 05:22+0000\n"
 "X-Generator: Launchpad (build 17947)\n"
 "Generated-By: Babel 0.9.6\n"
 
@@ -198,11 +198,11 @@ msgstr "Verbindung wird hergestellt"
 
 #: cli/wicd-cli.py:107
 msgid "Connecting to wired network."
-msgstr "Verbinde mit einem Kabelnetzwerk"
+msgstr "Zum Kabelnetzwerk wird verbunden."
 
 #: cli/wicd-cli.py:109
 msgid "Connecting to wireless network \"$A\"."
-msgstr "Verbinde mit Drahtlosnetzwerk »$A« wird hergestellt."
+msgstr "Zum Drahtlosnetzwerk »$A« wird verbunden."
 
 #: wicd/misc.py:86
 msgid "Connection Cancelled"
@@ -214,11 +214,11 @@ msgstr "Verbindung fehlgeschlagen."
 
 #: wicd/misc.py:88
 msgid "Connection Failed: Bad password"
-msgstr "Verbindung fehlgeschlagen: Falsches Passwort"
+msgstr "Verbindung fehlgeschlagen: falsches Passwort"
 
 #: wicd/misc.py:98
 msgid "Connection Failed: No DHCP offers received."
-msgstr "Verbindung fehlgeschlagen: Keine Angebote über DHCP erhalten."
+msgstr "Verbindung fehlgeschlagen: keine Angebote über DHCP erhalten."
 
 #: wicd/misc.py:90
 msgid "Connection Failed: Unable to Get IP Address"
@@ -231,7 +231,7 @@ msgstr "Verbindung hergestellt"
 #: wicd/misc.py:87
 msgid "Connection failed: Could not contact the wireless access point."
 msgstr ""
-"Verbindung gescheitert. Das Funknetzwerk konnte nicht gefunden werden."
+"Verbindung fehlgeschlagen: das Funknetzwerk konnte nicht kontaktiert werden."
 
 #: wicd/misc.py:51
 msgid "Connection in progress"
@@ -266,9 +266,9 @@ msgid ""
 "Could not find a graphical sudo program. The script editor could not be "
 "launched.  You'll have to edit scripts directly your configuration file."
 msgstr ""
-"Es konnte kein grafisches sudo-Programm gefunden werden. Der Skript-Editor "
-"konnte nicht gestartet werden. Sie müssen das Skript direkt in der "
-"Konfigurationsdatei ändern."
+"Es konnte kein grafisches sudo-Programm gefunden werden. Der "
+"Skriptbearbeitung konnte nicht gestartet werden. Sie müssen das Skript "
+"direkt in der Konfigurationsdatei ändern."
 
 #: curses/wicd-curses.py:488 gtk/gui.py:259
 msgid "Create an Ad-Hoc Network"
@@ -531,7 +531,7 @@ msgstr ""
 
 #: curses/wicd-curses.py:521
 msgid "Please select the networks to forget"
-msgstr "Bitte wählen Sie die zu löschenden Netzwerke aus"
+msgstr "Bitte die zu löschenden Netzwerke auswählen"
 
 #: curses/configscript_curses.py:57 gtk/configscript.py:129
 msgid "Post-connection Script"
@@ -607,11 +607,11 @@ msgstr "Wicd-Benachrichtigungsfeldsymbol beenden"
 
 #: curses/wicd-curses.py:609
 msgid "Refresh"
-msgstr "Aktualisieren"
+msgstr "Auffrischen"
 
 #: curses/wicd-curses.py:217
 msgid "Refresh network list"
-msgstr "Netzwerkliste aktualisieren"
+msgstr "Netzwerkliste auffrischen"
 
 #: curses/wicd-curses.py:538
 msgid "Remove"
@@ -664,7 +664,7 @@ msgstr "Skripte"
 
 #: curses/netentry_curses.py:57 curses/prefs_curses.py:75 gtk/netentry.py:78
 msgid "Search domain"
-msgstr "Such-Domain"
+msgstr "Suchdomäne"
 
 #: gtk/netentry.py:1032 gtk/netentry.py:1154
 msgid "Secured"
@@ -1000,11 +1000,11 @@ msgstr "Alle Verbin_dungen trennen"
 
 #: data/wicd.ui:118
 msgid "_Refresh"
-msgstr "_Aktualisieren"
+msgstr "_Auffrischen"
 
 #: data/wicd.ui:132
 msgid "_Preferences"
-msgstr "Einstellungen"
+msgstr "_Einstellungen"
 
 #: data/wicd.ui:146
 msgid "_About"
@@ -1066,7 +1066,7 @@ msgstr "<b>Nie verbinden</b>"
 
 #: data/wicd.ui:616
 msgid "Automatically reconnect on network connection loss"
-msgstr "Automatisch wiederverbinden bei Abbruch der Netzwerkverbindung"
+msgstr "Bei Abbruch der Netzwerkverbindung automatisch wieder verbinden"
 
 #: data/wicd.ui:635
 msgid "<b>Automatic Reconnection</b>"
@@ -1176,7 +1176,7 @@ msgstr "<b>Fehlerdiagnose</b>"
 
 #: data/wicd.ui:1584
 msgid "Backend:"
-msgstr "Hintergrundprogramm"
+msgstr "Hintergrundprogramm:"
 
 #: data/wicd.ui:1611
 msgid "<b>Backend</b>"
