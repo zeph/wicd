@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wicd\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2016-03-18 14:04+0000\n"
+"PO-Revision-Date: 2016-03-21 14:48+0000\n"
 "Last-Translator: Mikalai Udodau <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-19 05:25+0000\n"
-"X-Generator: Launchpad (build 17947)\n"
+"X-Launchpad-Export-Date: 2016-03-22 05:30+0000\n"
+"X-Generator: Launchpad (build 17958)\n"
 
 #: gtk/wicd-client.py:610
 msgid ""
@@ -380,7 +380,7 @@ msgstr "Стварэнне PSK..."
 
 #: wicd/misc.py:95
 msgid "Generating WPA configuration file..."
-msgstr ""
+msgstr "Стварэнне файла настаўленняў WPA..."
 
 #: gtk/netentry.py:234
 msgid "Global DNS has not been enabled in general preferences."
@@ -404,7 +404,7 @@ msgstr "Схаваны"
 
 #: gtk/gui.py:418
 msgid "Hidden Network ESSID"
-msgstr ""
+msgstr "ESSID схаванай сеткі"
 
 #: curses/netentry_curses.py:50 curses/wicd-curses.py:462 gtk/gui.py:266
 #: gtk/netentry.py:74
@@ -568,11 +568,11 @@ msgstr "Уласцівасці"
 
 #: wicd/misc.py:96
 msgid "Putting interface down..."
-msgstr ""
+msgstr "Адключэнне інтэрфейса..."
 
 #: wicd/misc.py:97
 msgid "Putting interface up..."
-msgstr ""
+msgstr "Падключэнне інтэрфейса..."
 
 #: curses/wicd-curses.py:613
 msgid "Quit"
@@ -617,7 +617,7 @@ msgstr ""
 
 #: curses/wicd-curses.py:606
 msgid "RfKill"
-msgstr ""
+msgstr "RfKill"
 
 #: curses/prefs_curses.py:103
 msgid "Route Table Flushing"
