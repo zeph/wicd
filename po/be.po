@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: wicd\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2016-03-21 14:48+0000\n"
+"PO-Revision-Date: 2016-03-22 16:33+0000\n"
 "Last-Translator: Mikalai Udodau <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-22 05:30+0000\n"
+"X-Launchpad-Export-Date: 2016-03-23 05:23+0000\n"
 "X-Generator: Launchpad (build 17958)\n"
 
 #: gtk/wicd-client.py:610
@@ -778,6 +778,7 @@ msgstr ""
 #: curses/prefs_curses.py:82 gtk/prefs.py:341
 msgid "Use default profile on wired autoconnect"
 msgstr ""
+"Выкарыстоўваць прадвызначаны профіль пры аўтаматычным правадным злучэнні"
 
 #: curses/netentry_curses.py:55 curses/prefs_curses.py:73 gtk/netentry.py:90
 #: data/wicd.ui:892
@@ -787,6 +788,7 @@ msgstr ""
 #: curses/prefs_curses.py:84 gtk/prefs.py:345
 msgid "Use last used profile on wired autoconnect"
 msgstr ""
+"Выкарыстоўваць апошні ўжываны профіль пры аўтаматычным правадным злучэнні"
 
 #: curses/netentry_curses.py:372 gtk/netentry.py:468
 msgid "Use these settings for all networks sharing this essid"
@@ -818,7 +820,7 @@ msgstr ""
 
 #: wicd/misc.py:216
 msgid "Wicd needs to access your computer's network cards."
-msgstr ""
+msgstr "Wicd патрэбен доступ да сеткавай карты вашага камп'ютара."
 
 #: cli/wicd-cli.py:85
 msgid "Wired"
@@ -911,14 +913,16 @@ msgid ""
 "wicd-curses does not support deleting the last wired profile.  Try renaming "
 "it (\"F2\")"
 msgstr ""
+"wicd-curses не падтрымлівае выдаленне апошняга праваднога профілю.  "
+"Паспрабуйце перайменаваць яго (\"F2\")"
 
 #: curses/wicd-curses.py:205
 msgid "wicd-curses help"
-msgstr ""
+msgstr "даведка па wicd-curses"
 
 #: data/wicd.ui:9
 msgid "Wicd Network Manager"
-msgstr ""
+msgstr "Менеджар сетак  Wicd"
 
 #: data/wicd.ui:46
 msgid "Create an ad-hoc network"
@@ -926,7 +930,7 @@ msgstr ""
 
 #: data/wicd.ui:55
 msgid "Find a hidden network"
-msgstr ""
+msgstr "Знайсці схаваную сетку"
 
 #: data/wicd.ui:57
 msgid "Enter a hidden network to try to locate."
@@ -934,7 +938,7 @@ msgstr ""
 
 #: data/wicd.ui:65
 msgid "Forget network settings"
-msgstr ""
+msgstr "Забыць настройкі сеткі"
 
 #: data/wicd.ui:89
 msgid "_Switch Off Wi-Fi"
@@ -962,7 +966,7 @@ msgstr "Злучэнне..."
 
 #: data/wicd.ui:238
 msgid "Cancel the current connection attempt"
-msgstr ""
+msgstr "Скасаваць бягучую спробу падключыцца"
 
 #: data/wicd.ui:270
 msgid "Configure Scripts"
@@ -990,7 +994,7 @@ msgstr ""
 
 #: data/wicd.ui:524
 msgid "Always switch to a wired connection when available"
-msgstr ""
+msgstr "Заўсёды пераключацца на правадное злучэнне, калі даступна"
 
 #: data/wicd.ui:529
 msgid ""
@@ -1084,7 +1088,7 @@ msgstr ""
 
 #: data/wicd.ui:1299
 msgid "<b>DHCP Client</b>"
-msgstr ""
+msgstr "<b>Кліент DHCP</b>"
 
 #: data/wicd.ui:1310
 msgid "<b>Graphical Sudo Application</b>"
