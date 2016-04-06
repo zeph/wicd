@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: wicd\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2016-03-23 09:58+0000\n"
+"PO-Revision-Date: 2016-04-05 12:45+0000\n"
 "Last-Translator: Mikalai Udodau <Unknown>\n"
 "Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-24 05:25+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2016-04-06 05:30+0000\n"
+"X-Generator: Launchpad (build 17972)\n"
 
 #: gtk/wicd-client.py:610
 msgid ""
@@ -276,6 +276,9 @@ msgid ""
 "wicd-curses is running. Please restart the daemon, and then restart wicd-"
 "curses."
 msgstr ""
+"Памылка DBus! Магчыма, гэта здарылася з-за спынення дэмана wicd, у той час "
+"як wicd-curses выконваецца. Калі ласка, перазапусціце дэмана, пасля чаго "
+"запусціце wicd-curses."
 
 #: curses/prefs_curses.py:92
 msgid "DHCP Client"
@@ -518,19 +521,19 @@ msgstr "Калі ласка, выберыце сеткі, пра якія трэ
 
 #: curses/configscript_curses.py:57 gtk/configscript.py:129
 msgid "Post-connection Script"
-msgstr ""
+msgstr "Выканаць скрыпт пасля злучэння"
 
 #: curses/configscript_curses.py:59 gtk/configscript.py:132
 msgid "Post-disconnection Script"
-msgstr ""
+msgstr "Выканаць скрыпт пасля адлучэння"
 
 #: curses/configscript_curses.py:56 gtk/configscript.py:128
 msgid "Pre-connection Script"
-msgstr ""
+msgstr "Выканаць скрыпт перад злучэннем"
 
 #: curses/configscript_curses.py:58 gtk/configscript.py:130
 msgid "Pre-disconnection Script"
-msgstr ""
+msgstr "Выканаць скрыпт перад адлучэннем"
 
 #: curses/prefs_curses.py:56 curses/prefs_curses.py:252 gtk/prefs.py:318
 msgid "Preferences"
@@ -623,7 +626,7 @@ msgstr "RfKill"
 
 #: curses/prefs_curses.py:103
 msgid "Route Table Flushing"
-msgstr ""
+msgstr "Ачышчэнне табліцы маршрутызацыі"
 
 #: curses/wicd-curses.py:677
 msgid "Scan"
