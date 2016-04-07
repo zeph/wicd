@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2016-03-20 02:35+0000\n"
+"PO-Revision-Date: 2016-04-06 13:16+0000\n"
 "Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: de <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-21 05:22+0000\n"
-"X-Generator: Launchpad (build 17947)\n"
+"X-Launchpad-Export-Date: 2016-04-07 05:39+0000\n"
+"X-Generator: Launchpad (build 17972)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -202,7 +202,7 @@ msgstr "Zum Kabelnetzwerk wird verbunden."
 
 #: cli/wicd-cli.py:109
 msgid "Connecting to wireless network \"$A\"."
-msgstr "Zum Drahtlosnetzwerk »$A« wird verbunden."
+msgstr "Zum Funknetzwerk »$A« wird verbunden."
 
 #: wicd/misc.py:86
 msgid "Connection Cancelled"
