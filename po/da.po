@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2012-03-05 21:01+0000\n"
-"Last-Translator: David Paleino <dapal@debian.org>\n"
+"PO-Revision-Date: 2017-07-06 16:36+0000\n"
+"Last-Translator: Ole Carlsen <Unknown>\n"
 "Language-Team: da <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-15 05:44+0000\n"
-"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2017-07-07 04:53+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -52,7 +52,7 @@ msgstr "Om wicd"
 
 #: curses/wicd-curses.py:465 gtk/gui.py:273
 msgid "Activate Internet Connection Sharing"
-msgstr "Aktiver Internet forbindelse deling"
+msgstr "Aktivér deling af internetforbindelse"
 
 #: curses/wicd-curses.py:378
 msgid "Add a new profile"
@@ -401,7 +401,7 @@ msgstr ""
 
 #: curses/wicd-curses.py:603
 msgid "Help"
-msgstr ""
+msgstr "Hjælp"
 
 #: curses/wicd-curses.py:611
 msgid "Hidden"
@@ -958,7 +958,7 @@ msgstr ""
 
 #: data/wicd.ui:55
 msgid "Find a hidden network"
-msgstr ""
+msgstr "Find et skjult netværk"
 
 #: data/wicd.ui:57
 msgid "Enter a hidden network to try to locate."
