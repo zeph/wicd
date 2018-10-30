@@ -3,17 +3,18 @@
 # /translator/edit/50/
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2015-03-13 11:20+0000\n"
+"PO-Revision-Date: 2018-10-30 05:27+0000\n"
 "Last-Translator: igor <igor@sato.ru>\n"
 "Language-Team: ru <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-03-14 05:14+0000\n"
-"X-Generator: Launchpad (build 17389)\n"
+"X-Launchpad-Export-Date: 2018-10-30 05:30+0000\n"
+"X-Generator: Launchpad (build 18810)\n"
+"Language: ru\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -435,7 +436,7 @@ msgstr "Ключ"
 
 #: wicd/translations.py:81
 msgid "Key index"
-msgstr ""
+msgstr "Ключевой индекс"
 
 #: curses/wicd-curses.py:536 gtk/gui.py:310
 msgid "List of saved networks"
@@ -525,7 +526,7 @@ msgstr "Пожалуйста, укажите сеть, которую надо �
 
 #: curses/configscript_curses.py:57 gtk/configscript.py:129
 msgid "Post-connection Script"
-msgstr "Запустить скрипт post-disconnect"
+msgstr "Запустить скрипт post-connect"
 
 #: curses/configscript_curses.py:59 gtk/configscript.py:132
 msgid "Post-disconnection Script"
@@ -533,7 +534,7 @@ msgstr "Запустить скрипт post-disconnect"
 
 #: curses/configscript_curses.py:56 gtk/configscript.py:128
 msgid "Pre-connection Script"
-msgstr "Запустить скрипт pre-disconnect"
+msgstr "Запустить скрипт pre-connect"
 
 #: curses/configscript_curses.py:58 gtk/configscript.py:130
 msgid "Pre-disconnection Script"
@@ -626,7 +627,7 @@ msgstr "Сброс IP-адреса..."
 
 #: curses/wicd-curses.py:606
 msgid "RfKill"
-msgstr ""
+msgstr "RfKill"
 
 #: curses/prefs_curses.py:103
 msgid "Route Table Flushing"
@@ -884,7 +885,7 @@ msgstr "Обнаружено проводное соединение"
 
 #: cli/wicd-cli.py:87
 msgid "Wireless"
-msgstr ""
+msgstr "Беспроводной"
 
 #: gtk/wicd-client.py:633
 msgid ""
@@ -1151,7 +1152,7 @@ msgstr "<b>Беспроводной интерфейс</b>"
 
 #: data/wicd.ui:1554
 msgid "<b>WPA Supplicant</b>"
-msgstr ""
+msgstr "<b>Участник WPA</b>"
 
 #: data/wicd.ui:1566
 msgid "<b>Debugging</b>"
@@ -1163,7 +1164,7 @@ msgstr "Бак-энд"
 
 #: data/wicd.ui:1611
 msgid "<b>Backend</b>"
-msgstr ""
+msgstr "<b>Бэк-энд</b>"
 
 #: data/wicd.ui:1625
 msgid ""
