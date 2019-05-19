@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 17:26+0200\n"
-"PO-Revision-Date: 2017-07-09 10:56+0000\n"
+"PO-Revision-Date: 2019-05-18 22:17+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: da <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-07-10 05:52+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2019-05-19 05:36+0000\n"
+"X-Generator: Launchpad (build 18962)\n"
 "Generated-By: Babel 0.9.6\n"
 
 #: gtk/wicd-client.py:610
@@ -144,7 +144,7 @@ msgstr "Konfigurer det valgte netværk"
 
 #: curses/netentry_curses.py:267
 msgid "Configuring preferences for wired profile \"$A\""
-msgstr "Konfigurere præferencer for den kablet profil \"$A\":"
+msgstr "Konfigurere præferencer for den kablet profil \"$A\""
 
 #: curses/netentry_curses.py:389
 msgid "Configuring preferences for wireless network \"$A\" ($B)"
@@ -208,7 +208,7 @@ msgstr "Forbindelse afbrudt"
 
 #: wicd/misc.py:92
 msgid "Connection Failed."
-msgstr "Tilslutning annulleret"
+msgstr "Tilslutning mislykkedes."
 
 #: wicd/misc.py:88
 msgid "Connection Failed: Bad password"
@@ -220,7 +220,7 @@ msgstr "Forbindelse mislykkedes: Ingen DHCP tilbud modtaget."
 
 #: wicd/misc.py:90
 msgid "Connection Failed: Unable to Get IP Address"
-msgstr "Tilslutning mislykkedes: Kunne ikke hente IP adresse"
+msgstr "Tilslutning mislykkedes: Kunne ikke hente IP-adresse"
 
 #: gtk/wicd-client.py:269 gtk/wicd-client.py:299
 msgid "Connection established"
@@ -229,8 +229,8 @@ msgstr "Forbindelse oprettet"
 #: wicd/misc.py:87
 msgid "Connection failed: Could not contact the wireless access point."
 msgstr ""
-"Forbindelse mislykkedes: Kunne ikke komme i kontakt med det trådløse access "
-"point."
+"Forbindelse mislykkedes: Kunne ikke komme i kontakt med det trådløse "
+"adgangspunkt."
 
 #: wicd/misc.py:51
 msgid "Connection in progress"
@@ -242,7 +242,7 @@ msgstr "Forbindelsesstatus"
 
 #: wicd/misc.py:104
 msgid "Connection successful."
-msgstr "Tilslutning annulleret"
+msgstr "Tilslutning lykkedes."
 
 #: wicd/misc.py:54
 msgid "Connection suspended"
@@ -258,7 +258,7 @@ msgid ""
 "messages."
 msgstr ""
 "Kunne ikke skabe forbindelse til wicd's D-Bus grænseflade. Kontroller wicd "
-"logfilen for fejlmeddelser."
+"logfilen for fejlmeddelelser."
 
 #: gtk/netentry.py:379 gtk/netentry.py:522
 msgid ""
@@ -278,7 +278,7 @@ msgid ""
 "wicd-curses is running. Please restart the daemon, and then restart wicd-"
 "curses."
 msgstr ""
-"DBus fejl! Dette skyldes formentlig at wicd dæmonen stopper mens wicd-curses "
+"DBus fejl! Dette skyldes formentlig at wicd-dæmonen stopper mens wicd-curses "
 "kører. Genstart venligst dæmonen, og genstart derefter wicd-curses."
 
 #: curses/prefs_curses.py:92
@@ -298,7 +298,7 @@ msgstr "DNS domæne"
 #: curses/prefs_curses.py:77 curses/prefs_curses.py:78 gtk/netentry.py:80
 #: gtk/netentry.py:81 gtk/netentry.py:82
 msgid "DNS server"
-msgstr "DNS server"
+msgstr "DNS-server"
 
 #: curses/prefs_curses.py:117
 msgid "Debugging"
@@ -322,15 +322,15 @@ msgstr "Afbryder aktive forbindelser..."
 
 #: curses/wicd-curses.py:226
 msgid "Display 'about' dialog"
-msgstr "Vis denne hjælpedialogboks"
+msgstr "Vis 'om'-dialog"
 
 #: gtk/prefs.py:349 data/wicd.ui:1002
 msgid "Display notifications about connection status"
-msgstr "Vis informationer om forbindelsesstatus"
+msgstr "Vis underretninger om forbindelsesstatus"
 
 #: curses/wicd-curses.py:213
 msgid "Display this help dialog"
-msgstr "Vis denne hjælpedialogboks"
+msgstr "Vis denne hjælpedialog"
 
 #: wicd/translations.py:78
 msgid "Domain"
@@ -345,7 +345,7 @@ msgid ""
 "ERROR: wicd-curses was denied access to the wicd daemon: please check that "
 "your user is in the \"$A\" group."
 msgstr ""
-"FEJL: wicd-curses blev nægtet  adgang til wicd dæmonen: kontroller venlligst "
+"FEJL: wicd-curses blev nægtet adgang til wicd-dæmonen: kontroller venligst "
 "at din bruger er i \"$A\" gruppen."
 
 #: curses/wicd-curses.py:461 gtk/gui.py:267 gtk/gui.py:327
@@ -394,7 +394,7 @@ msgstr "Global DNS er ikke aktiveret i generelle indstillinger."
 
 #: curses/prefs_curses.py:72
 msgid "Global DNS servers"
-msgstr "Globale DNS servere"
+msgstr "Globale DNS-servere"
 
 #: gtk/gui.py:321
 msgid "Global settings for this ESSID"
@@ -427,7 +427,7 @@ msgstr "Information om den opnåede forbindelse"
 
 #: gtk/netentry.py:168
 msgid "Invalid IP address entered."
-msgstr "Ugyldig IP adresse indtastet."
+msgstr "Ugyldig IP-adresse indtastet."
 
 #: gtk/gui.py:691 gtk/gui.py:699
 msgid "Invalid address in $A entry."
@@ -480,7 +480,7 @@ msgstr "OK"
 
 #: wicd/misc.py:100
 msgid "Obtaining IP address..."
-msgstr "Henter IP adresse..."
+msgstr "Henter IP-adresse..."
 
 #: curses/wicd-curses.py:278
 msgid ""
@@ -491,12 +491,13 @@ msgid ""
 "- not the actual script contents.  You will need to add/edit the script "
 "contents separately.  Refer to the wicd manual page for more information."
 msgstr ""
-"Når du er der kan du justerer (eller tilføje) de nødvendige variabler i "
-"\"før-skript\", \"efter-skript\", og \"afbryd-skript\", for at ændre enten "
-"før-, efter- eller afbryd-skripts. Du skal være opmærksom på, at du skal "
-"opgive den fulde sti til skriptet - ikke det faktiske skript-indhold. Du "
-"skal tilføje/redigere skriptets indhold separat. Se wicd manuel siden for "
-"yderligere information."
+"Når du er der kan du justerer (eller tilføje) de nødvendige variabler "
+"\"beforescript\", \"afterscript\", \"predisconnectscript\" og "
+"\"postdisconnectscript\", for at ændre enten førforbindelse-, "
+"efterforbindelse-, førafbrydelse eller efterafbrydelse-skripts. Du skal være "
+"opmærksom på, at du skal opgive den fulde sti til skriptet - ikke det "
+"faktiske skript-indhold. Du skal tilføje/redigere skriptets indhold separat. "
+"Se wicd manuel siden for yderligere information."
 
 #: wicd/translations.py:82
 msgid "Passphrase"
@@ -522,7 +523,7 @@ msgstr "Stien til klient certifikatet"
 msgid "Ping static gateways after connecting to verify association"
 msgstr ""
 "Ping de statiske gateways, efter at have opnået forbindelse, for at bekræfte "
-"tilslutningen"
+"tilknytning"
 
 #: curses/wicd-curses.py:521
 msgid "Please select the networks to forget"
@@ -530,19 +531,19 @@ msgstr "Vælg venligst netværkene som skal glemmes"
 
 #: curses/configscript_curses.py:57 gtk/configscript.py:129
 msgid "Post-connection Script"
-msgstr "\"Efter opnået forbindelse\" skript"
+msgstr "Efterforbindelse-skript"
 
 #: curses/configscript_curses.py:59 gtk/configscript.py:132
 msgid "Post-disconnection Script"
-msgstr "\"Efter afbrydelse af forbindelsen\" skript"
+msgstr "Efterafbrydelse-skript"
 
 #: curses/configscript_curses.py:56 gtk/configscript.py:128
 msgid "Pre-connection Script"
-msgstr "\"Forbered opkobling\" skript"
+msgstr "Førforbindelse-skript"
 
 #: curses/configscript_curses.py:58 gtk/configscript.py:130
 msgid "Pre-disconnection Script"
-msgstr "Kør før-afbrydelse skript"
+msgstr "Førafbrydelse-skript"
 
 #: curses/prefs_curses.py:56 curses/prefs_curses.py:252 gtk/prefs.py:318
 msgid "Preferences"
@@ -550,7 +551,7 @@ msgstr "Indstillinger"
 
 #: curses/wicd-curses.py:218
 msgid "Preferences dialog"
-msgstr "Indstillingsdialogboks"
+msgstr "Indstillingsdialog"
 
 #: curses/wicd-curses.py:610
 msgid "Prefs"
@@ -562,7 +563,7 @@ msgstr "Foruddelt nøgle"
 
 #: curses/wicd-curses.py:229
 msgid "Press any key to return."
-msgstr "Tryk på en tast for at vende tilbage til det du var i gang med"
+msgstr "Tryk på en tast for at vende tilbage."
 
 #: wicd/translations.py:88
 msgid "Private key"
@@ -594,11 +595,11 @@ msgstr "Afslut"
 
 #: curses/wicd-curses.py:227
 msgid "Quit wicd-curses"
-msgstr "Afslut \"wicd-curses\""
+msgstr "Afslut wicd-curses"
 
 #: gtk/wicd-client.py:502
 msgid "Quit wicd-tray-icon"
-msgstr "Afslut \"wicd-tray-icon\""
+msgstr "Afslut wicd-tray-icon"
 
 #: curses/wicd-curses.py:609
 msgid "Refresh"
@@ -627,7 +628,7 @@ msgstr "Den nødvendige krypteringsinformation mangler."
 
 #: wicd/misc.py:99
 msgid "Resetting IP address..."
-msgstr "Nulstiller IP adresse..."
+msgstr "Nulstiller IP-adresse..."
 
 #: curses/wicd-curses.py:606
 msgid "RfKill"
@@ -639,19 +640,19 @@ msgstr "Nulstiller rutetabel"
 
 #: curses/wicd-curses.py:677
 msgid "Scan"
-msgstr "Søg"
+msgstr "Skan"
 
 #: curses/wicd-curses.py:221
 msgid "Scan for hidden networks"
-msgstr "Søg efter skjulte netværk"
+msgstr "Skan efter skjulte netværk"
 
 #: gtk/gui.py:224 gtk/gui.py:589 gtk/wicd-client.py:810
 msgid "Scanning"
-msgstr "Søger"
+msgstr "Skanner"
 
 #: curses/wicd-curses.py:574
 msgid "Scanning networks... stand by..."
-msgstr "søger netværk... vent venligst..."
+msgstr "Skanner netværk... vent venligst..."
 
 #: gtk/netentry.py:102
 msgid "Scripts"
@@ -683,7 +684,7 @@ msgstr "Sæt Ad-hoc netværket op"
 
 #: wicd/misc.py:101
 msgid "Setting broadcast address..."
-msgstr "Indstiller broadcast adresse..."
+msgstr "Indstiller udsendelsesadresse..."
 
 #: wicd/misc.py:102
 msgid "Setting static DNS servers..."
@@ -691,7 +692,7 @@ msgstr "Indstiller statiske DNS-servere..."
 
 #: wicd/misc.py:103
 msgid "Setting static IP addresses..."
-msgstr "Sætter statiske IP adresser..."
+msgstr "Sætter statiske IP-adresser..."
 
 #: gtk/prefs.py:333 data/wicd.ui:581
 msgid "Show never connect networks"
@@ -699,7 +700,7 @@ msgstr "Afbryd alle netværk"
 
 #: gtk/gui.py:104
 msgid "Stop Showing Autoconnect pop-up temporarily"
-msgstr "Stop midlertidig visning af Autoforbindelse pop-up"
+msgstr "Stop midlertidig visning af autoforbindelse-pop op"
 
 #: curses/wicd-curses.py:216
 msgid "Stop a connection in progress"
@@ -730,13 +731,13 @@ msgid ""
 "The wicd daemon has shut down. The UI will not function properly until it is "
 "restarted."
 msgstr ""
-"Wicd dæmonen er stoppet. Brugergrænsefladen vil ikke virke korrekt inden den "
+"Wicd-dæmonen er stoppet. Brugergrænsefladen vil ikke virke korrekt inden den "
 "er genstartet."
 
 #: curses/netentry_curses.py:478 gtk/gui.py:761 gtk/netentry.py:436
 #: gtk/netentry.py:608
 msgid "This network requires encryption to be enabled."
-msgstr "Dette netværk kræver at kryptering er aktiveret"
+msgstr "Dette netværk kræver at kryptering er aktiveret."
 
 #: curses/wicd-curses.py:272
 msgid ""
@@ -747,8 +748,8 @@ msgid ""
 msgstr ""
 "For at undgå forskellige problemer, tillader wicd-curses ikke direkte "
 "redigering af skripts. Du kan dog redigere dem manuelt. Åbn først "
-"konfigurationsfilen \"$A\", og se efter den ønskede sektion mærket med $B. I "
-"dette tilfælde er det:"
+"konfigurationsfilen \"$A\" (som root), og se efter den ønskede sektion "
+"mærket med $B. I dette tilfælde er det:"
 
 #: gtk/netentry.py:707
 msgid ""
@@ -764,7 +765,7 @@ msgid ""
 "Unable to contact the Wicd daemon due to an access denied error from DBus. "
 "Please check that your user is in the $A group."
 msgstr ""
-"Kunne ikke kontakte wicd dæmonen på grund af en adgang nægtet fejl fra DBus. "
+"Kunne ikke kontakte wicd-dæmonen på grund af en adgang nægtet fejl fra DBus. "
 "Kontroller venligst at din bruger er i $A gruppen."
 
 #: curses/wicd-curses.py:353 gtk/netentry.py:1034 gtk/netentry.py:1156
@@ -802,16 +803,16 @@ msgstr "Brug dBm til at måle signal styrken"
 
 #: curses/prefs_curses.py:82 gtk/prefs.py:341
 msgid "Use default profile on wired autoconnect"
-msgstr "Brug standardprofil ved kablet autoforbindelse:"
+msgstr "Brug standardprofil ved kablet autoforbindelse"
 
 #: curses/netentry_curses.py:55 curses/prefs_curses.py:73 gtk/netentry.py:90
 #: data/wicd.ui:892
 msgid "Use global DNS servers"
-msgstr "Benyt globale DNS servere"
+msgstr "Benyt globale DNS-servere"
 
 #: curses/prefs_curses.py:84 gtk/prefs.py:345
 msgid "Use last used profile on wired autoconnect"
-msgstr "Benyt sidst anvendte profil ved kablet autoconnect"
+msgstr "Benyt sidst anvendte profil ved kablet autoforbindelse"
 
 #: curses/netentry_curses.py:372 gtk/netentry.py:468
 msgid "Use these settings for all networks sharing this essid"
@@ -827,11 +828,11 @@ msgstr "Validerer godkendelse..."
 
 #: wicd/misc.py:106
 msgid "Verifying access point association..."
-msgstr "Kontrollerer access point tilslutningen..."
+msgstr "Kontrollerer adgangspunkt-tilknytning..."
 
 #: curses/prefs_curses.py:108
 msgid "WPA Supplicant"
-msgstr "WPA Supplicant"
+msgstr "WPA supplikant"
 
 #: curses/wicd-curses.py:576
 msgid "Wicd Curses Interface"
@@ -839,7 +840,7 @@ msgstr "Wicd Curses grænseflade"
 
 #: gtk/wicd-client.py:226 gtk/wicd-client.py:333
 msgid "Wicd daemon unreachable"
-msgstr "Wicd dæmon ikke tilgængelig"
+msgstr "Wicd-dæmon ikke tilgængelig"
 
 #: wicd/misc.py:216
 msgid "Wicd needs to access your computer's network cards."
@@ -863,7 +864,7 @@ msgstr ""
 
 #: curses/prefs_curses.py:81
 msgid "Wired Autoconnect Settings"
-msgstr "Trådet autoforbind indstillinger"
+msgstr "Trådet autoforbindelse indstillinger"
 
 #: curses/prefs_curses.py:67
 msgid "Wired Interface"
@@ -880,7 +881,7 @@ msgstr "Kablet netværk"
 
 #: curses/wicd-curses.py:581
 msgid "Wired Networks"
-msgstr "Kablet netværk:"
+msgstr "Kablet netværk"
 
 #: gtk/gui.py:97
 msgid "Wired connection detected"
@@ -899,7 +900,14 @@ msgid ""
 "Strength:\n"
 "RX:\n"
 "TX:"
-msgstr "Trådløs SSID: Hastighed: IP: Styrke: RX: TX:"
+msgstr ""
+"Trådløs\n"
+"SSID:\n"
+"Hastighed:\n"
+"IP:\n"
+"Styrke:\n"
+"RX:\n"
+"TX:"
 
 #: curses/prefs_curses.py:68 curses/prefs_curses.py:120
 msgid "Wireless Interface"
@@ -943,11 +951,11 @@ msgid ""
 "it (\"F2\")"
 msgstr ""
 "wicd-curses tillader ikke sletning af den sidste kablet profil. Forsøg at "
-"omdøbe den ('F2'):"
+"omdøbe den (\"F2\")"
 
 #: curses/wicd-curses.py:205
 msgid "wicd-curses help"
-msgstr "\"wicd-curses\" hjælp"
+msgstr "wicd-curses hjælp"
 
 #: data/wicd.ui:9
 msgid "Wicd Network Manager"
@@ -975,7 +983,7 @@ msgstr "_Sluk for Wi-Fi"
 
 #: data/wicd.ui:104
 msgid "_Disconnect All"
-msgstr "Afbrudt"
+msgstr "_Afbryd alle"
 
 #: data/wicd.ui:118
 msgid "_Refresh"
@@ -983,7 +991,7 @@ msgstr "_Genopfrisk"
 
 #: data/wicd.ui:132
 msgid "_Preferences"
-msgstr "Indstillinger"
+msgstr "_Indstillinger"
 
 #: data/wicd.ui:146
 msgid "_About"
@@ -1007,19 +1015,19 @@ msgstr "Konfigurer scripts til at køre for dette netværk:"
 
 #: data/wicd.ui:306
 msgid "Pre-connection Script:"
-msgstr "Kør før-afbrydelse skript"
+msgstr "Førforbindelse-skript:"
 
 #: data/wicd.ui:339
 msgid "Post-connection Script:"
-msgstr "Kør efter-afbrydelse skript"
+msgstr "Efterforbindelse-skript:"
 
 #: data/wicd.ui:372
 msgid "Pre-disconnection Script:"
-msgstr "Kør før-afbrydelse skript"
+msgstr "Førafbrydelse-skript:"
 
 #: data/wicd.ui:405
 msgid "Post-disconnection Script:"
-msgstr "Kør efter-afbrydelse skript"
+msgstr "Efterafbrydelse-skript:"
 
 #: data/wicd.ui:524
 msgid "Always switch to a wired connection when available"
@@ -1038,7 +1046,7 @@ msgstr ""
 
 #: data/wicd.ui:552
 msgid "DNS domain:"
-msgstr "DNS domæne"
+msgstr "DNS domæne:"
 
 #: data/wicd.ui:600
 msgid "<b>Never Connect</b>"
@@ -1066,39 +1074,39 @@ msgstr "Omdøb kablet profil"
 
 #: data/wicd.ui:717
 msgid "<b>Wired automatic connection</b>"
-msgstr "Automatisk forbindelsesgenopretning"
+msgstr "<b>Kablet automatisk forbindelse</b>"
 
 #: data/wicd.ui:735
 msgid "Wired interface:"
-msgstr "Kablet grænseflade"
+msgstr "Kablet grænseflade:"
 
 #: data/wicd.ui:753
 msgid "Wireless interface:"
-msgstr "Trådløst netværkskort"
+msgstr "Trådløst netværkskort:"
 
 #: data/wicd.ui:793
 msgid "<b>Network Interfaces</b>"
-msgstr "Netværksgrænseflader"
+msgstr "<b>Netværksgrænseflader</b>"
 
 #: data/wicd.ui:809
 msgid "DNS server 3:"
-msgstr "DNS server"
+msgstr "DNS-server 3:"
 
 #: data/wicd.ui:840
 msgid "DNS server 2:"
-msgstr "DNS server"
+msgstr "DNS-server 2:"
 
 #: data/wicd.ui:858
 msgid "DNS server 1:"
-msgstr "DNS server"
+msgstr "DNS-server 1:"
 
 #: data/wicd.ui:876
 msgid "Search domain:"
-msgstr "Søgedomæne"
+msgstr "Søgedomæne:"
 
 #: data/wicd.ui:911
 msgid "<b>Global DNS Servers</b>"
-msgstr "Globale DNS servere"
+msgstr "<b>Globale DNS-servere</b>"
 
 #: data/wicd.ui:970
 msgid ""
@@ -1112,15 +1120,15 @@ msgstr ""
 
 #: data/wicd.ui:986
 msgid "<b>Notifications</b>"
-msgstr "<b>Informationer</b>"
+msgstr "<b>Underretninger</b>"
 
 #: data/wicd.ui:1060
 msgid "<b>Route Table Flushing</b>"
-msgstr "Nulstiller rutetabel"
+msgstr "<b>Nulstiller rutetabel</b>"
 
 #: data/wicd.ui:1073
 msgid "<b>Wired Link Detection</b>"
-msgstr "Opdagelse af kablet netværk"
+msgstr "<b>Opdagelse af kablet netværk</b>"
 
 #: data/wicd.ui:1299
 msgid "<b>DHCP Client</b>"
@@ -1135,7 +1143,7 @@ msgid ""
 "Hover your mouse over the selected backend \n"
 "to read its description."
 msgstr ""
-"Hold din mus over den valgte backend \n"
+"Hold din mus over den valgte motor \n"
 "for at læse dens beskrivelse."
 
 #: data/wicd.ui:1484
@@ -1144,29 +1152,31 @@ msgstr "Driver:"
 
 #: data/wicd.ui:1540
 msgid "<b>Wireless Interface</b>"
-msgstr "Trådløst netværkskort"
+msgstr "<b>Trådløst netværkskort</b>"
 
 #: data/wicd.ui:1554
 msgid "<b>WPA Supplicant</b>"
-msgstr "<b>WPA Supplicant</b>"
+msgstr "<b>WPA supplikant</b>"
 
 #: data/wicd.ui:1566
 msgid "<b>Debugging</b>"
-msgstr "Fejlsøgning"
+msgstr "<b>Fejlsøgning</b>"
 
 #: data/wicd.ui:1584
 msgid "Backend:"
-msgstr "Motor"
+msgstr "Motor:"
 
 #: data/wicd.ui:1611
 msgid "<b>Backend</b>"
-msgstr "<b>Backend</b>"
+msgstr "<b>Motor</b>"
 
 #: data/wicd.ui:1625
 msgid ""
 "You should almost always use wext as the\n"
 "WPA supplicant driver."
-msgstr "Du bør næsten altid anvende wext som WPA supplikant-driver"
+msgstr ""
+"Du bør næsten altid anvende wext som\n"
+"WPA supplikant-driver."
 
 #~ msgid "Help)"
 #~ msgstr "Hjælp)"
