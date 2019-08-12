@@ -30,8 +30,8 @@ import string
 import gobject
 from threading import Thread
 from subprocess import Popen, STDOUT, PIPE, call
-from commands import getoutput
-from itertools import repeat, chain, izip
+from subprocess import getoutput
+from itertools import repeat, chain
 from pipes import quote
 import socket
 
@@ -154,8 +154,8 @@ def Run(cmd, include_stderr=False, return_pipe=False,
     try:
         f = Popen(cmd, shell=False, stdout=PIPE, stdin=std_in, stderr=err,
                   close_fds=fds, cwd='/', env=tmpenv)
-    except OSError, e:
-        print "Running command %s failed: %s" % (str(cmd), str(e))
+    except OSError as e:
+        print("Running command %s failed: %s" % (str(cmd), str(e)))
         return ""
         
     if return_obj:
@@ -252,10 +252,10 @@ def ExecuteScript(script, verbose=False, extra_parameters=()):
     # escape script name
     script = quote(script)
     if verbose:
-        print "Executing %s with params %s" % (script, params)
+        print("Executing %s with params %s" % (script, params))
     ret = call('%s %s > /dev/null 2>&1' % (script, params), shell=True)
     if verbose:
-        print "%s returned %s" % (script, ret)
+        print("%s returned %s" % (script, ret))
 
 def ReadFile(filename):
     """ read in a file and return it's contents as a string """
@@ -322,9 +322,9 @@ def ParseEncryption(network):
                         if rep_val:
                             line = line.replace("$_%s" % cur_val, str(rep_val))
                         else:
-                            print "Ignoring template line: '%s'" % line
+                            print("Ignoring template line: '%s'" % line)
                     else:
-                        print "Weird parsing error occurred"
+                        print("Weird parsing error occurred")
                 config_file = ''.join([config_file, line])
             else:  # Just a regular entry.
                 config_file = ''.join([config_file, line])
@@ -337,7 +337,7 @@ def ParseEncryption(network):
         file_name = 'wired'
     file_loc = os.path.join(wpath.networks, file_name)
     f = open(file_loc, "w")
-    os.chmod(file_loc, 0600)
+    os.chmod(file_loc, 0o600)
     os.chown(file_loc, 0, 0)
     # We could do this above, but we'd like to read protect
     # them before we write, so that it can't be read.
@@ -358,8 +358,8 @@ def LoadEncryptionMethods(wired = False):
         active_fname = "active"
     try:
         enctypes = open(wpath.encryption + active_fname,"r").readlines()
-    except IOError, e:
-        print "Fatal Error: template index file is missing."
+    except IOError as e:
+        print("Fatal Error: template index file is missing.")
         raise IOError(e)
     
     # Parse each encryption method
@@ -391,7 +391,7 @@ def _parse_enc_template(enctype):
     try:
         f = open(os.path.join(wpath.encryption, enctype), "r")
     except IOError:
-        print "Failed to open template file %s" % enctype
+        print("Failed to open template file %s" % enctype)
         return None
 
     cur_type = {}
@@ -408,7 +408,7 @@ def _parse_enc_template(enctype):
             cur_type["required"] = __parse_field_ent(parse_ent(line, "require"))
             if not cur_type["required"]:
                 # An error occured parsing the require line.
-                print "Invalid 'required' line found in template %s" % enctype
+                print("Invalid 'required' line found in template %s" % enctype)
                 continue
         elif line.startswith("optional"):
             cur_type["optional"] = __parse_field_ent(parse_ent(line,
@@ -416,7 +416,7 @@ def _parse_enc_template(enctype):
                                                      field_type="optional")
             if not cur_type["optional"]:
                 # An error occured parsing the optional line.
-                print "Invalid 'optional' line found in template %s" % enctype
+                print("Invalid 'optional' line found in template %s" % enctype)
                 continue
         elif line.startswith("protected"):
             cur_type["protected"] = __parse_field_ent(
@@ -425,17 +425,17 @@ def _parse_enc_template(enctype):
             )
             if not cur_type["protected"]:
                 # An error occured parsing the protected line.
-                print "Invalid 'protected' line found in template %s" % enctype
+                print("Invalid 'protected' line found in template %s" % enctype)
                 continue
         elif line.startswith("----"):
             # We're done.
             break
     f.close()
     if not cur_type["required"]:
-        print "Failed to find a 'require' line in template %s" % enctype
+        print("Failed to find a 'require' line in template %s" % enctype)
         return None
     if not cur_type["name"]:
-        print "Failed to find a 'name' line in template %s" % enctype
+        print("Failed to find a 'name' line in template %s" % enctype)
         return None
     else:
         return cur_type
@@ -476,9 +476,9 @@ def sanitize_escaped(s):
 def to_unicode(x):
     """ Attempts to convert a string to utf-8. """
     # If this is a unicode string, encode it and return
-    if not isinstance(x, basestring):
+    if not isinstance(x, str):
         return x
-    if isinstance(x, unicode):
+    if isinstance(x, str):
         return x.encode('utf-8')
 
     x = sanitize_escaped(x)
@@ -500,7 +500,7 @@ def to_unicode(x):
 def RenameProcess(new_name):
     """ Renames the process calling the function to the given name. """
     if 'linux' not in sys.platform:
-        print 'Unsupported platform'
+        print('Unsupported platform')
         return False
     try:
         import ctypes
@@ -509,7 +509,7 @@ def RenameProcess(new_name):
         libc.prctl(15, new_name, 0, 0, 0)
         return True
     except:
-        print "rename failed"
+        print("rename failed")
         return False
     
 def detect_desktop_environment():
@@ -639,7 +639,7 @@ def izip_longest(*args, **kwds):
     fillers = repeat(fillvalue)
     iters = [chain(it, sentinel(), fillers) for it in args]
     try:
-        for tup in izip(*iters):
+        for tup in zip(*iters):
             yield tup
     except IndexError:
         pass
@@ -651,4 +651,4 @@ def grouper(n, iterable, fillvalue=None):
 
     """
     args = [iter(iterable)] * n
-    return izip_longest(fillvalue=fillvalue, *args)
+    return zip_longest(fillvalue=fillvalue, *args)

@@ -80,8 +80,8 @@ if not hasattr(gtk, "StatusIcon"):
         import egg.trayicon
         USE_EGG = True
     except ImportError:
-        print 'Unable to load tray icon: Missing both egg.trayicon and ' + \
-            'gtk.StatusIcon modules.'
+        print('Unable to load tray icon: Missing both egg.trayicon and ' + \
+            'gtk.StatusIcon modules.')
         ICON_AVAIL = False
 
 misc.RenameProcess("wicd-client")
@@ -101,7 +101,7 @@ def catchdbus(func):
     def wrapper(*args, **kwargs):
         try:
             return func(*args, **kwargs)
-        except DBusException, e:
+        except DBusException as e:
             if e.get_dbus_name() is not None and \
               "DBus.Error.AccessDenied" in e.get_dbus_name():
                 error(
@@ -114,7 +114,7 @@ def catchdbus(func):
                 #raise
                 raise DBusException(e)
             else:
-                print "warning: ignoring exception %s" % e
+                print("warning: ignoring exception %s" % e)
             return None
     wrapper.__name__ = func.__name__
     wrapper.__module__ = func.__module__
@@ -162,7 +162,7 @@ class TrayIcon(object):
             self.tr.toggle_wicd_gui()
         self.icon_info = self.TrayConnectionInfo(self, self.tr, animate)
         self.tr.icon_info = self.icon_info
-        print 'displaytray %s' % displaytray
+        print('displaytray %s' % displaytray)
         self.tr.visible(displaytray)
 
     def is_embedded(self):
@@ -263,14 +263,14 @@ class TrayIcon(object):
                         self._last_bubble.clear_hints()
                         self._last_bubble.update(title, details, image)
                         self._last_bubble.show()
-                except Exception, e:
+                except Exception as e:
                     if hasattr(e, 'message') and e.message != '':
                         msg = e.message
                     elif hasattr(e, 'args') and len(e.args) > 0:
                         msg = e.args[-1]
                     else:
                         msg = str(e)
-                    print "Exception during notification: %s" % msg
+                    print("Exception during notification: %s" % msg)
 
                 self.should_notify = False
 
@@ -386,7 +386,7 @@ class TrayIcon(object):
             elif state in (misc.SUSPENDED, misc.NOT_CONNECTED):
                 self.set_not_connected_state(info)
             else:
-                print 'Invalid state returned!!!'
+                print('Invalid state returned!!!')
                 return False
             return True
 
@@ -820,7 +820,7 @@ TX:'''))
 
             if num_networks > 0:
                 skip_never_connect = not daemon.GetShowNeverConnect()
-                for x in xrange(0, num_networks):
+                for x in range(0, num_networks):
                     if skip_never_connect and \
                       misc.to_bool(get_prop(x,"never")):
                         continue
@@ -1046,7 +1046,7 @@ TX:'''))
 
 def usage():
     """ Print usage information. """
-    print """
+    print("""
 wicd %s
 wireless (and wired) connection daemon front-end.
 
@@ -1056,19 +1056,19 @@ Arguments:
 \t-h\t--help\t\tPrint this help information.
 \t-a\t--no-animate\tRun the tray without network traffic tray animations.
 \t-o\t--only-notifications\tDon't display anything except notifications.
-""" % wpath.version
+""" % wpath.version)
 
 
 def setup_dbus(force=True):
     """ Initialize DBus. """
     global daemon, wireless, wired, DBUS_AVAIL, lost_dbus_id
-    print "Connecting to daemon..."
+    print("Connecting to daemon...")
     try:
         dbusmanager.connect_to_dbus()
     except DBusException:
         if force:
-            print "Can't connect to the daemon, trying to start it " + \
-                "automatically..."
+            print("Can't connect to the daemon, trying to start it " + \
+                "automatically...")
             misc.PromptToStartDaemon()
             try:
                 dbusmanager.connect_to_dbus()
@@ -1089,7 +1089,7 @@ def setup_dbus(force=True):
     wireless = dbus_ifaces['wireless']
     wired = dbus_ifaces['wired']
     DBUS_AVAIL = True
-    print "Connected."
+    print("Connected.")
     return True
 
 
@@ -1107,7 +1107,7 @@ def handle_no_dbus():
     global DBUS_AVAIL, lost_dbus_id
     DBUS_AVAIL = False
     gui.handle_no_dbus(from_tray=True)
-    print "Wicd daemon is shutting down!"
+    print("Wicd daemon is shutting down!")
     lost_dbus_id = misc.timeout_add(5,
         lambda: error(None,
             _('The wicd daemon has shut down. The UI will not function '
@@ -1151,14 +1151,14 @@ def main(argv):
         elif opt in ('-a', '--no-animate'):
             animate = False
         elif opt in ('-o', '--only-notifications'):
-            print "only displaying notifications"
+            print("only displaying notifications")
             use_tray = False
             display_app = False
         else:
             usage()
             sys.exit(2)
 
-    print 'Loading...'
+    print('Loading...')
     setup_dbus()
     atexit.register(on_exit)
 
@@ -1195,7 +1195,7 @@ def main(argv):
     )
     bus.add_signal_receiver(lambda: setup_dbus(force=False), "DaemonStarting",
                             "org.wicd.daemon")
-    print 'Done loading.'
+    print('Done loading.')
     mainloop = gobject.MainLoop()
     mainloop.run()
 

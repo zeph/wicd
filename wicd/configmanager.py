@@ -27,7 +27,7 @@ reusable for other purposes as well.
 
 import sys, os
 
-from ConfigParser import RawConfigParser, ParsingError
+from configparser import RawConfigParser, ParsingError
 import codecs
 
 from wicd.misc import Noneify, to_unicode
@@ -61,8 +61,8 @@ class ConfigManager(RawConfigParser):
             self.write()
             try:
                 self.read(path)
-            except ParsingError, p:
-                print "Could not start wicd: %s" % p.message
+            except ParsingError as p:
+                print("Could not start wicd: %s" % p.message)
                 sys.exit(1)
 
     def __repr__(self):
@@ -86,7 +86,7 @@ class ConfigManager(RawConfigParser):
         """
         if not self.has_section(section):
             self.add_section(section)
-        if isinstance(value, basestring):
+        if isinstance(value, str):
             value = to_unicode(value)
             if value.startswith(' ') or value.endswith(' '):
                 value = "%(ws)s%(value)s%(ws)s" % {"value" : value,
@@ -115,7 +115,7 @@ class ConfigManager(RawConfigParser):
 
         if self.has_option(section, option):
             ret = RawConfigParser.get(self, section, option)
-            if (isinstance(ret, basestring) and ret.startswith(self.mrk_ws) 
+            if (isinstance(ret, str) and ret.startswith(self.mrk_ws) 
                 and ret.endswith(self.mrk_ws)):
                 ret = ret[3:-3]
             ret = to_unicode(ret)
@@ -125,15 +125,15 @@ class ConfigManager(RawConfigParser):
                     if option in ['apsk', 'password', 'identity', \
                                   'private_key', 'private_key_passwd', \
                                   'key', 'passphrase']:
-                        print ''.join(['found ', option, \
-                            ' in configuration *****'])
+                        print(''.join(['found ', option, \
+                            ' in configuration *****']))
                     else:
-                        print ''.join(['found ', option, ' in configuration ',
-                                       str(ret)])
+                        print(''.join(['found ', option, ' in configuration ',
+                                       str(ret)]))
         else:	# Use the default, unless no default was provided
             if default != "__None__":
-                print 'did not find %s in configuration, setting default %s' \
-                    % (option, str(default))
+                print('did not find %s in configuration, setting default %s' \
+                    % (option, str(default)))
                 self.set(section, option, str(default), write=True)
                 ret = default
             else:
@@ -146,7 +146,7 @@ class ConfigManager(RawConfigParser):
         except (ValueError, TypeError, AttributeError):
             ret = Noneify(ret)
         # This is a workaround for a python-dbus issue on 64-bit systems.
-        if isinstance(ret, (int, long)):
+        if isinstance(ret, int):
             try:
                 Int32(ret)
             except OverflowError:

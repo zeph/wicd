@@ -99,15 +99,15 @@ def wrap_exceptions(func):
             #gobject.source_remove(redraw_tag)
             loop.quit()
             ui.stop()
-            print >> sys.stderr, "\n" + _('Terminated by user')
+            print("\n" + _('Terminated by user'), file=sys.stderr)
             #raise
         except DBusException:
             loop.quit()
             ui.stop()
-            print >> sys.stderr, "\n" + _('DBus failure! '
+            print("\n" + _('DBus failure! '
                 'This is most likely caused by the wicd daemon '
                 'stopping while wicd-curses is running. '
-                'Please restart the daemon, and then restart wicd-curses.')
+                'Please restart the daemon, and then restart wicd-curses.'), file=sys.stderr)
             raise
         except:
             # Quit the loop
@@ -231,7 +231,7 @@ def help_dialog(body):
     textT = urwid.Text(('header', _('wicd-curses help')), 'right')
     textSH = urwid.Text([
         'This is ', ('blue', 'wicd-curses-' + CURSES_REV),
-        ' using wicd ', unicode(daemon.Hello()), '\n'
+        ' using wicd ', str(daemon.Hello()), '\n'
     ])
 
     textH = urwid.Text([
@@ -517,7 +517,7 @@ class WiredComboBox(ComboBox):
             dialog = InputDialog(
                 ('header', _('Rename wired profile')),
                 7, 30,
-                edit_text=unicode(self.get_selected_profile())
+                edit_text=str(self.get_selected_profile())
             )
             exitcode, name = dialog.run(ui, self.parent)
             if exitcode == 0:
@@ -1259,8 +1259,7 @@ def setup_dbus(force=True):
     try:
         dbusmanager.connect_to_dbus()
     except DBusException:
-        print >> sys.stderr, \
-          _("Can't connect to the daemon, trying to start it automatically...")
+        print(_("Can't connect to the daemon, trying to start it automatically..."), file=sys.stderr)
 
     try:
            bus = dbusmanager.get_bus()
@@ -1269,12 +1268,11 @@ def setup_dbus(force=True):
            wireless = dbus_ifaces['wireless']
            wired = dbus_ifaces['wired']
     except DBusException:
-        print >> sys.stderr, \
-          _("Can't automatically start the daemon, this error is fatal...")
+        print(_("Can't automatically start the daemon, this error is fatal..."), file=sys.stderr)
 
     if not daemon:
-        print 'Error connecting to wicd via D-Bus. ' \
-            'Please make sure the wicd service is running.'
+        print('Error connecting to wicd via D-Bus. ' \
+            'Please make sure the wicd service is running.')
         sys.exit(3)
 
     netentry_curses.dbus_init(dbus_ifaces)
@@ -1292,11 +1290,11 @@ if __name__ == '__main__':
                 (CURSES_REV, daemon.Hello()),
             prog="wicd-curses"
         )
-    except Exception, e:
+    except Exception as e:
         if "DBus.Error.AccessDenied" in e.get_dbus_name():
-            print _('ERROR: wicd-curses was denied access to the wicd daemon: '
+            print(_('ERROR: wicd-curses was denied access to the wicd daemon: '
                 'please check that your user is in the "$A" group.'). \
-                replace('$A', '\033[1;34m' + wpath.wicd_group + '\033[0m')
+                replace('$A', '\033[1;34m' + wpath.wicd_group + '\033[0m'))
             sys.exit(1)
         else:
             raise

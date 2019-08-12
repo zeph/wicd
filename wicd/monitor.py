@@ -55,8 +55,8 @@ def diewithdbus(func):
             ret = func(self, *__args, **__kargs)
             self.__lost_dbus_count = 0
             return ret
-        except DBusException, e:
-            print  "Caught exception %s" % str(e)
+        except DBusException as e:
+            print("Caught exception %s" % str(e))
             if not hasattr(self, "__lost_dbus_count"):
                 self.__lost_dbus_count = 0
             if self.__lost_dbus_count > 3:
@@ -188,7 +188,7 @@ class ConnectionStatus(object):
             # If we haven't gotten any signal 4 runs in a row (12 seconds),
             # try to reconnect.
             self.connection_lost_counter += 1
-            print self.connection_lost_counter
+            print(self.connection_lost_counter)
             if self.connection_lost_counter >= 4 and daemon.GetAutoReconnect():
                 wireless.DisconnectWireless()
                 self.connection_lost_counter = 0
@@ -218,7 +218,7 @@ class ConnectionStatus(object):
         wifi_ip = None
 
         if daemon.GetSuspend():
-            print "Suspended."
+            print("Suspended.")
             state = misc.SUSPENDED
             return self.update_state(state)
 
@@ -251,7 +251,7 @@ class ConnectionStatus(object):
                 # Don't trigger it if the gui is open, because autoconnect
                 # is disabled while it's open.
                 if not daemon.GetGUIOpen():
-                    print 'Killing wireless connection to switch to wired...'
+                    print('Killing wireless connection to switch to wired...')
                     wireless.DisconnectWireless()
                     daemon.AutoConnect(False, reply_handler=lambda *a:None,
                                        error_handler=lambda *a:None)
@@ -291,7 +291,7 @@ class ConnectionStatus(object):
             self.reconnect_tries = 0
             info = [str(wired_ip)]
         else:
-            print 'ERROR: Invalid state!'
+            print('ERROR: Invalid state!')
             return True
 
         daemon.SetConnectionStatus(state, info)
@@ -345,14 +345,14 @@ class ConnectionStatus(object):
         # Some checks to keep reconnect retries from going crazy.
         if (self.reconnect_tries > 3 and
             (time.time() - self.last_reconnect_time) < 200):
-            print "Throttling autoreconnect"
+            print("Throttling autoreconnect")
             return
 
         self.reconnecting = True
         daemon.SetCurrentInterface('')
 
         if daemon.ShouldAutoReconnect():
-            print 'Starting automatic reconnect process'
+            print('Starting automatic reconnect process')
             self.last_reconnect_time = time.time()
             self.reconnect_tries += 1
 
@@ -362,10 +362,10 @@ class ConnectionStatus(object):
             if from_wireless and cur_net_id > -1:
                 # make sure disconnect scripts are run
                 # before we reconnect
-                print 'Disconnecting from network'
+                print('Disconnecting from network')
                 wireless.DisconnectWireless()
-                print 'Trying to reconnect to last used wireless ' + \
-                      'network'
+                print('Trying to reconnect to last used wireless ' + \
+                      'network')
                 wireless.ConnectWireless(cur_net_id)
             else:
                 daemon.AutoConnect(True, reply_handler=reply_handle,

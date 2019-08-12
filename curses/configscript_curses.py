@@ -45,7 +45,7 @@ def main(argv):
     """ Main function. """
     global ui, frame
     if len(argv) < 2:
-        print 'Network id to configure is missing, aborting.'
+        print('Network id to configure is missing, aborting.')
         sys.exit(1)
 
     ui = urwid.curses_display.Screen()
@@ -161,6 +161,6 @@ def run():
 
 if __name__ == '__main__':
     if os.getuid() != 0:
-        print "Root privileges are required to configure scripts.  Exiting."
+        print("Root privileges are required to configure scripts.  Exiting.")
         sys.exit(0)
     main(sys.argv)

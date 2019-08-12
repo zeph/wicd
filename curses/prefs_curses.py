@@ -267,8 +267,8 @@ class PrefsDialog(urwid.WidgetWrap):
         """ Load settings to be used in the dialog. """
         ### General Settings
         # ComboBox does not like dbus.Strings as text markups.  My fault. :/
-        wless_iface = unicode(daemon.GetWirelessInterface())
-        wired_iface = unicode(daemon.GetWiredInterface())
+        wless_iface = str(daemon.GetWirelessInterface())
+        wired_iface = str(daemon.GetWiredInterface())
         self.wless_edit.set_edit_text(wless_iface)
         self.wired_edit.set_edit_text(wired_iface)
 
@@ -312,7 +312,7 @@ class PrefsDialog(urwid.WidgetWrap):
         self.wpadrivers.append("ralink_legacy")
         self.wpadrivers.append('none')
         # Same as above with the dbus.String
-        self.thedrivers = [unicode(w) for w in self.wpadrivers]
+        self.thedrivers = [str(w) for w in self.wpadrivers]
         self.wpa_cbox.set_list(self.thedrivers)
 
         # Pick where to begin first:
@@ -323,7 +323,7 @@ class PrefsDialog(urwid.WidgetWrap):
             pass  # It defaults to 0 anyway (I hope)
 
         self.backends = daemon.GetBackendList()
-        self.thebackends = [unicode(w) for w in self.backends]
+        self.thebackends = [str(w) for w in self.backends]
         self.backend_cbox.set_list(self.thebackends)
         cur_backend = daemon.GetSavedBackend()
         try:

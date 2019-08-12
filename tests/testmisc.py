@@ -7,7 +7,7 @@ from wicd import misc
 class TestMisc(unittest.TestCase):
     def test_misc_run(self):
         output = misc.Run(['echo', 'hi']).strip()
-        self.assertEquals('hi', output)
+        self.assertEqual('hi', output)
 
     def test_valid_ip_1(self):
         self.assertTrue(misc.IsValidIP('0.0.0.0'))
@@ -55,13 +55,13 @@ class TestMisc(unittest.TestCase):
         import re
         regex = re.compile('.*(ABC.EFG).*')
         found = misc.RunRegex(regex, '01234ABCDEFG56789')
-        self.assertEquals(found, 'ABCDEFG')
+        self.assertEqual(found, 'ABCDEFG')
 
     def test_run_invalid_regex(self):
         import re
         regex = re.compile('.*(ABC.EFG).*')
         found = misc.RunRegex(regex, '01234ABCEDFG56789')
-        self.assertEquals(found, None)
+        self.assertEqual(found, None)
 
     def test_to_boolean_false(self):
         self.assertFalse(misc.to_bool('False'))
@@ -76,13 +76,13 @@ class TestMisc(unittest.TestCase):
         self.assertTrue(misc.to_bool('1'))
 
     def test_noneify_1(self):
-        self.assertEquals(misc.Noneify('None'), None)
+        self.assertEqual(misc.Noneify('None'), None)
 
     def test_noneify_2(self):
-        self.assertEquals(misc.Noneify(''), None)
+        self.assertEqual(misc.Noneify(''), None)
 
     def test_noneify_3(self):
-        self.assertEquals(misc.Noneify(None), None)
+        self.assertEqual(misc.Noneify(None), None)
 
     def test_noneify_4(self):
         self.assertFalse(misc.Noneify('False'))
@@ -103,65 +103,65 @@ class TestMisc(unittest.TestCase):
         self.assertTrue(misc.Noneify(True))
 
     def test_noneify_10(self):
-        self.assertEquals(misc.Noneify('randomtext'), 'randomtext')
+        self.assertEqual(misc.Noneify('randomtext'), 'randomtext')
 
     def test_noneify_11(self):
-        self.assertEquals(misc.Noneify(5), 5)
+        self.assertEqual(misc.Noneify(5), 5)
 
     def test_noneify_12(self):
-        self.assertEquals(misc.Noneify(1, False), 1)
+        self.assertEqual(misc.Noneify(1, False), 1)
 
     def test_noneify_13(self):
-        self.assertEquals(misc.Noneify(0, False), 0)
+        self.assertEqual(misc.Noneify(0, False), 0)
 
     def test_none_to_string_1(self):
-        self.assertEquals(misc.noneToString(None), 'None')
+        self.assertEqual(misc.noneToString(None), 'None')
 
     def test_none_to_string_2(self):
-        self.assertEquals(misc.noneToString(''), 'None')
+        self.assertEqual(misc.noneToString(''), 'None')
 
     def test_none_to_string_3(self):
-        self.assertEquals(misc.noneToString(None), 'None')
+        self.assertEqual(misc.noneToString(None), 'None')
 
     ####################################################################
     # misc.to_unicode actually converts to utf-8, which is type str    #
     ####################################################################
 
     def test_to_unicode_1(self):
-        self.assertEquals(misc.to_unicode('邪悪'), '邪悪')
+        self.assertEqual(misc.to_unicode('邪悪'), '邪悪')
 
     def test_to_unicode_2(self):
-        self.assertEquals(misc.to_unicode(u'邪悪'), '邪悪')
+        self.assertEqual(misc.to_unicode('邪悪'), '邪悪')
 
     def test_to_unicode_3(self):
-        self.assertEquals(misc.to_unicode(u'abcdef'), 'abcdef')
+        self.assertEqual(misc.to_unicode('abcdef'), 'abcdef')
 
     def test_to_unicode_4(self):
-        self.assertEquals(type(misc.to_unicode('abcdef'.encode('latin-1'))), str)
+        self.assertEqual(type(misc.to_unicode('abcdef'.encode('latin-1'))), str)
 
     def test_to_unicode_5(self):
-        self.assertEquals(misc.to_unicode("berkåk"), "berkåk")
+        self.assertEqual(misc.to_unicode("berkåk"), "berkåk")
 
     def test_to_unicode_6(self):
-        self.assertEquals(misc.to_unicode('berk\xe5k'), "berkåk")
+        self.assertEqual(misc.to_unicode('berk\xe5k'), "berkåk")
 
     def test_none_to_blank_string_1(self):
-        self.assertEquals(misc.noneToBlankString(None), '')
+        self.assertEqual(misc.noneToBlankString(None), '')
 
     def test_none_to_blank_string_2(self):
-        self.assertEquals(misc.noneToBlankString('None'), '')
+        self.assertEqual(misc.noneToBlankString('None'), '')
 
     def test_string_to_none_1(self):
-        self.assertEquals(misc.stringToNone(''), None)
+        self.assertEqual(misc.stringToNone(''), None)
 
     def test_string_to_none_2(self):
-        self.assertEquals(misc.stringToNone('None'), None)
+        self.assertEqual(misc.stringToNone('None'), None)
 
     def test_string_to_none_3(self):
-        self.assertEquals(misc.stringToNone(None), None)
+        self.assertEqual(misc.stringToNone(None), None)
 
     def test_string_to_none_4(self):
-        self.assertEquals(misc.stringToNone('abcdef'), 'abcdef')
+        self.assertEqual(misc.stringToNone('abcdef'), 'abcdef')
 
 def suite():
 	suite = unittest.TestSuite()

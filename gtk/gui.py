@@ -56,11 +56,11 @@ def setup_dbus(force=True):
         dbusmanager.connect_to_dbus()
     except DBusException:
         if force:
-            print "Can't connect to the daemon, ' + \
-                'trying to start it automatically..."
+            print("Can't connect to the daemon, ' + \
+                'trying to start it automatically...")
             if not misc.PromptToStartDaemon():
-                print "Failed to find a graphical sudo program, ' + \
-                    'cannot continue."
+                print("Failed to find a graphical sudo program, ' + \
+                    'cannot continue.")
                 return False
             try:
                 dbusmanager.connect_to_dbus()
@@ -91,7 +91,7 @@ def handle_no_dbus(from_tray=False):
     DBUS_AVAIL = False
     if from_tray:
         return False
-    print "Wicd daemon is shutting down!"
+    print("Wicd daemon is shutting down!")
     error(
         None,
         _('The wicd daemon has shut down. The UI will not function '
@@ -146,14 +146,14 @@ class WiredProfileChooser:
         wired_net_entry.profile_help.hide()
         if wired_net_entry.profile_list is not None:
             wired_profiles.set_active(0)
-            print "wired profiles found"
+            print("wired profiles found")
         else:
-            print "no wired profiles found"
+            print("no wired profiles found")
             wired_net_entry.profile_help.show()
 
         response = dialog.run()
         if response == 1:
-            print 'reading profile ', wired_profiles.get_active_text()
+            print('reading profile ', wired_profiles.get_active_text())
             wired.ReadWiredNetworkProfile(wired_profiles.get_active_text())
             wired.ConnectWired()
         else:
@@ -282,7 +282,7 @@ class appGui(object):
 
     def create_adhoc_network(self, widget=None):
         """ Shows a dialog that creates a new adhoc network. """
-        print "Starting the Ad-Hoc Network Creation Process..."
+        print("Starting the Ad-Hoc Network Creation Process...")
         dialog = gtk.Dialog(
             title=_('Create an Ad-Hoc Network'),
             flags=gtk.DIALOG_MODAL,
@@ -695,7 +695,7 @@ class appGui(object):
                 wireless.SetHiddenNetworkESSID(noneToString(hidden))
             self.refresh_clicked()
             return
-        print "refreshing..."
+        print("refreshing...")
         self.network_list.set_sensitive(False)
         self._remove_items_from_vbox(self.network_list)
         self.wait_for_events()
@@ -707,7 +707,7 @@ class appGui(object):
         if num_networks > 0:
             skip_never_connect = not daemon.GetShowNeverConnect()
             instruct_label.show()
-            for x in xrange(0, num_networks):
+            for x in range(0, num_networks):
                 if skip_never_connect and \
                   misc.to_bool(get_wireless_prop(x, 'never')):
                     continue
@@ -821,7 +821,7 @@ class appGui(object):
         # Make sure no entries are left blank
         if entry.chkbox_encryption.get_active():
             encryption_info = entry.encryption_info
-            for entry_info in encryption_info.itervalues():
+            for entry_info in encryption_info.values():
                 if entry_info[0].entry.get_text() == "" and \
                    entry_info[1] == 'required':
                     error(

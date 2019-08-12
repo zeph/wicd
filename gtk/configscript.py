@@ -120,7 +120,7 @@ def write_scripts(network, network_type, script_info):
 def main (argv):
     """ Runs the script configuration dialog. """
     if len(argv) < 2:
-        print 'Network id to configure is missing, aborting.'
+        print('Network id to configure is missing, aborting.')
         sys.exit(1)
 
     network = argv[1]
@@ -171,6 +171,6 @@ def main (argv):
 
 if __name__ == '__main__':
     if os.getuid() != 0:
-        print "Root privileges are required to configure scripts.  Exiting."
+        print("Root privileges are required to configure scripts.  Exiting.")
         sys.exit(0)
     main(sys.argv)

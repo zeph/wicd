@@ -465,14 +465,14 @@ class WiredSettingsDialog(AdvancedSettingsDialog):
             self.chkbox_encryption.get_active()
         )
         if self.chkbox_encryption.get_active():
-            print "setting encryption info..."
+            print("setting encryption info...")
             encrypt_methods = self.encrypt_types
             self.set_net_prop(
                 "enctype",
                 encrypt_methods[self.combo_encryption.get_active()]['type']
             )
             # Make sure all required fields are filled in.
-            for entry_info in encrypt_info.itervalues():
+            for entry_info in encrypt_info.values():
                 if entry_info[0].entry.get_text() == "" and \
                    entry_info[1] == 'required':
                     error(
@@ -484,11 +484,11 @@ class WiredSettingsDialog(AdvancedSettingsDialog):
                     )
                     return False
             # Now save all the entries.
-            for entry_key, entry_info in encrypt_info.iteritems():
+            for entry_key, entry_info in encrypt_info.items():
                 self.set_net_prop(entry_key,
                                   noneToString(entry_info[0].entry.get_text()))
         else:
-            print "no encryption specified..."
+            print("no encryption specified...")
             self.set_net_prop("enctype", "None")
         AdvancedSettingsDialog.save_settings(self)
         wired.SaveWiredNetworkProfile(self.prof_name)
@@ -682,14 +682,14 @@ class WirelessSettingsDialog(AdvancedSettingsDialog):
         # Check encryption info
         encrypt_info = self.encryption_info
         if self.chkbox_encryption.get_active():
-            print "setting encryption info..."
+            print("setting encryption info...")
             encrypt_methods = self.encrypt_types
             self.set_net_prop(
                 "enctype",
                 encrypt_methods[self.combo_encryption.get_active()]['type']
             )
             # Make sure all required fields are filled in.
-            for entry_info in encrypt_info.itervalues():
+            for entry_info in encrypt_info.values():
                 if entry_info[0].entry.get_text() == "" and \
                    entry_info[1] == 'required':
                     error(
@@ -701,7 +701,7 @@ class WirelessSettingsDialog(AdvancedSettingsDialog):
                     )
                     return False
             # Now save all the entries.
-            for entry_key, entry_info in encrypt_info.iteritems():
+            for entry_key, entry_info in encrypt_info.items():
                 self.set_net_prop(entry_key,
                                   noneToString(entry_info[0].entry.get_text()))
         elif not self.chkbox_encryption.get_active() and \
@@ -710,7 +710,7 @@ class WirelessSettingsDialog(AdvancedSettingsDialog):
             error(self, _('This network requires encryption to be enabled.'))
             return False
         else:
-            print "no encryption specified..."
+            print("no encryption specified...")
             self.set_net_prop("enctype", "None")
         AdvancedSettingsDialog.save_settings(self)
 
@@ -861,7 +861,7 @@ class WiredNetworkEntry(NetworkEntry):
                     starting_index = x
             self.combo_profile_names.set_active(starting_index)
         else:
-            print "no wired profiles found"
+            print("no wired profiles found")
             self.profile_help.show()
 
         self.advanced_dialog = \
@@ -942,7 +942,7 @@ class WiredNetworkEntry(NetworkEntry):
 
     def remove_profile(self, widget):
         """ Remove a profile from the profile list. """
-        print "removing profile"
+        print("removing profile")
         profile_name = self.combo_profile_names.get_active_text()
         wired.DeleteWiredNetworkProfile(profile_name)
         self.combo_profile_names.remove_text(self.combo_profile_names.
@@ -1010,7 +1010,7 @@ class WirelessNetworkEntry(NetworkEntry):
         self.lbl_encryption = GreyLabel()
         self.lbl_channel = GreyLabel()
 
-        print "ESSID : " + self.essid
+        print("ESSID : " + self.essid)
         self.chkbox_autoconnect = gtk.CheckButton(
             _('Automatically connect to this network'))
         self.chkbox_neverconnect = gtk.CheckButton(

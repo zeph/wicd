@@ -35,9 +35,9 @@ try:
     dbusmanager.connect_to_dbus()
     daemon = dbusmanager.get_interface('daemon')
     wireless = dbusmanager.get_interface('wireless')
-except Exception, e:
-    print >> sys.stderr, "Exception caught: %s" % str(e)
-    print >> sys.stderr, 'Could not connect to daemon.'
+except Exception as e:
+    print("Exception caught: %s" % str(e), file=sys.stderr)
+    print('Could not connect to daemon.', file=sys.stderr)
     sys.exit(1)
 
 def handler(*args):
@@ -45,7 +45,7 @@ def handler(*args):
     pass
 def error_handler(*args):
     """ Error handler. """
-    print >> sys.stderr, 'Async error autoconnecting.'
+    print('Async error autoconnecting.', file=sys.stderr)
     sys.exit(3)
 
 if __name__ == '__main__':
@@ -55,7 +55,7 @@ if __name__ == '__main__':
         if not daemon.CheckIfConnecting():
             daemon.AutoConnect(True, reply_handler=handler, 
                                error_handler=error_handler)
-    except Exception, e:
-        print >> sys.stderr, "Exception caught: %s" % str(e)
-        print >> sys.stderr, 'Error autoconnecting.'
+    except Exception as e:
+        print("Exception caught: %s" % str(e), file=sys.stderr)
+        print('Error autoconnecting.', file=sys.stderr)
         sys.exit(2)

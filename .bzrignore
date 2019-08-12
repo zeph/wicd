@@ -28,3 +28,4 @@ wicd/wpath.py
 dist/
 MANIFEST
 debian/
+.vscode/

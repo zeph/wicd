@@ -50,10 +50,10 @@ import os
 from signal import SIGTERM
 
 # wicd imports 
-import misc
+from . import misc
 import wpath
-from backend import BackendManager
-from translations import _
+from .backend import BackendManager
+from .translations import _
 
 if __name__ == '__main__':
     wpath.chdir(__file__)
@@ -123,9 +123,9 @@ def expand_script_macros(script, msg, bssid, essid):
     """
     def repl(match):
         macro = match.group(1).lower()
-        if macro_dict.has_key(macro):
+        if macro in macro_dict:
             return macro_dict[macro]
-        print 'Warning: found illegal macro %s in %s script' % (macro, msg)
+        print('Warning: found illegal macro %s in %s script' % (macro, msg))
         return match.group()
     
     macro_dict = { 'script' : msg,
@@ -133,7 +133,7 @@ def expand_script_macros(script, msg, bssid, essid):
              'essid' : essid }
     regex = re.compile(r'%\{([a-zA-Z0-9]+)\}')
     expanded = regex.sub(repl, script)
-    print "Expanded '%s' to '%s'" % (script, expanded)
+    print("Expanded '%s' to '%s'" % (script, expanded))
     return expanded
 
  
@@ -223,7 +223,7 @@ class Controller(object):
         misc.ExecuteScripts(wpath.predisconnectscripts, self.debug,
                            extra_parameters=(nettype, name, mac))
         if self.pre_disconnect_script:
-            print 'Running pre-disconnect script'
+            print('Running pre-disconnect script')
             misc.ExecuteScript(expand_script_macros(self.pre_disconnect_script,
                                                     'pre-disconnection',
                                                     mac, name),
@@ -237,7 +237,7 @@ class Controller(object):
         misc.ExecuteScripts(wpath.postdisconnectscripts, self.debug,
                             extra_parameters=(nettype, name, mac))
         if self.post_disconnect_script:
-            print 'Running post-disconnect script'
+            print('Running post-disconnect script')
             misc.ExecuteScript(expand_script_macros(self.post_disconnect_script,
                                                     'post-disconnection',
                                                    mac, name),
@@ -249,7 +249,7 @@ class Controller(object):
     
     def KillDHCP(self):
         """ Kill the managed DHCP client if its in a connecting state. """
-        print 'running kill dhcp.'
+        print('running kill dhcp.')
         if (self.connecting_thread.is_connecting and 
             self.iface.dhcp_object):
             if self.iface.dhcp_object.poll() is None:
@@ -403,14 +403,14 @@ class ConnectThread(threading.Thread):
         routing entry is created.
         
         """
-        print 'Setting false IP...'
+        print('Setting false IP...')
         self.SetStatus('resetting_ip_address')
         iface.SetAddress('0.0.0.0')
     
     @abortable
     def put_iface_down(self, iface):
         """ Puts the given interface down. """
-        print 'Putting interface down'
+        print('Putting interface down')
         self.SetStatus('interface_down')
         iface.Down()
         
@@ -430,7 +430,7 @@ class ConnectThread(threading.Thread):
         
         """
         if script:
-            print 'Executing %s script' % (msg)
+            print('Executing %s script' % (msg))
             misc.ExecuteScript(expand_script_macros(script, msg, bssid, essid),
                                self.debug)
         
@@ -438,7 +438,7 @@ class ConnectThread(threading.Thread):
     def flush_routes(self, iface):
         """ Flush the routes for both wired/wireless interfaces. """
         self.SetStatus('flushing_routing_table')
-        print 'Flushing the routing table...'
+        print('Flushing the routing table...')
         iface.FlushRoutes()
         
     @abortable
@@ -446,7 +446,7 @@ class ConnectThread(threading.Thread):
         """ Set the broadcast address for the given interface. """
         if not self.network.get('broadcast') == None:
             self.SetStatus('setting_broadcast_address')
-            print 'Setting the broadcast address...' + self.network['broadcast']
+            print('Setting the broadcast address...' + self.network['broadcast'])
             iface.SetAddress(broadcast=self.network['broadcast'])
         
     @abortable
@@ -458,10 +458,10 @@ class ConnectThread(threading.Thread):
         """
         if self.network.get('ip'):
             self.SetStatus('setting_static_ip')
-            print 'Setting static IP : ' + self.network['ip']
+            print('Setting static IP : ' + self.network['ip'])
             iface.SetAddress(self.network['ip'], self.network['netmask'])
             if self.network.get('gateway'):
-                print 'Setting default gateway : ' + self.network['gateway']
+                print('Setting default gateway : ' + self.network['gateway'])
                 iface.SetDefaultRoute(self.network['gateway'])
         else:
             # Run dhcp...
@@ -472,10 +472,10 @@ class ConnectThread(threading.Thread):
                 self.network['dhcphostname'] = os.uname()[1]
             if self.network['usedhcphostname']:
                 hname = self.network['dhcphostname']
-                print "Running DHCP with hostname", hname
+                print("Running DHCP with hostname", hname)
             else:
                 hname = None
-                print "Running DHCP with NO hostname"
+                print("Running DHCP with NO hostname")
             
             # Check if a global DNS is configured. If it is, then let the DHCP know *not* to update resolv.conf
             staticdns = False
@@ -525,7 +525,7 @@ class ConnectThread(threading.Thread):
     @abortable
     def release_dhcp_clients(self, iface):
         """ Release all running dhcp clients. """
-        print "Releasing DHCP leases..."
+        print("Releasing DHCP leases...")
         iface.ReleaseDHCP()
         
     def connect_aborted(self, reason):
@@ -536,7 +536,7 @@ class ConnectThread(threading.Thread):
         self.is_aborted = True
         self.connect_result = reason
         self.is_connecting = False
-        print 'exiting connection thread'
+        print('exiting connection thread')
         
     def abort_connection(self, reason=""):
         """ Schedule a connection abortion for the given reason. """
@@ -556,13 +556,13 @@ class ConnectThread(threading.Thread):
     @abortable
     def stop_wpa(self, iface):
         """ Stops wpa_supplicant. """
-        print 'Stopping wpa_supplicant'
+        print('Stopping wpa_supplicant')
         iface.StopWPA()
         
     @abortable
     def put_iface_up(self, iface):
         """ Bring up given interface. """
-        print 'Putting interface up...'
+        print('Putting interface up...')
         self.SetStatus('interface_up')
         iface.Up()
         for x in range(0, 5):
@@ -572,7 +572,7 @@ class ConnectThread(threading.Thread):
             self.abort_if_needed()
          
         # If we get here, the interface never came up
-        print "WARNING: Timed out waiting for interface to come up"
+        print("WARNING: Timed out waiting for interface to come up")
 
 
 class Wireless(Controller):
@@ -657,7 +657,7 @@ class Wireless(Controller):
         # Note: this does not always work, sometimes we have to pass it with "iwlist wlan0 scan essid -- XXXXX"
         essid = misc.Noneify(essid)
         if essid is not None:
-            print 'Setting hidden essid ' + essid
+            print('Setting hidden essid ' + essid)
             wiface.SetEssid(essid)
             # sleep for a bit; scanning to fast will result in nothing
             time.sleep(1)
@@ -792,23 +792,23 @@ class Wireless(Controller):
 
         """
         wiface = self.wiface
-        print 'Creating ad-hoc network'
-        print 'Stopping dhcp client and wpa_supplicant'
+        print('Creating ad-hoc network')
+        print('Stopping dhcp client and wpa_supplicant')
         wiface.ReleaseDHCP()
         wiface.StopWPA()
-        print 'Putting wireless interface down'
+        print('Putting wireless interface down')
         wiface.Down()
-        print 'Setting mode, channel, and essid'
+        print('Setting mode, channel, and essid')
         wiface.SetMode('ad-hoc')
         wiface.SetChannel(channel)
         wiface.SetEssid(essid)
         # Right now it just assumes you're using WEP
         if enc_used:
-            print 'Setting encryption key'
+            print('Setting encryption key')
             wiface.SetKey(key)
-        print 'Putting interface up'
+        print('Putting interface up')
         wiface.Up()
-        print 'Setting IP address'
+        print('Setting IP address')
         wiface.SetAddress(ip, '255.255.255.0')
 
     def DetectWirelessInterface(self):
@@ -843,10 +843,10 @@ class Wireless(Controller):
                 action = 'block'
             for t in types:
                 cmd = ['rfkill', action, t]
-                print "rfkill: %sing %s" % (action, t)
+                print("rfkill: %sing %s" % (action, t))
                 misc.Run(cmd)
             return True
-        except Exception, e:
+        except Exception as e:
             raise e
             return False
 
@@ -858,9 +858,8 @@ class Wireless(Controller):
         """
         cmd = 'rfkill list'
         rfkill_out = misc.Run(cmd)
-        soft_blocks = filter(lambda x: x.startswith('Soft'),
-            rfkill_out.split('\t'))
-        for line in map(lambda x: x.strip(), soft_blocks):
+        soft_blocks = [x for x in rfkill_out.split('\t') if x.startswith('Soft')]
+        for line in [x.strip() for x in soft_blocks]:
             if line.endswith('yes'):
                 return True
         return False
@@ -983,7 +982,7 @@ class WirelessConnectThread(ConnectThread):
         if self.network.get('enctype'):
             self.SetStatus('validating_authentication')
             if not wiface.ValidateAuthentication(time.time()):
-                print "connect result is %s" % self.connect_result
+                print("connect result is %s" % self.connect_result)
                 if not self.connect_result or self.connect_result == 'failed':
                     self.abort_connection('bad_pass')
 
@@ -1003,9 +1002,9 @@ class WirelessConnectThread(ConnectThread):
                                   self.network['bssid'], self.network['essid'])
 
         self.SetStatus('done')
-        print 'Connecting thread exiting.'
+        print('Connecting thread exiting.')
         if self.debug:
-            print "IP Address is: " + str(wiface.GetIP())
+            print("IP Address is: " + str(wiface.GetIP()))
         self.connect_result = "success"
         self.is_connecting = False
         
@@ -1020,17 +1019,17 @@ class WirelessConnectThread(ConnectThread):
         """
         if self.network.get('gateway') and self.should_verify_ap:
             self.SetStatus('verifying_association')
-            print "Verifying AP association..."
+            print("Verifying AP association...")
             for tries in range(1, 11):
-                print "Attempt %d of 10..." % tries
+                print("Attempt %d of 10..." % tries)
                 retcode = self.iface.VerifyAPAssociation(self.network['gateway'])
                 if retcode == 0: 
-                    print "Successfully associated."
+                    print("Successfully associated.")
                     break
                 time.sleep(1)
             #TODO this should be in wnettools.py
             if retcode:
-                print "Connection Failed: Failed to ping the access point!"
+                print("Connection Failed: Failed to ping the access point!")
                 # Clean up before aborting.
                 iface.SetAddress('0.0.0.0')
                 iface.FlushRoutes()
@@ -1039,7 +1038,7 @@ class WirelessConnectThread(ConnectThread):
                     iface.StopWPA()
                 self.abort_connection('association_failed')
         else:
-            print 'not verifying'
+            print('not verifying')
         
     @abortable
     def generate_psk_and_authenticate(self, wiface):
@@ -1052,22 +1051,22 @@ class WirelessConnectThread(ConnectThread):
         # Check to see if we need to generate a PSK (only for non-ralink
         # cards).
         if self.debug:
-            print "enctype is %s" % self.network.get('enctype')
+            print("enctype is %s" % self.network.get('enctype'))
         if self.network.get('key') and \
            'wpa' in str(self.network.get('enctype')):
             self.SetStatus('generating_psk')
-            print 'Generating psk...'
+            print('Generating psk...')
             self.network['psk'] = wiface.GeneratePSK(self.network)
             
             if not self.network.get('psk'):
                 self.network['psk'] = self.network['key']
-                print 'WARNING: PSK generation failed!  Falling back to ' + \
+                print('WARNING: PSK generation failed!  Falling back to ' + \
                       'wireless key.\nPlease report this error to the wicd ' + \
-                      'developers!'
+                      'developers!')
         # Generate the wpa_supplicant file...
         if self.network.get('enctype'):
             self.SetStatus('generating_wpa_config')
-            print 'Attempting to authenticate...'
+            print('Attempting to authenticate...')
             wiface.Authenticate(self.network)
 
 
@@ -1248,9 +1247,9 @@ class WiredConnectThread(ConnectThread):
                                   'wired')
 
         self.SetStatus('done')
-        print 'Connecting thread exiting.'
+        print('Connecting thread exiting.')
         if self.debug:
-            print "IP Address is: " + str(liface.GetIP())
+            print("IP Address is: " + str(liface.GetIP()))
         
         self.connect_result = "success"
         self.is_connecting = False

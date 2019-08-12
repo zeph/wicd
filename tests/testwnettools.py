@@ -35,23 +35,23 @@ class TestWnettools(unittest.TestCase):
 		
 	def test_interface_name_sanitation(self):
 		interface = wnettools.BaseInterface('blahblah; uptime > /tmp/blah | cat')
-		self.assertEquals(interface.iface, 'blahblahuptimetmpblahcat')
+		self.assertEqual(interface.iface, 'blahblahuptimetmpblahcat')
 		
 	def test_freq_translation_low(self):
 		freq = '2.412 GHz'
 		interface = wnettools.BaseWirelessInterface('wlan0')
-		self.assertEquals(interface._FreqToChannel(freq), 1)
+		self.assertEqual(interface._FreqToChannel(freq), 1)
 		
 	def test_freq_translation_high(self):
 		freq = '2.484 GHz'
 		interface = wnettools.BaseWirelessInterface('wlan0')
-		self.assertEquals(interface._FreqToChannel(freq), 14)
+		self.assertEqual(interface._FreqToChannel(freq), 14)
 		
 	def test_generate_psk(self):
 		interface = wnettools.BaseWirelessInterface('wlan0')
 		if 'wlan0' in wnettools.GetWirelessInterfaces():
 			psk = interface.GeneratePSK({'essid' : 'Network 1', 'key' : 'arandompassphrase'})
-			self.assertEquals(psk, 'd70463014514f4b4ebb8e3aebbdec13f4437ac3a9af084b3433f3710e658a7be')
+			self.assertEqual(psk, 'd70463014514f4b4ebb8e3aebbdec13f4437ac3a9af084b3433f3710e658a7be')
 
 def suite():
 	suite = unittest.TestSuite()

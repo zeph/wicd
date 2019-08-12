@@ -41,13 +41,13 @@ try:
     import iwscan
     IWSCAN_AVAIL = True
 except ImportError:
-    print "WARNING: python-iwscan not found, falling back to using iwlist scan."
+    print("WARNING: python-iwscan not found, falling back to using iwlist scan.")
     IWSCAN_AVAIL = False
 try:
     import wpactrl
     WPACTRL_AVAIL = True
 except ImportError:
-    print "WARNING: python-wpactrl not found, falling back to using wpa_cli."
+    print("WARNING: python-wpactrl not found, falling back to using wpa_cli.")
     WPACTRL_AVAIL = False
 
 import re
@@ -165,9 +165,9 @@ class Interface(BaseInterface):
         data = (self.iface + '\0' * 16)[:18]
         try:
             result = fcntl.ioctl(self.sock.fileno(), SIOCGIFFLAGS, data)
-        except IOError, e:
+        except IOError as e:
             if self.verbose:
-                print "SIOCGIFFLAGS failed: " + str(e)
+                print("SIOCGIFFLAGS failed: " + str(e))
             return False
 
         flags, = struct.unpack('H', result[16:18])
@@ -204,8 +204,8 @@ class WiredInterface(Interface, BaseWiredInterface):
         elif self.miitool_cmd and self.link_detect in [misc.MIITOOL, misc.AUTO]:
             return self._mii_get_plugged_in()
         else:
-            print ('Error: No way of checking for a wired connection. Make' +
-                   'sure that either mii-tool or ethtool is installed.')
+            print(('Error: No way of checking for a wired connection. Make' +
+                   'sure that either mii-tool or ethtool is installed.'))
             return False
 
     def _eth_get_plugged_in(self):
@@ -224,9 +224,9 @@ class WiredInterface(Interface, BaseWiredInterface):
         data = (self.iface + '\0' * 16)[:16] + arg
         try:
             fcntl.ioctl(self.sock.fileno(), SIOCETHTOOL, data)
-        except IOError, e:
+        except IOError as e:
             if self.verbose:
-                print 'SIOCETHTOOL failed: ' + str(e)
+                print('SIOCETHTOOL failed: ' + str(e))
             return False
         return bool(buff.tolist()[1])
 
@@ -244,9 +244,9 @@ class WiredInterface(Interface, BaseWiredInterface):
                            0x0004, 0)
         try:
             result = fcntl.ioctl(self.sock.fileno(), SIOCGMIIPHY, buff)
-        except IOError, e:
+        except IOError as e:
             if self.verbose:
-                print 'SIOCGMIIPHY failed: ' + str(e)
+                print('SIOCGMIIPHY failed: ' + str(e))
             return False
         reg = struct.unpack('16shhhh', result)[-1]
         return bool(reg & 0x0004)
@@ -286,16 +286,16 @@ class WirelessInterface(Interface, BaseWirelessInterface):
         if not self.scan_iface:
             try:
                 self.scan_iface = iwscan.WirelessInterface(self.iface)
-            except iwscan.error, e:
-                print "GetNetworks caught an exception: %s" % e
+            except iwscan.error as e:
+                print("GetNetworks caught an exception: %s" % e)
                 return []
 
         try:
             results = self.scan_iface.Scan()
-        except iwscan.error, e:
-            print "ERROR: %s" % e
+        except iwscan.error as e:
+            print("ERROR: %s" % e)
             return []
-        return filter(None, [self._parse_ap(cell) for cell in results])
+        return [_f for _f in [self._parse_ap(cell) for cell in results] if _f]
 
     def _parse_ap(self, cell):
         """ Parse a single cell from the python-iwscan list. """
@@ -303,7 +303,7 @@ class WirelessInterface(Interface, BaseWirelessInterface):
         try:
             ap['essid'] = misc.to_unicode(cell['essid'])
         except UnicodeError:
-            print 'Unicode problem with the current network essid, ignoring!!'
+            print('Unicode problem with the current network essid, ignoring!!')
             return None
 
         if ap['essid'] in [ "", '<hidden>']:
@@ -356,12 +356,12 @@ class WirelessInterface(Interface, BaseWirelessInterface):
         if os.path.exists(socket_loc):
             try:
                 return wpactrl.WPACtrl(socket_loc)
-            except wpactrl.error, e:
-                print "Couldn't open ctrl_interface: %s" % e
+            except wpactrl.error as e:
+                print("Couldn't open ctrl_interface: %s" % e)
                 return None
         else:
-            print "Couldn't find a wpa_supplicant ctrl_interface for iface %s" \
-                % self.iface
+            print("Couldn't find a wpa_supplicant ctrl_interface for iface %s" \
+                % self.iface)
             return None
 
     def ValidateAuthentication(self, auth_time):
@@ -392,7 +392,7 @@ class WirelessInterface(Interface, BaseWirelessInterface):
 
         wpa = self._connect_to_wpa_ctrl_iface()
         if not wpa:
-            print "Failed to open ctrl interface"
+            print("Failed to open ctrl interface")
             return False
 
         MAX_TIME = 35
@@ -402,12 +402,12 @@ class WirelessInterface(Interface, BaseWirelessInterface):
             try:
                 status = wpa.request("STATUS").split("\n")
             except:
-                print "wpa_supplicant status query failed."
+                print("wpa_supplicant status query failed.")
                 return False
 
             if self.verbose:
-                print 'wpa_supplicant ctrl_interface status query is %s' \
-                    % str(status)
+                print('wpa_supplicant ctrl_interface status query is %s' \
+                    % str(status))
 
             try:
                 [result] = [l for l in status if l.startswith("wpa_state=")]
@@ -426,7 +426,7 @@ class WirelessInterface(Interface, BaseWirelessInterface):
                 disconnected_time = 0
             time.sleep(1)
 
-        print 'wpa_supplicant authentication may have failed.'
+        print('wpa_supplicant authentication may have failed.')
         return False
 
     @neediface(False)
@@ -458,28 +458,28 @@ class WirelessInterface(Interface, BaseWirelessInterface):
                 if info[2] == network.get('essid'):
                     if info[5] == 'WEP' or (info[5] == 'OPEN' and \
                                             info[4] == 'WEP'):
-                        print 'Setting up WEP'
+                        print('Setting up WEP')
                         cmd = ''.join(['iwconfig ', self.iface, ' key ',
                                        network.get('key')])
                         if self.verbose:
-                            print cmd
+                            print(cmd)
                         misc.Run(cmd)
                     else:
                         if info[5] == 'SHARED' and info[4] == 'WEP':
-                            print 'Setting up WEP'
+                            print('Setting up WEP')
                             auth_mode = 'SHARED'
                             key_name = 'Key1'
                         elif info[5] == 'WPA-PSK':
-                            print 'Setting up WPA-PSK'
+                            print('Setting up WPA-PSK')
                             auth_mode = 'WPAPSK'
                             key_name = 'WPAPSK'
                         elif info[5] == 'WPA2-PSK':
-                            print 'Setting up WPA2-PSK'
+                            print('Setting up WPA2-PSK')
                             auth_mode = 'WPA2PSK'
                             key_name = 'WPAPSK'
                         else:
-                            print 'Unknown AuthMode, can\'t complete ' + \
-                                  'connection process!'
+                            print('Unknown AuthMode, can\'t complete ' + \
+                                  'connection process!')
                             return
 
                         cmd_list = []
@@ -495,7 +495,7 @@ class WirelessInterface(Interface, BaseWirelessInterface):
                         for cmd in cmd_list:
                             cmd = 'iwpriv ' + self.iface + ' '
                             if self.verbose:
-                                print cmd
+                                print(cmd)
                             misc.Run(cmd)
 
     @neediface("")
@@ -504,9 +504,9 @@ class WirelessInterface(Interface, BaseWirelessInterface):
         data = (self.iface + '\0' * 32)[:32]
         try:
             result = fcntl.ioctl(self.sock.fileno(), SIOCGIWAP, data)[16:]
-        except IOError, e:
+        except IOError as e:
             if self.verbose:
-                print "SIOCGIWAP failed: " + str(e)
+                print("SIOCGIWAP failed: " + str(e))
             return ""
         raw_addr = struct.unpack("xxBBBBBB", result[:8])
         return "%02X:%02X:%02X:%02X:%02X:%02X" % raw_addr
@@ -519,9 +519,9 @@ class WirelessInterface(Interface, BaseWirelessInterface):
         size = struct.calcsize(fmt)
         try:
             result = fcntl.ioctl(self.sock.fileno(), SIOCGIWRATE, data)[16:]
-        except IOError, e:
+        except IOError as e:
             if self.verbose:
-                print "SIOCGIWRATE failed: " + str(e)
+                print("SIOCGIWRATE failed: " + str(e))
             return ""
         f, e, x, x = struct.unpack(fmt, result[:size])
         return "%s %s" % ((f / 1000000), 'Mb/s')
@@ -562,9 +562,9 @@ class WirelessInterface(Interface, BaseWirelessInterface):
         iwfreq = (self.iface + '\0' * 16)[:16] + arg
         try:
             result = fcntl.ioctl(self.sock.fileno(), SIOCGIWRANGE, iwfreq)
-        except IOError, e:
+        except IOError as e:
             if self.verbose:
-                print "SIOCGIWRANGE failed: " + str(e)
+                print("SIOCGIWRANGE failed: " + str(e))
             return None
         # This defines the iwfreq struct, used to get signal strength.
         fmt = "iiihb6ii4B4Bi32i2i2i2i2i3h8h2b2bhi8i2b3h2i2ihB17x" + 32 * "ihbb"
