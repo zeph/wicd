@@ -163,7 +163,7 @@ def Run(cmd, include_stderr=False, return_pipe=False,
     if return_pipe:
         return f.stdout
     else:
-        return f.communicate()[0]
+        return f.communicate()[0].decode()
     
 def LaunchAndWait(cmd):
     """ Launches the given program with the given arguments, then blocks.
