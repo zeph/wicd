@@ -479,7 +479,7 @@ def to_unicode(x):
     if not isinstance(x, str):
         return x
     if isinstance(x, str):
-        return x.encode('utf-8')
+        return x
 
     x = sanitize_escaped(x)
 
