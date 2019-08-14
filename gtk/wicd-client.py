@@ -80,8 +80,8 @@ if not hasattr(gtk, "StatusIcon"):
         import egg.trayicon
         USE_EGG = True
     except ImportError:
-        print('Unable to load tray icon: Missing both egg.trayicon and ' + \
-            'gtk.StatusIcon modules.')
+        print(('Unable to load tray icon: Missing both egg.trayicon and ' + \
+            'gtk.StatusIcon modules.'))
         ICON_AVAIL = False
 
 misc.RenameProcess("wicd-client")
@@ -114,7 +114,7 @@ def catchdbus(func):
                 #raise
                 raise DBusException(e)
             else:
-                print("warning: ignoring exception %s" % e)
+                print(("warning: ignoring exception %s" % e))
             return None
     wrapper.__name__ = func.__name__
     wrapper.__module__ = func.__module__
@@ -162,7 +162,7 @@ class TrayIcon(object):
             self.tr.toggle_wicd_gui()
         self.icon_info = self.TrayConnectionInfo(self, self.tr, animate)
         self.tr.icon_info = self.icon_info
-        print('displaytray %s' % displaytray)
+        print(('displaytray %s' % displaytray))
         self.tr.visible(displaytray)
 
     def is_embedded(self):
@@ -270,7 +270,7 @@ class TrayIcon(object):
                         msg = e.args[-1]
                     else:
                         msg = str(e)
-                    print("Exception during notification: %s" % msg)
+                    print(("Exception during notification: %s" % msg))
 
                 self.should_notify = False
 
@@ -1046,7 +1046,7 @@ TX:'''))
 
 def usage():
     """ Print usage information. """
-    print("""
+    print(("""
 wicd %s
 wireless (and wired) connection daemon front-end.
 
@@ -1056,7 +1056,7 @@ Arguments:
 \t-h\t--help\t\tPrint this help information.
 \t-a\t--no-animate\tRun the tray without network traffic tray animations.
 \t-o\t--only-notifications\tDon't display anything except notifications.
-""" % wpath.version)
+""" % wpath.version))
 
 
 def setup_dbus(force=True):
@@ -1067,8 +1067,8 @@ def setup_dbus(force=True):
         dbusmanager.connect_to_dbus()
     except DBusException:
         if force:
-            print("Can't connect to the daemon, trying to start it " + \
-                "automatically...")
+            print(("Can't connect to the daemon, trying to start it " + \
+                "automatically..."))
             misc.PromptToStartDaemon()
             try:
                 dbusmanager.connect_to_dbus()

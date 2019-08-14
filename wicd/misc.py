@@ -38,7 +38,7 @@ import socket
 from wicd.translations import _
 
 # wicd imports
-import wpath
+from . import wpath
 
 # Connection state constants
 NOT_CONNECTED = 0
@@ -155,7 +155,7 @@ def Run(cmd, include_stderr=False, return_pipe=False,
         f = Popen(cmd, shell=False, stdout=PIPE, stdin=std_in, stderr=err,
                   close_fds=fds, cwd='/', env=tmpenv)
     except OSError as e:
-        print("Running command %s failed: %s" % (str(cmd), str(e)))
+        print(("Running command %s failed: %s" % (str(cmd), str(e))))
         return ""
         
     if return_obj:
@@ -252,10 +252,10 @@ def ExecuteScript(script, verbose=False, extra_parameters=()):
     # escape script name
     script = quote(script)
     if verbose:
-        print("Executing %s with params %s" % (script, params))
+        print(("Executing %s with params %s" % (script, params)))
     ret = call('%s %s > /dev/null 2>&1' % (script, params), shell=True)
     if verbose:
-        print("%s returned %s" % (script, ret))
+        print(("%s returned %s" % (script, ret)))
 
 def ReadFile(filename):
     """ read in a file and return it's contents as a string """
@@ -322,7 +322,7 @@ def ParseEncryption(network):
                         if rep_val:
                             line = line.replace("$_%s" % cur_val, str(rep_val))
                         else:
-                            print("Ignoring template line: '%s'" % line)
+                            print(("Ignoring template line: '%s'" % line))
                     else:
                         print("Weird parsing error occurred")
                 config_file = ''.join([config_file, line])
@@ -391,7 +391,7 @@ def _parse_enc_template(enctype):
     try:
         f = open(os.path.join(wpath.encryption, enctype), "r")
     except IOError:
-        print("Failed to open template file %s" % enctype)
+        print(("Failed to open template file %s" % enctype))
         return None
 
     cur_type = {}
@@ -408,7 +408,7 @@ def _parse_enc_template(enctype):
             cur_type["required"] = __parse_field_ent(parse_ent(line, "require"))
             if not cur_type["required"]:
                 # An error occured parsing the require line.
-                print("Invalid 'required' line found in template %s" % enctype)
+                print(("Invalid 'required' line found in template %s" % enctype))
                 continue
         elif line.startswith("optional"):
             cur_type["optional"] = __parse_field_ent(parse_ent(line,
@@ -416,7 +416,7 @@ def _parse_enc_template(enctype):
                                                      field_type="optional")
             if not cur_type["optional"]:
                 # An error occured parsing the optional line.
-                print("Invalid 'optional' line found in template %s" % enctype)
+                print(("Invalid 'optional' line found in template %s" % enctype))
                 continue
         elif line.startswith("protected"):
             cur_type["protected"] = __parse_field_ent(
@@ -425,17 +425,17 @@ def _parse_enc_template(enctype):
             )
             if not cur_type["protected"]:
                 # An error occured parsing the protected line.
-                print("Invalid 'protected' line found in template %s" % enctype)
+                print(("Invalid 'protected' line found in template %s" % enctype))
                 continue
         elif line.startswith("----"):
             # We're done.
             break
     f.close()
     if not cur_type["required"]:
-        print("Failed to find a 'require' line in template %s" % enctype)
+        print(("Failed to find a 'require' line in template %s" % enctype))
         return None
     if not cur_type["name"]:
-        print("Failed to find a 'name' line in template %s" % enctype)
+        print(("Failed to find a 'name' line in template %s" % enctype))
         return None
     else:
         return cur_type

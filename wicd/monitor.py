@@ -56,7 +56,7 @@ def diewithdbus(func):
             self.__lost_dbus_count = 0
             return ret
         except DBusException as e:
-            print("Caught exception %s" % str(e))
+            print(("Caught exception %s" % str(e)))
             if not hasattr(self, "__lost_dbus_count"):
                 self.__lost_dbus_count = 0
             if self.__lost_dbus_count > 3:
@@ -188,7 +188,7 @@ class ConnectionStatus(object):
             # If we haven't gotten any signal 4 runs in a row (12 seconds),
             # try to reconnect.
             self.connection_lost_counter += 1
-            print(self.connection_lost_counter)
+            print((self.connection_lost_counter))
             if self.connection_lost_counter >= 4 and daemon.GetAutoReconnect():
                 wireless.DisconnectWireless()
                 self.connection_lost_counter = 0
@@ -364,8 +364,8 @@ class ConnectionStatus(object):
                 # before we reconnect
                 print('Disconnecting from network')
                 wireless.DisconnectWireless()
-                print('Trying to reconnect to last used wireless ' + \
-                      'network')
+                print(('Trying to reconnect to last used wireless ' + \
+                      'network'))
                 wireless.ConnectWireless(cur_net_id)
             else:
                 daemon.AutoConnect(True, reply_handler=reply_handle,

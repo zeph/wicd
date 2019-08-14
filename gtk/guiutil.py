@@ -31,7 +31,7 @@ except ImportError:
     print("Importing pynotify failed, notifications disabled.")
     HAS_NOTIFY = False
 
-print("Has notifications support", HAS_NOTIFY)
+print(("Has notifications support", HAS_NOTIFY))
 
 if wpath.no_use_notifications:
     print('Notifications disabled during setup.py configure')

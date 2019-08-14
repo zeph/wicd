@@ -62,7 +62,7 @@ class ConfigManager(RawConfigParser):
             try:
                 self.read(path)
             except ParsingError as p:
-                print("Could not start wicd: %s" % p.message)
+                print(("Could not start wicd: %s" % p.message))
                 sys.exit(1)
 
     def __repr__(self):
@@ -125,15 +125,15 @@ class ConfigManager(RawConfigParser):
                     if option in ['apsk', 'password', 'identity', \
                                   'private_key', 'private_key_passwd', \
                                   'key', 'passphrase']:
-                        print(''.join(['found ', option, \
-                            ' in configuration *****']))
+                        print((''.join(['found ', option, \
+                            ' in configuration *****'])))
                     else:
-                        print(''.join(['found ', option, ' in configuration ',
-                                       str(ret)]))
+                        print((''.join(['found ', option, ' in configuration ',
+                                       str(ret)])))
         else:	# Use the default, unless no default was provided
             if default != "__None__":
-                print('did not find %s in configuration, setting default %s' \
-                    % (option, str(default)))
+                print(('did not find %s in configuration, setting default %s' \
+                    % (option, str(default))))
                 self.set(section, option, str(default), write=True)
                 ret = default
             else:

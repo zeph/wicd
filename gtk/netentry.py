@@ -472,7 +472,7 @@ class WiredSettingsDialog(AdvancedSettingsDialog):
                 encrypt_methods[self.combo_encryption.get_active()]['type']
             )
             # Make sure all required fields are filled in.
-            for entry_info in encrypt_info.values():
+            for entry_info in list(encrypt_info.values()):
                 if entry_info[0].entry.get_text() == "" and \
                    entry_info[1] == 'required':
                     error(
@@ -484,7 +484,7 @@ class WiredSettingsDialog(AdvancedSettingsDialog):
                     )
                     return False
             # Now save all the entries.
-            for entry_key, entry_info in encrypt_info.items():
+            for entry_key, entry_info in list(encrypt_info.items()):
                 self.set_net_prop(entry_key,
                                   noneToString(entry_info[0].entry.get_text()))
         else:
@@ -689,7 +689,7 @@ class WirelessSettingsDialog(AdvancedSettingsDialog):
                 encrypt_methods[self.combo_encryption.get_active()]['type']
             )
             # Make sure all required fields are filled in.
-            for entry_info in encrypt_info.values():
+            for entry_info in list(encrypt_info.values()):
                 if entry_info[0].entry.get_text() == "" and \
                    entry_info[1] == 'required':
                     error(
@@ -701,7 +701,7 @@ class WirelessSettingsDialog(AdvancedSettingsDialog):
                     )
                     return False
             # Now save all the entries.
-            for entry_key, entry_info in encrypt_info.items():
+            for entry_key, entry_info in list(encrypt_info.items()):
                 self.set_net_prop(entry_key,
                                   noneToString(entry_info[0].entry.get_text()))
         elif not self.chkbox_encryption.get_active() and \
@@ -1010,7 +1010,7 @@ class WirelessNetworkEntry(NetworkEntry):
         self.lbl_encryption = GreyLabel()
         self.lbl_channel = GreyLabel()
 
-        print("ESSID : " + self.essid)
+        print(("ESSID : " + self.essid))
         self.chkbox_autoconnect = gtk.CheckButton(
             _('Automatically connect to this network'))
         self.chkbox_neverconnect = gtk.CheckButton(

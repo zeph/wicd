@@ -51,7 +51,7 @@ from signal import SIGTERM
 
 # wicd imports 
 from . import misc
-import wpath
+from . import wpath
 from .backend import BackendManager
 from .translations import _
 
@@ -125,7 +125,7 @@ def expand_script_macros(script, msg, bssid, essid):
         macro = match.group(1).lower()
         if macro in macro_dict:
             return macro_dict[macro]
-        print('Warning: found illegal macro %s in %s script' % (macro, msg))
+        print(('Warning: found illegal macro %s in %s script' % (macro, msg)))
         return match.group()
     
     macro_dict = { 'script' : msg,
@@ -133,7 +133,7 @@ def expand_script_macros(script, msg, bssid, essid):
              'essid' : essid }
     regex = re.compile(r'%\{([a-zA-Z0-9]+)\}')
     expanded = regex.sub(repl, script)
-    print("Expanded '%s' to '%s'" % (script, expanded))
+    print(("Expanded '%s' to '%s'" % (script, expanded)))
     return expanded
 
  
@@ -430,7 +430,7 @@ class ConnectThread(threading.Thread):
         
         """
         if script:
-            print('Executing %s script' % (msg))
+            print(('Executing %s script' % (msg)))
             misc.ExecuteScript(expand_script_macros(script, msg, bssid, essid),
                                self.debug)
         
@@ -446,7 +446,7 @@ class ConnectThread(threading.Thread):
         """ Set the broadcast address for the given interface. """
         if not self.network.get('broadcast') == None:
             self.SetStatus('setting_broadcast_address')
-            print('Setting the broadcast address...' + self.network['broadcast'])
+            print(('Setting the broadcast address...' + self.network['broadcast']))
             iface.SetAddress(broadcast=self.network['broadcast'])
         
     @abortable
@@ -458,10 +458,10 @@ class ConnectThread(threading.Thread):
         """
         if self.network.get('ip'):
             self.SetStatus('setting_static_ip')
-            print('Setting static IP : ' + self.network['ip'])
+            print(('Setting static IP : ' + self.network['ip']))
             iface.SetAddress(self.network['ip'], self.network['netmask'])
             if self.network.get('gateway'):
-                print('Setting default gateway : ' + self.network['gateway'])
+                print(('Setting default gateway : ' + self.network['gateway']))
                 iface.SetDefaultRoute(self.network['gateway'])
         else:
             # Run dhcp...
@@ -472,7 +472,7 @@ class ConnectThread(threading.Thread):
                 self.network['dhcphostname'] = os.uname()[1]
             if self.network['usedhcphostname']:
                 hname = self.network['dhcphostname']
-                print("Running DHCP with hostname", hname)
+                print(("Running DHCP with hostname", hname))
             else:
                 hname = None
                 print("Running DHCP with NO hostname")
@@ -657,7 +657,7 @@ class Wireless(Controller):
         # Note: this does not always work, sometimes we have to pass it with "iwlist wlan0 scan essid -- XXXXX"
         essid = misc.Noneify(essid)
         if essid is not None:
-            print('Setting hidden essid ' + essid)
+            print(('Setting hidden essid ' + essid))
             wiface.SetEssid(essid)
             # sleep for a bit; scanning to fast will result in nothing
             time.sleep(1)
@@ -843,7 +843,7 @@ class Wireless(Controller):
                 action = 'block'
             for t in types:
                 cmd = ['rfkill', action, t]
-                print("rfkill: %sing %s" % (action, t))
+                print(("rfkill: %sing %s" % (action, t)))
                 misc.Run(cmd)
             return True
         except Exception as e:
@@ -982,7 +982,7 @@ class WirelessConnectThread(ConnectThread):
         if self.network.get('enctype'):
             self.SetStatus('validating_authentication')
             if not wiface.ValidateAuthentication(time.time()):
-                print("connect result is %s" % self.connect_result)
+                print(("connect result is %s" % self.connect_result))
                 if not self.connect_result or self.connect_result == 'failed':
                     self.abort_connection('bad_pass')
 
@@ -1004,7 +1004,7 @@ class WirelessConnectThread(ConnectThread):
         self.SetStatus('done')
         print('Connecting thread exiting.')
         if self.debug:
-            print("IP Address is: " + str(wiface.GetIP()))
+            print(("IP Address is: " + str(wiface.GetIP())))
         self.connect_result = "success"
         self.is_connecting = False
         
@@ -1021,7 +1021,7 @@ class WirelessConnectThread(ConnectThread):
             self.SetStatus('verifying_association')
             print("Verifying AP association...")
             for tries in range(1, 11):
-                print("Attempt %d of 10..." % tries)
+                print(("Attempt %d of 10..." % tries))
                 retcode = self.iface.VerifyAPAssociation(self.network['gateway'])
                 if retcode == 0: 
                     print("Successfully associated.")
@@ -1051,7 +1051,7 @@ class WirelessConnectThread(ConnectThread):
         # Check to see if we need to generate a PSK (only for non-ralink
         # cards).
         if self.debug:
-            print("enctype is %s" % self.network.get('enctype'))
+            print(("enctype is %s" % self.network.get('enctype')))
         if self.network.get('key') and \
            'wpa' in str(self.network.get('enctype')):
             self.SetStatus('generating_psk')
@@ -1060,9 +1060,9 @@ class WirelessConnectThread(ConnectThread):
             
             if not self.network.get('psk'):
                 self.network['psk'] = self.network['key']
-                print('WARNING: PSK generation failed!  Falling back to ' + \
+                print(('WARNING: PSK generation failed!  Falling back to ' + \
                       'wireless key.\nPlease report this error to the wicd ' + \
-                      'developers!')
+                      'developers!'))
         # Generate the wpa_supplicant file...
         if self.network.get('enctype'):
             self.SetStatus('generating_wpa_config')
@@ -1249,7 +1249,7 @@ class WiredConnectThread(ConnectThread):
         self.SetStatus('done')
         print('Connecting thread exiting.')
         if self.debug:
-            print("IP Address is: " + str(liface.GetIP()))
+            print(("IP Address is: " + str(liface.GetIP())))
         
         self.connect_result = "success"
         self.is_connecting = False

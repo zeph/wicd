@@ -415,7 +415,7 @@ class WiredSettingsDialog(AdvancedSettingsDialog):
                 encrypt_methods[self.encryption_combo.get_focus()[1]]['type'])
             self.set_net_prop("encryption_enabled", True)
             # Make sure all required fields are filled in.
-            for entry_info in encrypt_info.values():
+            for entry_info in list(encrypt_info.values()):
                 if entry_info[0].get_edit_text() == "" \
                   and entry_info[1] == 'required':
                     error(
@@ -428,7 +428,7 @@ class WiredSettingsDialog(AdvancedSettingsDialog):
                     )
                     return False
 
-            for entry_key, entry_info in encrypt_info.items():
+            for entry_key, entry_info in list(encrypt_info.items()):
                 self.set_net_prop(entry_key, noneToString(entry_info[0].
                                                    get_edit_text()))
         else:
@@ -606,7 +606,7 @@ class WirelessSettingsDialog(AdvancedSettingsDialog):
                 encrypt_methods[self.encryption_combo.get_focus()[1]]['type']
             )
             # Make sure all required fields are filled in.
-            for entry_info in encrypt_info.values():
+            for entry_info in list(encrypt_info.values()):
                 if entry_info[0].get_edit_text() == "" \
                     and entry_info[1] == 'required':
                     error(
@@ -619,7 +619,7 @@ class WirelessSettingsDialog(AdvancedSettingsDialog):
                     )
                     return False
 
-            for entry_key, entry_info in encrypt_info.items():
+            for entry_key, entry_info in list(encrypt_info.items()):
                 self.set_net_prop(entry_key, noneToString(entry_info[0].
                                                    get_edit_text()))
         elif not self.encryption_chkbox.get_state() and \

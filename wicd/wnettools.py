@@ -35,7 +35,6 @@ import os
 import re
 import random
 import time
-from string import maketrans, translate
 import dbus
 import socket, fcntl
 import shutil
@@ -81,19 +80,18 @@ NONE_DRIVER = 'none'
 
 blacklist_strict = '!"#$%&\'()*+,./:;<=>?@[\\]^`{|}~ '
 blacklist_norm = ";`$!*|><&\\"
-blank_trans = maketrans("", "")
 
 def _sanitize_string(string):
     """ Sanitize string. """
     if string:
-        return translate(str(string), blank_trans, blacklist_norm)
+        return str(string).translate(blacklist_norm)
     else:
         return string
 
 def _sanitize_string_strict(string):
     """ Sanitize string in a stricter way. """
     if string:
-        return translate(str(string), blank_trans, blacklist_strict)
+        return str(string).translate(blacklist_strict)
     else:
         return string
   

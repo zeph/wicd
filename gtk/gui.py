@@ -153,7 +153,7 @@ class WiredProfileChooser:
 
         response = dialog.run()
         if response == 1:
-            print('reading profile ', wired_profiles.get_active_text())
+            print(('reading profile ', wired_profiles.get_active_text()))
             wired.ReadWiredNetworkProfile(wired_profiles.get_active_text())
             wired.ConnectWired()
         else:
@@ -821,7 +821,7 @@ class appGui(object):
         # Make sure no entries are left blank
         if entry.chkbox_encryption.get_active():
             encryption_info = entry.encryption_info
-            for entry_info in encryption_info.values():
+            for entry_info in list(encryption_info.values()):
                 if entry_info[0].entry.get_text() == "" and \
                    entry_info[1] == 'required':
                     error(

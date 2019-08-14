@@ -21,7 +21,7 @@
 #
 import locale
 import os
-import wpath
+from . import wpath
 import gettext
 
 
@@ -45,7 +45,7 @@ def get_gettext():
                                                         'LC_ALL', 'LANG', 
                                                         'LANGUAGE'))
     except ValueError as e:
-        print(str(e))
+        print((str(e)))
         print("Default locale unavailable, falling back to en_US")
     if (lc):
         langs += [lc]

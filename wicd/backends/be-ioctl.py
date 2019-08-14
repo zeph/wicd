@@ -167,7 +167,7 @@ class Interface(BaseInterface):
             result = fcntl.ioctl(self.sock.fileno(), SIOCGIFFLAGS, data)
         except IOError as e:
             if self.verbose:
-                print("SIOCGIFFLAGS failed: " + str(e))
+                print(("SIOCGIFFLAGS failed: " + str(e)))
             return False
 
         flags, = struct.unpack('H', result[16:18])
@@ -226,7 +226,7 @@ class WiredInterface(Interface, BaseWiredInterface):
             fcntl.ioctl(self.sock.fileno(), SIOCETHTOOL, data)
         except IOError as e:
             if self.verbose:
-                print('SIOCETHTOOL failed: ' + str(e))
+                print(('SIOCETHTOOL failed: ' + str(e)))
             return False
         return bool(buff.tolist()[1])
 
@@ -246,7 +246,7 @@ class WiredInterface(Interface, BaseWiredInterface):
             result = fcntl.ioctl(self.sock.fileno(), SIOCGMIIPHY, buff)
         except IOError as e:
             if self.verbose:
-                print('SIOCGMIIPHY failed: ' + str(e))
+                print(('SIOCGMIIPHY failed: ' + str(e)))
             return False
         reg = struct.unpack('16shhhh', result)[-1]
         return bool(reg & 0x0004)
@@ -287,13 +287,13 @@ class WirelessInterface(Interface, BaseWirelessInterface):
             try:
                 self.scan_iface = iwscan.WirelessInterface(self.iface)
             except iwscan.error as e:
-                print("GetNetworks caught an exception: %s" % e)
+                print(("GetNetworks caught an exception: %s" % e))
                 return []
 
         try:
             results = self.scan_iface.Scan()
         except iwscan.error as e:
-            print("ERROR: %s" % e)
+            print(("ERROR: %s" % e))
             return []
         return [_f for _f in [self._parse_ap(cell) for cell in results] if _f]
 
@@ -357,11 +357,11 @@ class WirelessInterface(Interface, BaseWirelessInterface):
             try:
                 return wpactrl.WPACtrl(socket_loc)
             except wpactrl.error as e:
-                print("Couldn't open ctrl_interface: %s" % e)
+                print(("Couldn't open ctrl_interface: %s" % e))
                 return None
         else:
-            print("Couldn't find a wpa_supplicant ctrl_interface for iface %s" \
-                % self.iface)
+            print(("Couldn't find a wpa_supplicant ctrl_interface for iface %s" \
+                % self.iface))
             return None
 
     def ValidateAuthentication(self, auth_time):
@@ -406,8 +406,8 @@ class WirelessInterface(Interface, BaseWirelessInterface):
                 return False
 
             if self.verbose:
-                print('wpa_supplicant ctrl_interface status query is %s' \
-                    % str(status))
+                print(('wpa_supplicant ctrl_interface status query is %s' \
+                    % str(status)))
 
             try:
                 [result] = [l for l in status if l.startswith("wpa_state=")]
@@ -478,8 +478,8 @@ class WirelessInterface(Interface, BaseWirelessInterface):
                             auth_mode = 'WPA2PSK'
                             key_name = 'WPAPSK'
                         else:
-                            print('Unknown AuthMode, can\'t complete ' + \
-                                  'connection process!')
+                            print(('Unknown AuthMode, can\'t complete ' + \
+                                  'connection process!'))
                             return
 
                         cmd_list = []
@@ -506,7 +506,7 @@ class WirelessInterface(Interface, BaseWirelessInterface):
             result = fcntl.ioctl(self.sock.fileno(), SIOCGIWAP, data)[16:]
         except IOError as e:
             if self.verbose:
-                print("SIOCGIWAP failed: " + str(e))
+                print(("SIOCGIWAP failed: " + str(e)))
             return ""
         raw_addr = struct.unpack("xxBBBBBB", result[:8])
         return "%02X:%02X:%02X:%02X:%02X:%02X" % raw_addr
@@ -521,7 +521,7 @@ class WirelessInterface(Interface, BaseWirelessInterface):
             result = fcntl.ioctl(self.sock.fileno(), SIOCGIWRATE, data)[16:]
         except IOError as e:
             if self.verbose:
-                print("SIOCGIWRATE failed: " + str(e))
+                print(("SIOCGIWRATE failed: " + str(e)))
             return ""
         f, e, x, x = struct.unpack(fmt, result[:size])
         return "%s %s" % ((f / 1000000), 'Mb/s')
@@ -564,7 +564,7 @@ class WirelessInterface(Interface, BaseWirelessInterface):
             result = fcntl.ioctl(self.sock.fileno(), SIOCGIWRANGE, iwfreq)
         except IOError as e:
             if self.verbose:
-                print("SIOCGIWRANGE failed: " + str(e))
+                print(("SIOCGIWRANGE failed: " + str(e)))
             return None
         # This defines the iwfreq struct, used to get signal strength.
         fmt = "iiihb6ii4B4Bi32i2i2i2i2i3h8h2b2bhi8i2b3h2i2ihB17x" + 32 * "ihbb"
