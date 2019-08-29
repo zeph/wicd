@@ -476,9 +476,10 @@ def sanitize_escaped(s):
 def to_unicode(x):
     """ Attempts to convert a string to utf-8. """
     # If this is a unicode string, encode it and return
-    if not isinstance(x, str):
+    if not isinstance(x, bytes):
         return x
-    if isinstance(x, str):
+
+    if isinstance(x, bytes):
         return x
 
     x = sanitize_escaped(x)

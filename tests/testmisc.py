@@ -137,7 +137,7 @@ class TestMisc(unittest.TestCase):
         self.assertEqual(misc.to_unicode('abcdef'), 'abcdef')
 
     def test_to_unicode_4(self):
-        self.assertEqual(type(misc.to_unicode('abcdef'.encode('latin-1'))), str)
+        self.assertEqual(type(misc.to_unicode('abcdef'.encode('latin-1'))), bytes)
 
     def test_to_unicode_5(self):
         self.assertEqual(misc.to_unicode("berkåk"), "berkåk")
