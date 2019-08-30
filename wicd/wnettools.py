@@ -78,20 +78,23 @@ auth_pattern = re.compile('.*wpa_state=(.*?)\n', _re_mode)
 RALINK_DRIVER = 'ralink legacy'
 NONE_DRIVER = 'none'
 
-blacklist_strict = '!"#$%&\'()*+,./:;<=>?@[\\]^`{|}~ '
-blacklist_norm = ";`$!*|><&\\"
+blacklist_strict = list('!"#$%&\'()*+,./:;<=>?@[\\]^`{|}~ ')
+blacklist_norm = list(";`$!*|><&\\")
+
+blacklist_strict_t = str.maketrans(dict.fromkeys(blacklist_strict, None))
+blacklist_norm_t = str.maketrans(dict.fromkeys(blacklist_norm, None))
 
 def _sanitize_string(string):
     """ Sanitize string. """
     if string:
-        return str(string).translate(blacklist_norm)
+        return str(string).translate(blacklist_norm_t)
     else:
         return string
 
 def _sanitize_string_strict(string):
     """ Sanitize string in a stricter way. """
     if string:
-        return str(string).translate(blacklist_strict)
+        return str(string).translate(blacklist_strict_t)
     else:
         return string
   
