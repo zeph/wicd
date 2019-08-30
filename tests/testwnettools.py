@@ -1,4 +1,5 @@
 import unittest
+from unittest import mock
 from wicd import wnettools
 
 class TestWnettools(unittest.TestCase):
@@ -11,9 +12,13 @@ class TestWnettools(unittest.TestCase):
 		#self.assertTrue('wlan0' in interfaces)
 		self.assertTrue(type(interfaces) == list)
 		
-	def test_find_wired_interface(self):
+	@mock.patch('wicd.wnettools.os')
+	@mock.patch('wicd.wnettools.open')
+	def test_find_wired_interface(self, mock_f, mock_os):
+		mock_os.listdir.return_value = ['eth0']
+		mock_os.path.isdir.return_value = True
+		mock_f.return_value.readlines.return_value = "1"
 		interfaces = wnettools.GetWiredInterfaces()
-		# eth0 may change depending on your system
 		self.assertTrue('eth0' in interfaces)
 		
 	def test_wext_is_valid_wpasupplicant_driver(self):
