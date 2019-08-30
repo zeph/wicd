@@ -21,8 +21,10 @@ class TestWnettools(unittest.TestCase):
 		interfaces = wnettools.GetWiredInterfaces()
 		self.assertTrue('eth0' in interfaces)
 		
-	def test_wext_is_valid_wpasupplicant_driver(self):
+	@mock.patch('wicd.misc.Run')
+	def test_wext_is_valid_wpasupplicant_driver(self, mock_syscall):
 		self.assertTrue(wnettools.IsValidWpaSuppDriver('wext'))
+		mock_syscall.assert_called_once()
 		
 	def test_needs_external_calls_not_implemented(self):
 		self.assertRaises(NotImplementedError, wnettools.NeedsExternalCalls)
