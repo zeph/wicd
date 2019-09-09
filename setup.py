@@ -631,7 +631,7 @@ class compile_translations(Command):
                     msgfmt = subprocess.Popen(['msgfmt', '--statistics', pofile,
                         '-o', '/dev/null'], stderr=subprocess.PIPE)
                     returncode = msgfmt.wait() # let it finish, and get the exit code
-                    output = msgfmt.stderr.readline().strip()
+                    output = msgfmt.stderr.readline().strip().decode('utf-8')
                     if len(output) == 0 or returncode != 0:
                         print(len(output), returncode)
                         raise ValueError
