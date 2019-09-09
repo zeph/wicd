@@ -29,7 +29,7 @@ class SizeError(IOError):
     """ Custom error class. """
     pass
 
-class LogFile(file):
+class LogFile(name, mode="r", maxsize=-1):
     """LogFile(name, [mode="w"], [maxsize=360000])
     
     Opens a new file object. After writing <maxsize> bytes a SizeError
