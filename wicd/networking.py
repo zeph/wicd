@@ -48,6 +48,7 @@ import time
 import threading
 import os
 from signal import SIGTERM
+from functools import cmp_to_key
 
 # wicd imports 
 from . import misc
@@ -663,7 +664,7 @@ class Wireless(Controller):
             time.sleep(1)
 
         aps = wiface.GetNetworks(essid)
-        aps.sort(cmp=comp, reverse=True)
+        aps.sort(key=cmp_to_key(comp), reverse=True)
         
         return aps
 
