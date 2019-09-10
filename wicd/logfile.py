@@ -48,7 +48,7 @@ class LogFile:
     def write(self, data):
         self.written += len(data)
         
-        data = data.decode('utf-8').encode('utf-8')
+        data = data.encode('utf-8')
         if len(data) <= 0:
             return
         if self.eol:
