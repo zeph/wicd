@@ -644,7 +644,8 @@ class Wireless(Controller):
                 key = 'quality'
             else:
                 key = 'strength'
-            return cmp(x[key], y[key])
+            return ((x[key] > y[key]) - (x[key] < y[key])) # cmp(x[key], y[key])
+
                 
         if not self.wiface:
             return []
