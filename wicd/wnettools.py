@@ -39,7 +39,7 @@ import dbus
 import socket, fcntl
 import shutil
 
-import wpath
+from . import wpath
 from . import misc
 from .misc import find_path 
 

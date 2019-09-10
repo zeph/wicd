@@ -24,7 +24,7 @@ when appropriate.
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-import gobject
+from gi.repository import GObject as gobject
 import time
 
 from dbus import DBusException

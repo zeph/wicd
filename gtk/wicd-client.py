@@ -39,7 +39,7 @@ class TrayIcon() -- Parent class of TrayIconGUI and IconConnectionInfo.
 
 import sys
 import gtk
-import gobject
+from gi.repository import GObject as gobject
 import getopt
 import os
 import pango
