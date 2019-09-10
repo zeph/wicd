@@ -231,36 +231,36 @@ class configure(Command):
             pmtemp = subprocess.Popen(["pkg-config", "--variable=pm_sleephooks", 
                                        "pm-utils"], stdout=subprocess.PIPE)
             returncode = pmtemp.wait() # let it finish, and get the exit code
-            pmutils_candidate = pmtemp.stdout.readline().strip() # read stdout
+            pmutils_candidate = str(pmtemp.stdout.readline().strip()) # read stdout
             if len(pmutils_candidate) == 0 or returncode != 0 or \
                not os.path.isabs(pmutils_candidate):
                 raise ValueError
             else:
                 self.pmutils = pmutils_candidate
-        except (OSError, ValueError):
+        except (OSError, ValueError, FileNotFoundError):
             pass # use our default
 
         try:
             kdetemp = subprocess.Popen(["kde-config","--prefix"], stdout=subprocess.PIPE)
             returncode = kdetemp.wait() # let it finish, and get the exit code
-            kdedir_candidate = kdetemp.stdout.readline().strip() # read stdout
+            kdedir_candidate = str(kdetemp.stdout.readline().strip()) # read stdout
             if len(kdedir_candidate) == 0 or returncode != 0 or \
                not os.path.isabs(kdedir_candidate):
                 raise ValueError
             else:
                 self.kdedir = kdedir_candidate + '/share/autostart'
-        except (OSError, ValueError):
+        except (OSError, ValueError, FileNotFoundError):
             # If kde-config isn't present, we'll check for kde-4.x
             try:
                 kde4temp = subprocess.Popen(["kde4-config","--prefix"], stdout=subprocess.PIPE)
                 returncode = kde4temp.wait() # let it finish, and get the exit code
-                kde4dir_candidate = kde4temp.stdout.readline().strip() # read stdout
+                kde4dir_candidate = str(kde4temp.stdout.readline().strip()) # read stdout
                 if len(kde4dir_candidate) == 0 or returncode != 0 or \
                    not os.path.isabs(kde4dir_candidate):
                     raise ValueError
                 else:
                     self.kdedir = kde4dir_candidate + '/share/autostart'
-            except (OSError, ValueError):
+            except (OSError, ValueError, FileNotFoundError):
                 # If neither kde-config nor kde4-config are not present or 
                 # return an error, then we can assume that kde isn't installed
                 # on the user's system
@@ -339,9 +339,9 @@ class configure(Command):
             # if the option is not python (which is not a directory)
             if not argument[0][:-1] == "python":
                 # see if it ends with a /
-                if not value.endswith("/"):
+                if not str(value).endswith("/"):
                     # if it doesn't, slap one on
-                    setattr(self, argument_name, value + "/")
+                    setattr(self, argument_name, str(value) + "/")
             else:
                 # as stated above, the python entry defines the beginning
                 # of the files section
@@ -636,7 +636,7 @@ class compile_translations(Command):
                         print(len(output), returncode)
                         raise ValueError
                     else:
-                        m = re.match('(\d+) translated messages(?:, (\d+) fuzzy translation)?(?:, (\d+) untranslated messages)?.', output)
+                        m = re.match(b'(\d+) translated messages(?:, (\d+) fuzzy translation)?(?:, (\d+) untranslated messages)?.', output)
                         if m:
                             done, fuzzy, missing = m.groups()
                             fuzzy = int(fuzzy) if fuzzy else 0
