@@ -24,20 +24,21 @@ rotates itself when a maximum size is reached.
 import sys
 import os
 import time
+import io
 
 class SizeError(IOError):
     """ Custom error class. """
     pass
 
-class LogFile:
+class LogFile(io.FileIO):
     """LogFile(name, [mode="w"], [maxsize=360000])
     
     Opens a new file object. After writing <maxsize> bytes a SizeError
     will be raised.
     
     """
-    def __init__(self, name, mode="a", maxsize=360000):
-        super(LogFile, self).__init__(name, mode)
+    def __init__(self, name, mode="a", maxsize=360000, *args, **kwargs):
+        super(LogFile, self).__init__(name, mode, maxsize, *args, **kwargs)
         self.maxsize = maxsize
         self.eol = True
         try:
