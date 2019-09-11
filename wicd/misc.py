@@ -27,7 +27,7 @@ import locale
 import sys
 import re
 import string
-from gi.repository import GObject as gobject
+from gi.repository import GLib as gobject
 from threading import Thread
 from subprocess import Popen, STDOUT, PIPE, call
 from subprocess import getoutput
