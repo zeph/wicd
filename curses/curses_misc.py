@@ -707,7 +707,7 @@ class OptCols(urwid.WidgetWrap):
         # callbacks map the text contents to its assigned callback.
         self.callbacks = []
         for cmd in tuples:
-            key = reduce(lambda s, (f, t): s.replace(f, t), [
+            key = reduce(lambda s, tuple: s.replace(tuple[0], tuple[1]), [
                 ('ctrl ', 'Ctrl+'), ('meta ', 'Alt+'),
                 ('left', '<-'), ('right', '->'),
                 ('page up', 'Page Up'), ('page down', 'Page Down'),

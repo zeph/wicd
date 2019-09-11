@@ -38,8 +38,9 @@ import time
 import dbus
 import socket, fcntl
 import shutil
+from functools import cmp_to_key
 
-import wpath
+from . import wpath
 from . import misc
 from .misc import find_path 
 
@@ -1444,7 +1445,7 @@ class BaseWirelessInterface(BaseInterface):
         m = re.findall(bitrates_pattern, bitrates)
         if m:
             # numeric sort
-            ap['bitrates'] = sorted(m, lambda x, y: int(float(x) - float(y)))
+            ap['bitrates'] = sorted(m, key=cmp_to_key(lambda x, y: int(float(x) - float(y))))
         else:
             ap['bitrates'] = None
 

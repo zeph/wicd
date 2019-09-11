@@ -26,7 +26,7 @@ Module containing the code for the main wicd GUI.
 import os
 import sys
 import time
-import gobject
+from gi.repository import GObject as gobject
 import gtk
 from itertools import chain
 from dbus import DBusException

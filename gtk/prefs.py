@@ -25,7 +25,7 @@ handles recieving/sendings the settings from/to the daemon.
 #
 
 import gtk
-import gobject
+from gi.repository import GObject as gobject
 import os
 
 from wicd import misc

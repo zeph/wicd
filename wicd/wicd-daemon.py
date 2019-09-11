@@ -44,7 +44,7 @@ from subprocess import Popen
 from operator import itemgetter
 
 # DBUS
-import gobject
+from gi.repository import GObject as gobject
 import dbus
 import dbus.service
 if getattr(dbus, 'version', (0, 0, 0)) < (0, 80, 0):
@@ -1950,5 +1950,7 @@ if __name__ == '__main__':
         print(("Root privileges are required for the daemon to run properly." +
                "  Exiting."))
         sys.exit(1)
-    gobject.threads_init()
+    # No more needed since PyGObject 3.11, c.f.
+    # https://wiki.gnome.org/PyGObject/Threading
+    #gobject.threads_init()
     main(sys.argv)
