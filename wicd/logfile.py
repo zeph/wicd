@@ -53,7 +53,7 @@ class LogFile(io.FileIO):
         if len(data) <= 0:
             return
         if self.eol:
-            super(LogFile, self).write(self.get_time() + ' :: ')
+            super(LogFile, self).write(self.get_time().encode("utf-8") + b' :: ')
             self.eol = False
 
         if data[-1] == '\n':
@@ -61,7 +61,7 @@ class LogFile(io.FileIO):
             data = data[:-1]
 
         super(LogFile, self).write(data.replace(
-                                    '\n', '\n' + self.get_time() + ' :: '))
+                                    b'\n', b'\n' + self.get_time().encode("utf-8") + b' :: '))
         if self.eol:
             super(LogFile, self).write('\n')
             
