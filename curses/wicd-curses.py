@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -* coding: utf-8 -*-
 
 """ wicd-curses. (curses/urwid-based) console interface to wicd

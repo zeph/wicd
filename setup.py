@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 #   Copyright (C) 2007 - 2009 Adam Blackburn
 #   Copyright (C) 2007 - 2009 Dan O'Reilly
@@ -268,7 +268,7 @@ class configure(Command):
                 # If the assumption above turns out to be wrong, do this:
                 #pass # use our default
 
-        self.python = '/usr/bin/python'
+        self.python = '/usr/bin/python3'
         self.pidfile = '/var/run/wicd/wicd.pid'
         self.initfilename = os.path.basename(self.initfile)
         self.wicdgroup = 'users'

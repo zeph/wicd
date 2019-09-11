@@ -9,4 +9,4 @@ if [ -e "/var/lib/wicd/WHEREAREMYFILES" ] && [ ! -L "$HOME/.wicd/WHEREAREMYFILES
     ln -s "/var/lib/wicd/WHEREAREMYFILES" "$HOME/.wicd/WHEREAREMYFILES"
 fi
 
-exec /usr/bin/python -O /usr/share/wicd/gtk/wicd-client.py $@
+exec /usr/bin/python3 -O /usr/share/wicd/gtk/wicd-client.py $@

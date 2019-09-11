@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """ wicd - wireless connection daemon frontend implementation
 

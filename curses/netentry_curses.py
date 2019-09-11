@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
     netentry_curses -- everyone's favorite networks settings dialogs... in text
     form!

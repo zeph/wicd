@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """configscript_curses.py
 Kind of like configscript.py, except written using urwid.

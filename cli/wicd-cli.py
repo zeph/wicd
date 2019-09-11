@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 """ Scriptable command-line interface. """
 #       This program is free software; you can redistribute it and/or modify

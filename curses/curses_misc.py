@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -* coding: utf-8 -*-
 
 """ curses_misc.py: Module for various widgets that are used throughout
