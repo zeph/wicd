@@ -44,7 +44,7 @@ from subprocess import Popen
 from operator import itemgetter
 
 # DBUS
-from gi.repository import GObject as gobject
+from gi.repository import GLib as gobject
 import dbus
 import dbus.service
 if getattr(dbus, 'version', (0, 0, 0)) < (0, 80, 0):

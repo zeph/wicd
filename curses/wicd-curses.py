@@ -46,7 +46,7 @@ import urwid
 # DBus communication stuff
 from dbus import DBusException
 # It took me a while to figure out that I have to use this.
-from gi.repository import GObject as gobject
+from gi.repository import GLib as gobject
 
 # Other important wicd-related stuff
 from wicd import wpath
